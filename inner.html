@@ -16,14 +16,16 @@
 					<li class="navigation"><a href="#">Карта штата</a></li>
 					<li class="navigation"><a href="#">Гостиницы</a></li>
 				</ul>
-				<a class="navigation-logo" href="#"><img src="http://placehold.it/50x50"></a>
+				<a class="navigation-logo" href="#"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
 			</nav>
 		</div>
 	</header>
 
 	<main>
 		<form class="serach-hotels" action="#" method="get">  
-			<legend class="search-hotels-options">Инфраструктура:</legend>
+			<fieldset>
+				<legend class="search-hotels-options">Инфраструктура:</legend>
+			</fieldset>>
 			<label class="search-hotels-content">
 				Бассейн<input type="checkbox" name="option1">
 			</label>
@@ -33,7 +35,10 @@
 			<label class="search-hotels-content">
 				Wi-Fi<input type="checkbox" name="option3">
 			</label>
-			<legend class="search-hotels-options">Тип жилья:</legend>
+			
+			<fieldset>
+				<legend class="search-hotels-options">Тип жилья:</legend>
+			</fieldset>>
 			<label class="search-hotels-content">
 				Гостиница<input type="checkbox" name="option4">
 			</label>
@@ -43,57 +48,76 @@
 			<label class="search-hotels-content">
 				Апартаменты<input type="checkbox" name="option6">
 			</label>
-			<legend class="search-hotels-options">Стоимость в сутки (р)</legend>
+			
+			<fieldset>
+				<legend class="search-hotels-options">Стоимость в сутки (р)</legend>
+			</fieldset>
 			<label>
 			<!--Java script-->
-				<span class="search-hotels-price-limit">от 0</span>
-				<span class="search-hotels-price-limit">до 3000</span>
+			<!--Не слишком длинные наименования классов в форме?-->
+			<!--Тегам span нужна обертка?-->
+					<span class="search-hotels-price-limit">от 0</span>
+					<span class="search-hotels-price-limit">до 3000</span>
 				<input type="range" name="price" min="0" max="3000">
 			</label>
 			<input class="search-hotels-btn" type="submit" value="Показать">
 		</form>
 		
-		<span class="results">Найдено</span>
-		<!--Java script-->
-		<span class="results-number">3</span>
-		<span class="result-sorting">Сортировка:</span>
+		<div class="result">
+		<!--Если названия гостиниц оформить заголовками, тогда "Найдено" может быть заголовком первого уровня?-->
+			<h1 class="result-found">Найдено:</h1>
+			<!--Java script-->
+			<span class="result-number">3</span>
+		</div>
+
 		<ul class="result-variants">
+			<li class="result-sorting">Сортировка:</li>
 			<li class="result-variants"><a href="#">По цене</a></li>
 			<li class="result-variants"><a href="#">По типу</a></li>
 			<li class="result-variants"><a href="#">По рейтингу</a></li>
-			<a class="result-view-up" href="#">&#9650;</a>
-			<a class="result-view-down" href="#">&#9660;</a>
 		</ul>
+			<div>
+				<a class="result-view-up" href="#">&#9650;</a>
+				<a class="result-view-down" href="#">&#9660;</a>
+			</div>
 
+		<!--Могут быть у секций одинаковые классы?-->
+		<!--Чтобы разделить контент на блоки - использовать тег div?-->
 		<section class="hotels">
-			<img src="http://placehold.it/150x100">
-			<div class="hotels-title">Amara Resort & Spa</div>
+			<div class="hotels-image">
+				<img src="img/hotel.jpg" width="135" height="90" alt="Hotel">
+			</div>
+			<h2 class="hotels-title">Amara Resort & Spa</h2>
 			<span class="hotels-type">Гостиница</span>
 			<span class="hotels-price">от 3 500 руб.</span>
-			<a href="#">Подробнее</a>
-			<a href="#">Забронировать</a>
+			<a class="hotels-link-more" href="#">Подробнее</a>
+			<a class="hotels-link-book" href="#">Забронировать</a>
 			<span class="hotels-stars">&#9733;&#9733;&#9733;&#9733;</span>
 			<div class="hotels-rating">Рейтинг: 8,5</div>
 		</section>
 
 		<section class="hotels">
-			<img src="http://placehold.it/150x100">
-			<div class="hotels-title">Desert Quail Inn</div>
+			<div class="hotels-image">
+				<img src="img/motel.jpg" width="135" height="90" alt="Motel">
+			</div>
+			<h2 class="hotels-title">Desert Quail Inn</h2>
 			<span class="hotels-type">Мотель</span>
 			<span class="hotels-price">от 2 000 руб.</span>
-			<a href="#">Подробнее</a>
-			<a href="#">Забронировать</a>
+			<a class="hotels-link-more" href="#">Подробнее</a>
+			<a class="hotels-link-book" href="#">Забронировать</a>
 			<span class="hotels-stars">&#9733;&#9733;</span>
 			<div class="hotels-rating">Рейтинг: 8,9</div>
 		</section>
 
 		<section class="hotels">
-			<img src="http://placehold.it/150x100">
-			<div class="hotels-title">Villas At Poco Diablo</div>
+			<div class="hotels-image">
+				<img src="img/apartments.jpg" width="135" height="90" alt="Apartments">
+			</div>
+			<h2 class="hotels-title">Villas At Poco Diablo</h2>
 			<span class="hotels-type">Апартаменты</span>
 			<span class="hotels-price">от 4 000 руб.</span>
-			<a href="#">Подробнее</a>
-			<a href="#">Забронировать</a>
+			<a class="hotels-link-more" href="#">Подробнее</a>
+			<a class="hotels-link-book" href="#">Забронировать</a>
 			<span class="hotels-stars">&#9733;&#9733;&#9733;</span>
 			<div class="hotels-rating">Рейтинг: 9,2</div>
 		</section>
@@ -108,16 +132,17 @@
 				<section class="footer-social">
 					<div class="footer-social">
 						<ul class="footer-social">
-							<li><a class="footer-twitter-btn" href="#">Твиттер</a></li>
-							<li><a class="footer-facebook-btn" href="#">Facebook</a></li>
-							<li><a class="footer-youtube-btn" href="#">YouTube</a></li>
+						<!--Картинки или фон-->
+							<li><a class="footer-twitter-btn" href="#"><img src="img/twitter.png" width="17" height="15" alt="Twitter"></a></li>
+							<li><a class="footer-facebook-btn" href="#"><img src="img/facebook.png" width="10" height="19" alt="Facebook"></a></li>
+							<li><a class="footer-youtube-btn" href="#"><img src="img/youtube.png" width="20" height="16" alt="YouTube"></a></li>
 						</ul>
 					</div>
 				</section>
 
 				<section class="footer-copyright">
 					<p class="footer-copyright-content">Website by:</p>
-					<a class="btn" href="https://htmlacademy.ru"><img src="http://placehold.it/50x50" alt="HTML academy"></a>
+					<a class="btn" href="https://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="html academy"></a>
 				</section>
 			</div>
 		</footer>

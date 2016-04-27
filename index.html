@@ -4,26 +4,27 @@
 <head>
 	<meta charset="utf-8">
 	<title>index.html</title>
+	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 	<header> 
 		<div class="header-container">
 			<nav class="navigation">
-				<ul class="navigation">
-					<li class="navigation"><a href="#">Информация</a></li>
-					<li class="navigation"><a href="#">Фото и видео</a></li>
-					<li class="navigation"><a href="#">Карта штата</a></li>
-					<li class="navigation"><a href="#">Гостиницы</a></li>
+				<ul class="navigation-list">
+					<li class="navigation-item"><a href="#">Информация</a></li>
+					<li class="navigation-item"><a href="#">Фото и видео</a></li>
+					<li class="navigation-item"><a href="#">Карта штата</a></li>
+					<li class="navigation-item"><a href="#">Гостиницы</a></li>
 				</ul>
-				<a class="navigation-logo" href="#"><img src="http://placehold.it/50x50"></a>
+				<a class="navigation-logo" href="#"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
 			</nav>
 		</div>
 	</header>
 
 	<main>
 		<div class="main-container">
-			<img src="http://placehold.it/450x250">
+			<img src="img/welcome.jpg" width="1200" height="514" alt="Sedona">
 			
 			<h1 class="main-decignation">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1> 
 			<!--Можно ли всем тегам макета p присвоить класс text?-->
@@ -31,9 +32,10 @@
 			
 			<section class="description">
 				<div class="descroption-header">Настоящий городок</div>
-				<span class="description-content">&mdash; №1 &mdash;</span>
+				<!--Можно ли задавать тегам span и p одинаковые классы в данном случае?-->
+				<span class="description-content-numder">&mdash; №1 &mdash;</span>
 				<p class="description-content">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
-				<img src="http://placehold.it/250x100">
+				<img src="img/truetown.jpg" width="800" height="256" alt="Настоящий городок">
 			</section>
 			
 			<ul class="services">
@@ -51,41 +53,44 @@
 				</li>
 			</ul>
 
-			<section class="description">
-				<img src="http://placehold.it/250x100">
-				<div class="description-header">Там есть мост дьявола</div>
-				<span class="description-content">&mdash; №2 &mdash;</span>
-				<p class="description-content">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+			<section class="entertainment">
+				<img src="img/canyon.jpg" width="800" height="256" alt="Grand Canyon">
+				<div class="entertainment-header">Там есть мост дьявола</div>
+				<span class="entertainment-content-number">&mdash; №2 &mdash;</span>
+				<p class="entertainment-content">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
 			</section>
 
 			<ul class="causes">
 				<li>
-					<div class="causes-heade">Небольшая площадь</div>
-					<span class="causes-content">&mdash; №3 &mdash;</span>
+					<div class="causes-header">Небольшая площадь</div>
+					<span class="causes-content-number">&mdash; №3 &mdash;</span>
 					<p class="causes-content">Все достопримечательности находятся очень близко</p>
 				</li>
 
 				<li>
 					<div class="causes-header">Красивая дорога</div>
-					<span class="causes-content">&mdash; №4 &mdash;</span>
-					<p class="cases-content">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					<span class="causes-content-number">&mdash; №4 &mdash;</span>
+					<p class="causes-content">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
 
 				<li>
 					<div class="causes-header">Мало туристов</div>
-					<span class="causes-content">&mdash; №5 &mdash;</span>
+					<span class="causes-content-number">&mdash; №5 &mdash;</span>
 					<p class="causes-content">Большинство едет в Гранд Каньон и толпится там</p>
 				</li>
 			</ul>
 
-			<section class="order">
-				<div class="order-header">Заитересовались?</h2>
+			<div class="order">
+				<!--Заголовок или div?-->
+				<h2 class="order-header">Заинтересовались?</h2>
 				<p class="order-content">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-				<img src="http://placehold.it/500x400">
+			</div>
+				<!--Карту сделать фоном-->
 
 				<form class="search-hotels" action="#" method="get">
 					<h2>Поиск гостиницы в Седоне</h2>
-				<!--Формат даты-->
+				<!--Формат даты
+				 	Что такое polyfill?-->
 					<label class="search-hotels-data">
 						Дата заезда:<input type="date" name="checkin_date" value="2016-04-24">
 					</label>
@@ -100,28 +105,29 @@
 					</label>
 					<input class="search-hotels-btn" type="submit" value="Найти">
 				</form>
-			</section>
 		</div>
 	</main>
 
 	<footer>
 		<div class="footer">
-			<section class="footer-contacts"
+			<section class="footer-contacts">
 				<a href="#">#visitsedona</a>
 			</section>
 
 			<section class="footer-social">
-				<ul>
-					<li><a class="footer-twitter-btn" href="#">Твиттер</a></li>
-					<li><a class="footer-facebook-btn" href="#">Facebook</a></li>
-					<li><a class="footer-youtube-btn" href="#">YouTube</a></li>
+				<ul class="footer-social-list">
+				<!--Картинки или фон-->
+				<!--Во всех ссылках кода должны быть основные и дополнительные классы?-->
+					<li class="footer-social-t"><a class="footer-link twitter-btn" href="#"><img src="img/twitter.png" width="17" height="15" alt="Twitter"></a></li>
+					<li class="footer-social-f"><a class="footer-link facebook-btn" href="#"><img src="img/facebook.png" width="10" height="19" alt="Facebook"></a></li>
+					<li class="footer-social-y"><a class="footer-link youtube-btn" href="#"><img src="img/youtube.png" width="20" height="16" alt="YouTube"></a></li>
 				</ul>
 			</section>
 
 			<section class="footer-copyright">
 				<!--Уточнить шрифт-->
-				<p class="footer-copyright-content">Website by:</p
-				<a class="btn" href="https://htmlacademy.ru"><img src="http://placehold.it/50x50" alt="HTML academy"></a>
+				<p class="footer-copyright-content">Website by:</p>
+				<a class="btn" href="https://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="html academy"></a>
 			</section>
 		</div>
 	</footer>
