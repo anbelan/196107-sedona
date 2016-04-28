@@ -1,0 +1,37 @@
+body {
+	font-family: PT Sans Regular;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	vertical-align: baseline;
+	outline: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #333333;
+}
+
+h1 {
+	font-family: PT Sans Bold;
+	font-weight: bold;
+	font-size: 21px; 
+	line-height: 26px;
+	vertical-align: baseline;
+	outline: none;
+	vertical-align: baseline;
+	text-transform: uppercase;	
+	text-align: center;
+	color: #333333;
+}
+
+h2 {
+	font-family: PT Sans Bold;
+	font-weight: bold;
+	font-size: 21px; 
+	line-height: 21px;
+	vertical-align: baseline;
+	outline: none;
+	vertical-align: baseline;
+	text-transform: uppercase;	
+	text-align: center;
+	color: #333333;
+}
