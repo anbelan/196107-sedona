@@ -55,10 +55,9 @@
 				<legend class="search-hotels-options">Стоимость в сутки (р)</legend>
 				<label>
 				<!--Java script-->
-				<!--Не слишком длинные наименования классов в форме?-->
 				<!--Тегам span нужна обертка?-->
-						<span class="search-hotels-price-min">от 0</span>
-						<span class="search-hotels-price-max">до 3000</span>
+					<span class="search-hotels-price-min">от 0</span>
+					<span class="search-hotels-price-max">до 3000</span>
 					<input type="range" name="price" min="0" max="3000">
 				</label>
 			</fieldset>
@@ -66,12 +65,9 @@
 			<input class="search-hotels-btn" type="submit" value="Показать">
 		</form>
 		
-		<div class="result">
-		<!--Если "Найдено" не оформляется заголовком первого уровня, тогда и названия гостиниц лучше оставить тегами div? Не могут же быть h2 без h1?-->
-			<span class="result-title">Найдено:</span>
+			<!--Пробел-->
+			<div class="result">Найдено: 3</div>
 			<!--Java script-->
-			<span class="result-number">3</span>
-		</div>
 
 		<div>
 			<span class="result-sorting">Сортировка:</span>
@@ -86,17 +82,13 @@
 				</div>
 		</div>
 
-		<!--Могут быть у секций одинаковые классы?-->
-		<!--Как это должно выглядеть в блоках я поняла. Не была уверена в использовании тега div для разделения контента на блоки.-->
 		<section class="hotels">
 			<div class="hotels-image">
 				<img src="img/hotel.jpg" width="135" height="90" alt="Hotel">
 			</div>
 			
 			<div class="hotels-content">
-				<div class="title">
-					<div class="hotels-title">Amara Resort & Spa</div>
-				</div>
+				<h2 class="hotels-title">Amara Resort & Spa</h2>
 
 				<div class="type">
 					<span class="type-hotel">Гостиница</span>
@@ -122,9 +114,8 @@
 			</div>
 				
 			<div class="hotels-content">
-				<div class="title">
-					<div class="title-hotel">Desert Quail Inn</div>
-				</div>
+				<h2 class="title-hotel">Desert Quail Inn</h2>
+				
 				<div class="type">
 					<span class="type-motel">Мотель</span>
 					<a class="hotels-link-more" href="#">Подробнее</a>
@@ -147,18 +138,18 @@
 				<img src="img/apartments.jpg" width="135" height="90" alt="Apartments">
 			</div>
 			
-			<div class="title">
-				<div class="title-apartments">Villas At Poco Diablo</div>
-			</div>
+			<div class="hotels-content">
+				<h2 class="title-apartments">Villas At Poco Diablo</h2>
 
-			<div class="type">
-				<span class="type-apartments">Апартаменты</span>
-				<a class="hotels-link-more" href="#">Подробнее</a>
-			</div>
-				
-			<div class="price">
-				<span class="price-apartments">от 4 000 руб.</span>
-				<a class="hotels-link-book" href="#">Забронировать</a>
+				<div class="type">
+					<span class="type-apartments">Апартаменты</span>
+					<a class="hotels-link-more" href="#">Подробнее</a>
+				</div>
+					
+				<div class="price">
+					<span class="price-apartments">от 4 000 руб.</span>
+					<a class="hotels-link-book" href="#">Забронировать</a>
+				</div>
 			</div>
 			
 			<div class="rating">

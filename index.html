@@ -27,7 +27,6 @@
 			<img src="img/welcome.jpg" width="1200" height="514" alt="Sedona">
 			
 			<h1 class="main-decignation">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1> 
-			<!--Можно ли всем тегам макета p присвоить класс text?-->
 			<p class="main-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 			
 			<section class="description">
@@ -79,31 +78,33 @@
 					<p class="causes-content">Большинство едет в Гранд Каньон и толпится там</p>
 				</li>
 			</ul>
+					
+				<div class="search">
+					<div class="search-order">
+						<div class="order-header">Заинтересовались?</div>
+						<span class="order-content">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</span>
+					</div>
 
-				<form class="search" action="#" method="get">
-					<h2 class="search-header">Заинтересовались?</h2>
-					<label class="search-content">
-						Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне<input type="text">
-					</label>
-				<!--Карту сделать фоном-->
-					<h2>Поиск гостиницы в Седоне</h2>
-				<!--Формат даты
-				 	Что такое polyfill?-->
-				 	<!--Сэкспортировала иконку "календарь" из макета. Ее ведь фоном нужно добавлять, я правильно поняла?-->
-					<label class="search-data">
-						Дата заезда:<input type="date" name="checkin_date" value="2016-04-24">
-					</label>
-					<label class="search-data">
-						Дата выезда:<input type="date" name="checkout_date" value="2016-07-04">
-					</label>
-					<label class="search-data">
-						Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
-					</label>
-					<label class="search-data">
-						Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
-					</label>
-					<input class="search-btn" type="submit" value="Найти">
-				</form>
+					<form class="search-block" action="#" method="get">
+						<h2>Поиск гостиницы в Седоне</h2>
+					<!--Формат даты-->
+					 	<!--Что такое polyfill?-->
+					 	<!--Сэкспортировала иконку "календарь" из макета. Ее ведь фоном нужно добавлять, я правильно поняла?-->
+						<label class="search-data">
+							Дата заезда:<input type="date" name="checkin_date" value="2016-04-24">
+						</label>
+						<label class="search-data">
+							Дата выезда:<input type="date" name="checkout_date" value="2016-07-04">
+						</label>
+						<label class="search-data">
+							Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
+						</label>
+						<label class="search-data">
+							Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
+						</label>
+						<input class="search-btn" type="submit" value="Найти">
+					</form>
+				</div>
 		</div>
 	</main>
 
@@ -116,7 +117,6 @@
 			<section class="social">
 				<ul class="social-list">
 				<!--Картинки или фон-->
-				<!--Во всех ссылках кода должны быть основные и дополнительные классы?-->
 					<li class="social-item"><a class="social-link twitter-btn" href="#"><img src="img/twitter.png" width="17" height="15" alt="Twitter"></a></li>
 					<li class="social-item"><a class="social-link facebook-btn" href="#"><img src="img/facebook.png" width="10" height="19" alt="Facebook"></a></li>
 					<li class="social-item"><a class="social-link youtube-btn" href="#"><img src="img/youtube.png" width="20" height="16" alt="YouTube"></a></li>
