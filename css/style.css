@@ -1,5 +1,5 @@
 body {
-	font-family: "PT Sans", "Arial", serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 21px;
@@ -23,4 +23,10 @@ h1 {
 	font-weight: bold;
 	font-size: 30px; 
 	line-height: 24px;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 21px; 
+	line-height: 21px;
 }
