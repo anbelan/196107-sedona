@@ -88,20 +88,32 @@
 					<form class="search-block" action="#" method="get">
 						<h2>Поиск гостиницы в Седоне</h2>
 					<!--Формат даты-->
-					 	<!--Что такое polyfill?-->
-					 	<!--Сэкспортировала иконку "календарь" из макета. Ее ведь фоном нужно добавлять, я правильно поняла?-->
-						<label class="search-data">
-							Дата заезда:<input type="date" name="checkin_date" value="2016-04-24">
-						</label>
-						<label class="search-data">
-							Дата выезда:<input type="date" name="checkout_date" value="2016-07-04">
-						</label>
-						<label class="search-data">
-							Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
-						</label>
-						<label class="search-data">
-							Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
-						</label>
+						<div class="search-item">
+							<label class="search-data">
+								Дата заезда:<input type="date" name="checkin_date" value="2016-04-24">
+							</label>
+							<span class="calendar"><img src="img/calendar.png" width="21" height="22" alt="Calendar"></span>
+						</div>
+
+						<div class="search-item">
+							<label class="search-data">
+								Дата выезда:<input type="date" name="checkout_date" value="2016-07-04">
+							</label>
+							<span class="calendar"><img src="img/calendar.png" width="21" height="22" alt="Calendar"></span>
+						</div>
+
+						<div class="search-item">
+							<label class="search-data">
+								Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
+							</label>
+						</div>
+
+						<div class="search-item">
+							<label class="search-data">
+								Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
+							</label>
+						</div>
+
 						<input class="search-btn" type="submit" value="Найти">
 					</form>
 				</div>
