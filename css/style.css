@@ -14,6 +14,11 @@ h1 {
 	line-height: 26px;
 }
 
+.main-content {
+	font-size: 14px; 
+	line-height: 26px;
+}
+
 .order-header {
 	font-weight: bold;
 	font-size: 30px; 
