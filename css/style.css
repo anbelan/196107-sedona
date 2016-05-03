@@ -1,6 +1,5 @@
 header{
 	position: relative;
-	margin-bottom: 25px;
 }
 body {
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -16,13 +15,38 @@ h1 {
 	font-size: 21px; 
 	line-height: 26px;
 }
-.header-container, .main-container, .footer-container{
+.main-content {
+	font-size: 14px; 
+	line-height: 26px;
+	margin-bottom: 60px;
+}
+
+.order-header {
+	font-weight: bold;
+	font-size: 30px; 
+	line-height: 24px;
+	margin-bottom: 40px;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 21px; 
+	line-height: 21px;
+}
+.header-container{
+	width: 1200px;
+	margin-bottom: 25px;
+}
+.main-container{
+	width: 1200px;
+}
+.footer-container{
 	width: 1200px;
 }
 .nav-logo{
 	position: absolute;
-	top: 0;
-  	left: 50%;
+	padding-top: 0;
+  	padding-left: 50%;
   	transform: translateX(-50%);
 }
 .nav-list {
@@ -46,25 +70,105 @@ main img{
 	margin-top: 62px;
 	margin-bottom: 32px;
 }
-
-
-.main-content {
-	font-size: 14px; 
-	line-height: 26px;
+.description-item, .entertainment-item{
+	display: inline-block;
+}
+.description-item:first-child{
+	width: 400px;
+	height: 256px;
+	margin: 0 auto;
+	margin-left: -2px;
+	margin-right: -2px;
+	vertical-align: top;
+	padding-top: 57px;
+	background-color: #81b3d2;
+}
+.description-item:last-child{
+	margin-left: -2px;
+	margin-right: -2px;
+}
+.description-title, .description-number{
+	/*не сработали стили для .description-number. Потому что span?*/
+	margin-bottom: 32px;
+}
+.entertainment-item:first-child{
+	margin-left: -2px;
+	margin-right: -2px;
+}
+.entertainment-item:last-child{
+	width: 400px;
+	height: 256px;
+	margin: 0 auto;
+	margin-left: -2px;
+	margin-right: -2px;
+	vertical-align: top;
+	padding-top: 57px;
+	background-color: #81b3d2;
 }
 
-.order-header {
-	font-weight: bold;
-	font-size: 30px; 
-	line-height: 24px;
+.entertainment-title, .entertainment-number{
+	/*не сработали стили для .entertainment-number. Потому что span?*/
+	margin-bottom: 32px;
+}
+.services-item, .causes-item{
+	list-style: none;
+	float: left;
+	width: 33%;
+	height: 332px;
+}
+.services-title, .causes-title{
+	margin-bottom: 32px;
+}
+.causes-item{
+	background-color: #eeeeee;
+	margin-bottom: 59px;
+}
+.search-order{
+	float: center;
+}
+.search-title{
+	background-color: #766357;
+	width: 574px;
+	height: 88px;
+	clear: both;
+	margin: 0 auto;
+	padding-top: 36px;
+}
+.search-map{
+	background-image: url("");
+	background-color: #eeeeee;
+	/*Как добавить карту?*/
+}
+.search-item{
+	display: block;
 }
 
-.title {
-	font-weight: bold;
-	font-size: 21px; 
-	line-height: 21px;
+.footer-container{
+	list-style: none;
+}
+.hashtag, .social, .copyright{
+	width: 33%;
+	float: left;
+}
+.social-item{
+	display: inline-block;
+	width: 33%;	
+	background-color: #81b3d2;
+	width: 46px;
+	height: 48px;
+} 
+.social-link{
+	padding-top: 50%;
+	transform: translateX(-50%);
+
+}
+.copyright{
+	display: inline;
+}
+.copyright-content{
+	width: 
+}
+.copyright-btn{
+	width: 
 }
 
-.nav-item{
-	float
-}
