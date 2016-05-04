@@ -17,11 +17,15 @@ header{
 	position: relative;
 	margin-bottom: 25px;
 }
+
 img{
 	max-width: 100%;
 	height: auto;
 	vertical-align: top;
 	margin: 0 auto;
+}
+.img-wrap{
+	overflow: hidden;
 }
 
 .main-content {
@@ -83,13 +87,17 @@ img{
   width: 66.66%;
   float: left;
 }
+footer .column{
+	height: 121px;
+}
 fieldset{
 	border: none;
 	padding: 0;
 	margin: 0;
-
 }
-
+li{
+	list-style: none;
+}
 
 .nav{
 	position: relative;
@@ -128,6 +136,13 @@ main img{
 .description-item, .entertainment-item{
 	display: inline-block;
 }
+*/
+
+.description, .entertainment{
+	background-color: #81b3d2;
+	color: #ffffff;
+}
+/*
 .description-item:first-child{
 	width: 400px;
 	height: 256px;
@@ -237,6 +252,9 @@ input[type="checkbox"]{
 .result:last-child{
 	float: right;
 }
+.sorting{
+	margin: 0;
+}
 .sorting-item{
 	list-style: none;
 	float: left;	
@@ -252,6 +270,13 @@ input[type="checkbox"]{
 }
 .hotel-block{
 	display: inline-block;
+}
+
+.img-background{
+	background-image: url("img/map-background.jpg");	
+}
+.footer-wrap{
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 

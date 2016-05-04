@@ -10,7 +10,7 @@
 <body>
 	<div class="container">
 		<header> 
-				<nav class="nav row">
+				<nav class="nav">
 					<ul class="nav-list">
 						<li class="nav-item"><a href="#">Информация</a></li>
 						<li class="nav-item"><a href="#">Фото и видео</a></li>
@@ -22,10 +22,12 @@
 		</header>
 
 		<main>
+			<div class="img-wrap">
 				<img src="img/welcome.jpg" width="1200" height="514" alt="Sedona">
+			</div>
 				
-				<h1 class="main-decignation row">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1> 
-				<p class="main-content row">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+				<h1 class="main-decignation">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1> 
+				<p class="main-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 				
 				<div class="description row">
 					<div class="column">
@@ -34,7 +36,9 @@
 						<p class="description-content">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
 					</div>
 					<div class="column-double">
-						<img src="img/truetown.jpg" width="800" height="256" alt="Настоящий городок">
+						<div class="img-wrap">
+							<img src="img/truetown.jpg" width="800" height="256" alt="Настоящий городок">
+						</div>
 					</div>
 				</div>
 				
@@ -55,7 +59,9 @@
 
 				<div class="entertainment row">
 					<div class="column-double">
-						<img src="img/canyon.jpg" width="800" height="256" alt="Grand Canyon">
+						<div class="img-wrap">
+							<img src="img/canyon.jpg" width="800" height="256" alt="Grand Canyon">
+						</div>
 					</div>
 					<div class="column">
 						<div class="entertainment-title">Там есть мост дьявола</div>
@@ -84,14 +90,17 @@
 					</li>
 				</ul>
 						
-					<div class="search row">
-						<div class="search-order row">
+					<div class="search">
+						<div class="search-order">
 							<h2 class="order-header">Заинтересовались?</h2>
 							<p class="order-content">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-							<div class="order-map"><img src="img/map.jpg" width="1200" height="471" alt="Map"></div>
+							<div class="img-wrap">
+								<div class="order-map"><img src="img/map.jpg" width="1200" height="471" alt="Map">
+								</div>
+							</div>
 						</div>
 
-						<form class="search-block row" action="#" method="get">
+						<form class="search-block" action="#" method="get">
 							<h2 class="search-title">Поиск гостиницы в Седоне</h2>
 						<!--Формат даты-->
 							<div class="search-map">
@@ -109,16 +118,18 @@
 									<span class="calendar"><img src="img/calendar.png" width="21" height="22" alt="Calendar"></span>
 								</div>
 
-								<div class="search-item">
-									<label class="search-data">
-										Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
-									</label>
-								</div>
+								<div class="search-people">
+									<div class="search-item">
+										<label class="search-data">
+											Взрослые:<span>-</span><input type="number" name="adults" value="2"><span>+</span>
+										</label>
+									</div>
 
-								<div class="search-item">
-									<label class="search-data">
-										Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
-									</label>
+									<div class="search-item">
+										<label class="search-data">
+											Дети:<span>-</span><input type="number" name="children" value="0"><span>+</span>
+										</label>
+									</div>
 								</div>
 							</div>
 
@@ -128,24 +139,25 @@
 		</main>
 
 		<footer>
-			<div class="row">
-				<section class="hashtag">
-					<a href="#">#visitsedona</a>
-				</section>
+			<div class="img-background row">
+				<div class="footer-wrap">
+					<section class="column hashtag">
+						<a href="#">#visitsedona</a>
+					</section>
 
-				<section class="social">
-					<ul class="social-list">
-					<!--Картинки или фон-->
-						<li class="social-item"><a class="social-link twitter-btn" href="#"><img src="img/twitter.png" width="17" height="15" alt="Twitter"></a></li>
-						<li class="social-item"><a class="social-link facebook-btn" href="#"><img src="img/facebook.png" width="10" height="19" alt="Facebook"></a></li>
-						<li class="social-item"><a class="social-link youtube-btn" href="#"><img src="img/youtube.png" width="20" height="16" alt="YouTube"></a></li>
-					</ul>
-				</section>
+					<section class="column social">
+						<ul class="social-list">
+							<li class="social-item"><a class="social-link twitter-btn" href="#">Твиттер</a></li>
+							<li class="social-item"><a class="social-link facebook-btn" href="#">Facebook</a></li>
+							<li class="social-item"><a class="social-link youtube-btn" href="#">YouTube</a></li>
+						</ul>
+					</section>
 
-				<section class="copyright">
-					<p class="copyright-content">Website by:</p>
-					<a class="copyright-btn" href="https://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="html academy"></a>
-				</section>
+					<section class="column copyright">
+						<p class="copyright-content">Website by:</p>
+						<a class="copyright-btn" href="https://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="html academy"></a>
+					</section>
+				</div>
 			</div>
 		</footer>
 	</div>
