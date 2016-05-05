@@ -81,15 +81,12 @@ img{
   float: left;
   width: 33.33%;
   outline: 2px solid yellow;
-  height: 256px;
 }
 .column-double {
   width: 66.66%;
   float: left;
 }
-footer .column{
-	height: 121px;
-}
+
 fieldset{
 	border: none;
 	padding: 0;
@@ -216,15 +213,21 @@ main img{
 	text-align: left;
 }
 */
-
-
+.search form{
+	position: absolute;
+	z-index: 1;
+}
+.map{
+	z-index: 2;
+}
+footer{
+	position: relative;
+}
 footer .content{	
 	background-color: rgba(255, 255, 255, 0.9);
 	position: absolute;
 	width: 1200px;
-}
-footer .img-wrap{
-	position: absolute;
+	bottom: 0;
 }
 
 footer .social-item{
@@ -232,7 +235,6 @@ footer .social-item{
 	float: left;
 	background-color: #81b3d2;
 	width: 46px;
-	height: 48px;
 	margin-right: 8px;
 } 
 .social-link{
