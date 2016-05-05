@@ -207,16 +207,33 @@ main img{
 	display: block;
 }
 */
-.hashtag, .social, .copyright{
-	width: 33%;
-	float: left;
+/*
+.search form{
+	position: absolute;
+	bottom: 0;
+	top: 1938px;
+	margin-left: 512px;
+	text-align: left;
 }
-.social-item{
+*/
+
+
+footer .content{	
+	background-color: rgba(255, 255, 255, 0.9);
+	position: absolute;
+	width: 1200px;
+}
+footer .img-wrap{
+	position: absolute;
+}
+
+footer .social-item{
 	display: inline-block;
-	width: 33%;	
+	float: left;
 	background-color: #81b3d2;
 	width: 46px;
 	height: 48px;
+	margin-right: 8px;
 } 
 .social-link{
 	padding-top: 50%;
@@ -272,11 +289,7 @@ input[type="checkbox"]{
 	display: inline-block;
 }
 
-.img-background{
-	background-image: url("img/map-background.jpg");	
-}
-.footer-wrap{
-	background-color: rgba(255, 255, 255, 0.5);
-}
+
+
 
 
