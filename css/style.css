@@ -30,17 +30,19 @@ img{
 	vertical-align: top;
 	margin: 0 auto;
 }
-
+.clearfix{
+	content: '';
+	display: table;
+	clear: both;
+}
 .img-wrap{
 	overflow: hidden;
 }
-
 .main-content {
 	font-size: 14px; 
 	line-height: 26px;
 	margin-bottom: 60px;
 }
-
 .title {
 	font-weight: bold;
 	font-size: 21px; 
@@ -65,7 +67,7 @@ img{
 /*   list-style: none;
   margin: 0;
   padding: 0; */
-  /*outli*/ne: 2px solid red;
+  /*outline: 2px solid red;*/
   margin: 0;
 }
 .row::after {
@@ -91,7 +93,6 @@ fieldset{
 li{
 	list-style: none;
 }
-
 .nav{
 	position: relative;
 }
@@ -101,7 +102,6 @@ li{
   	left: 50%;
   	transform: translateX(-50%);
 }
-
 .nav-list {
 	list-style: none;
  	margin: 0;
@@ -116,7 +116,7 @@ li{
   font-weight: bold;
 }
 .nav-information{
-	margin-left: -2px;
+
 }
 .nav-map{
 	margin-left: 2px;
@@ -124,90 +124,106 @@ li{
 .nav-hotels{
 	margin-left: 14px;
 }
-
 .nav-item:nth-child(2) {
   margin-right: 20%;  
 }
 .nav-item a{
 	color: #000000;
 }
-
-
 .decignation{
 	margin-top: 54px;
-	margin-bottom: 29px;
+	margin-bottom: 31px;
 	padding: 0 300px;
 }
 .decignation-content{
 	margin-bottom: 53px;
 }
-
-
+/*Текст заголовка не стыкуется с макетом в части. 
+Свойство letter-spacing не помогло.*/
+.header-spacing{
+	letter-spacing: 0.3px;
+}
 .description, .entertainment{
 	background-color: #81b3d2;
 	color: #ffffff;
 }
-
-.description-title{
-	padding: 55px 139px 23px;
+/*Добавила паддинги к обертке колонки -
+- всё увеличилось до размеров страницы. 
+Не могу понять в чем причина. 
+Из-за установленной ширины?
+Тогда не знаю как это исправить.
+Пока поставила теги <br> по тексту.*/
+.description-wrapper{
+    /*padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;*/
 }
-
+.description-title{
+	margin-top: 57px;
+	margin-bottom: 25px;
+}
 .description-title, .entertainment-title{
 	font-weight: bold;
     font-size: 21px;
 }
-
-.entertainment-title{
-	padding: 55px 119px 23px;
+/*См комментарий выше*/
+.entertainment-wrapper{
+	/*padding-top: 56px;
+	padding-left: 38px;
+	padding-right: 38px;*/
 }
-
+.entertainment-title{
+	margin-top: 57px;
+	margin-bottom: 26px;
+}
 .description-content{
-	padding: 7px 50px 0;
+	margin-top: 25px;
 }
 .entertainment-content{
-	padding: 7px 38px 0;	
+	margin-top: 24px;	
 }
-
+.services{
+	margin-bottom: 56px;
+}
+.services-title{
+	padding-top: 103px;
+	font-weight: bold;
+	font-size: 21px;
+}
+.services-content{
+	padding: 26px 50px;
+	margin: 0 auto;
+}
+.services-title:before{
+	padding-top: 200px;
+}
+.sprite{
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+}
 .house{
 	background-image: url("../img/sprites.png");
 	background-position: 0 -4px;
 	width: 75px;
-	height: 72px;
-	margin-top: 63px;
-	margin-bottom: 28px;
+	/*height: 72px;*/
+	margin-top: 60px;
 }
 .burger{
 	background-image: url("../img/sprites.png");
 	background-position: -114px -6px;
 	width: 74px;
-	height: 70px;
-	margin-top: 64px;
-	margin-bottom: 28px;
+	/*height: 70px;*/
+	margin-top: 60px;
 }
 .present{
 	background-image: url("../img/sprites.png");
-	background-position: -221px 0;
-	width: 64px;
-	height: 76px;
+	/*Верхняя часть картинки скрылась при -5px 
+	в свойстве background-position.*/
+	background-position: -197px -5px; 
+	width: 112px;
+	/*height: 76px;*/
 	margin-top: 61px;
-	margin-bottom: 25px;
-}
-.sprite{
-	margin-left: auto;
-	margin-right: auto;
-	
-	background-repeat: no-repeat;
-}
-.services{
-	margin-bottom: 64px;
-}
-.services-title{
-	padding: 5px 0;
-	font-weight: bold;
-	font-size: 21px;
-}
-.services-content{
-	padding: 4px 50px;
 }
 .causes{
 	background-color: #eeeeee;
@@ -216,8 +232,8 @@ li{
 .causes-title{
 	font-weight: bold;
 	font-size: 21px;
-	padding-top: 48px;
-	padding-bottom: 23px;
+	padding-top: 51px;
+	padding-bottom: 25px;
 }
 .causes-square{
 	padding-left: 100px;
@@ -231,89 +247,110 @@ li{
 	padding-left: 150px;
 	padding-right: 150px;
 }
-
 .causes-content-square{
-	padding: 7px 71px 0px;
+	padding: 10px 71px 0px;
 }
-
 .causes-content-road{
-	padding: 7px 61px 0px;
+	padding: 10px 61px 0px;
 }
-
 .causes-content-tourists{
-	padding: 7px 61px 0px;
+	padding: 10px 61px 0px;
 }
-
 .order-header {
 	font-weight: bold;
 	font-size: 30px; 
 	line-height: 24px;
-	padding: 32px 0 5px;
+	padding: 35px 0 5px;
 }
 .order-content{
 	padding: 0;
 	margin: 0;
 }
 .order-content-2{
-	padding-bottom: 33px;
-	margin-top: 3px;
+	padding-bottom: 34px;
+	margin-top: 5px;
 }
-
-
 .search-title{
 	background-color: #766357;
 	color: #ffffff;
 	margin: 0 316px;
 	padding: 33px 0;
 }
-
-.search form{
+.popup{
 	position: absolute;
 	z-index: 1;
 	margin: 0 auto;
 	background-color: #ffffff;
-	margin: 0 318px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 568px
 }
-.search-data input{
+.search-card{
+	margin-top: 57px;
+}
+.search-item{
+	text-align: left;
+	padding-left: 55px;
+	padding-bottom: 30px;
+}
+.search-data{
+	font-weight: bold;
+	line-height: 26px;
+	color: #000000;
+
+}
+.search-data-date, .search-data-number{
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
 	background-color: #f2f2f2;
 	border: none;
 }
-label{
-	font-weight: bold;
-	line-height: 26px;
-}
-.check-in{
-	margin: 56px 45px 27px 40px;
-}
-.check-out{
-	margin: 0px 45px 28px 36px;
-}
-.search-data{
-	color: #000000;
-}
 .search-data-date{
-	padding: 13px 130px 12px 15px;
-	font-weight: bold;
-	width: 142px;
-	font-size: 13px;
-	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
+	width: 331px;
+	height: 35px;
+	/*Не совпадает текст с макетом.*/
+	padding-left: 13px;
 }
+
+.search-data-date:after{
+	padding-right: 20px;
+	background-color: #f2f2f2;
+}
+
 input[name="checkin-date"]{
-	margin-left: 20px;
+	margin-left: 18px;
 	margin-right: 0px;
+	padding-left: 
 }
 input[name="checkout-date"]{
-	margin-left: 18px;
+	margin-left: 15px;
 	margin-right: 0;
 }
 .calendar{
-	background-color: #f2f2f2;
-	padding: 12px 14px;
-	margin-right: 15px;
+	position: absolute;
+	z-index: 1;
+	background-image: url("../img/sprites2.png");
+	background-position: -27px -162px;
+	width: 21px;
+	height: 22px;
+	background-repeat: no-repeat;
+	/*версия календаря, когда пользователь на него не кликал*/
 }
-.calendar img{
-	vertical-align: middle;
-	margin: 8px 7px 10px 11px;
+.calendar:hover{
+	/*версия календаря по наведению мышки*/
+	position: relative;
+	z-index: 2;
+	background-color: yellow; /*удалить*/
+}
+.calendar:active{
+	/*версия календаря в момент когда пользователь на него кликнул*/
+	z-index: 2;
+	background-image: url("../img/calendar-active.png");
+	background-color: black; /*удалить*/
 }
 .search-people{
 	margin-bottom: 51px;
@@ -321,7 +358,6 @@ input[name="checkout-date"]{
 .search-number{
 	display: inline-block;
 }
-
 .children{
 	margin-left: 54px;	
 }
@@ -333,19 +369,20 @@ input[name="checkout-date"]{
 }
 .minus{
 	margin-left: 38px;
+	width: 30px;
+	height: 30px;
 }
 .plus{
 	margin-right: -6px;
+	width: 30px;
+	height: 30px;
 }
 .symbols{
 	color: #a9a9a9;
-}
-.search-people span{
+	display: inline-block;
 	background-color: #f2f2f2;
 	vertical-align: middle;
-	padding: 12px 14px;
 }
-
 .search-btn{
 	color: #ffffff;
 	background-color: #81b3d2;
@@ -358,14 +395,11 @@ input[name="checkout-date"]{
 	line-height: 26px;
 	cursor: pointer;
 }
-
 .map{
 	z-index: 2;
 }
-
 footer{
 	position: relative;
-
 }
 footer .content{	
 	background-color: rgba(255, 255, 255, 0.9);
@@ -377,6 +411,7 @@ footer .content{
 	padding: 40px 0;
 	font-weight: bold;
 	font-size: 21px;
+	color: #000000;
 }
 footer .social-item{
 	display: inline-block;
@@ -388,12 +423,11 @@ footer .social-item{
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
-} 
+}
 .social-link{
 	display: block;
 	margin: 0 auto;
 }
-
 .social-list{
 	padding: 35px 80px;
 	margin-left: 44px;
@@ -405,7 +439,6 @@ footer .social-item{
 	height: 15px;
 	margin-top: 15px;
 }
-
 .facebook-btn{
 	background-image: url("../img/sprites.png");
 	background-position: -88px -100px;
@@ -420,7 +453,6 @@ footer .social-item{
 	height: 16px;
 	margin-top: 15px;
 }
-
 .copyright{
 	display: inline-block;
 	padding: 30px 0;
@@ -430,7 +462,6 @@ footer .social-item{
 	margin-right: 10px;
 	padding-left: 85px;
 }
-
 .copyright-btn{
 	float: left;
 }
@@ -449,7 +480,6 @@ footer .social-item{
 	display: inline-block;
 	vertical-align: top;
 }
-
 form.search{
 	color: #ffffff;
 }
@@ -474,7 +504,6 @@ legend{
 	margin-left: 20px;
 	text-align: left;
 }
-
 .search-label{
 	display: block;
 	font-weight: normal;
@@ -482,14 +511,10 @@ legend{
 	margin: 0;
 	padding: 0;
 }
-/*Можно ли поменять с помощью Java Script вид чекбокса?*/
 input[type="checkbox"]{
 	vertical-align: middle;
 	margin-right: 18px;
-	margin-left: -60px;
-	/*
-	background: none;
-	*/
+	/*background: none;*/
 }
 .pool{
 	padding: 17px 0 0 23px;
@@ -509,10 +534,9 @@ input[type="checkbox"]{
 .apartaments{
 	padding: 20px 0 0 118px;
 }
-
 .span{
 	border: 2px solid white;
-	margin: -17px 0 10px 34px;
+	margin: 0 0 10px 34px;
 	padding: 3px 0;
 }
 .span-price{
@@ -534,11 +558,9 @@ input[type="range"]{
 	background: none;
 	color: #ffffff;
 }
-
 .search-line{
 	margin: 59px 0;
 }
-
 .result{
 	display: inline-block;
 	float: left;
@@ -585,19 +607,14 @@ input[type="range"]{
 .switch-down{
 	color: #81b3d2;
 }
-
 .hotels{
 	text-align: left;
+	border-bottom: 1px solid #cccccc;
 	clear: both;
-}
-hr{
-	clear: both;
-	color: #cccccc;
 }
  .hotels-image{
  	padding: 22px 26px 23px 0;
  }
- 
  .hotel-block{
  	display: inline-block;
  	float: left;
@@ -631,7 +648,6 @@ hr{
  	background-color: #766357;
  	width: 108px;
  }
-
 .rating{
 	float: right;
 	text-align: right;
@@ -646,3 +662,112 @@ hr{
 .rating-grade{
 	margin: 46px 18px 0 0;
 }
+
+
+/*
+.house{
+background-position: 0 -4px;
+width: 75px;
+height: 72px;
+}
+.burger{
+background-position: -114px -6px;
+width: 74px;
+height: 70px;
+}
+.present{
+background-position: -221px 0;
+width: 64px;
+height: 76px;
+}
+.twitter{
+background-position: -31px -100px;
+width: 17px;
+height: 15px;
+}
+.facebook{
+background-position: -88px -100px;
+width: 10px;
+height: 19px;
+}
+.youtube{
+background-position: -128px -100px;
+width: 20px;
+height: 16px;
+}
+.htmlacademy{
+background-position: -11px -10px;
+width: 113px;
+height: 39px;
+}
+.checkbox{
+background-position: -26px -63px;
+width: 22px;
+height: 22px;
+}
+.checkbox_hvr{
+background-position: -77px -64px;
+width: 22px;
+height: 22px;
+}
+.checkbox_disabled{
+background-position: -126px -63px;
+width: 22px;
+height: 22px;
+}
+.slide{
+background-position: -51px -111px;
+width: 20px;
+height: 23px;
+}
+.slide_hvr{
+background-position: -101px -112px;
+width: 20px;
+height: 23px;
+}
+.calendar{
+background-position: -27px -162px;
+width: 21px;
+height: 22px;
+}
+.calendar_hvr{
+background-position: -76px -162px;
+width: 21px;
+height: 22px;
+}
+.calendar_down{
+background-position: -126px -162px;
+width: 21px;
+height: 22px;
+}
+.minus{
+background-position: -36px -220px;
+width: 12px;
+height: 3px;
+}
+.minus_hvr{
+background-position: -86px -221px;
+width: 12px;
+height: 3px;
+}
+.minus_down{
+background-position: -135px -221px;
+width: 12px;
+height: 3px;
+}
+.plus{
+background-position: -37px -268px;
+width: 11px;
+height: 11px;
+}
+.plus_hvr{
+background-position: -87px -267px;
+width: 11px;
+height: 11px;
+}
+.plus_down{
+background-position: -136px -266px;
+width: 11px;
+height: 11px;
+}
+*/

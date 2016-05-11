@@ -15,7 +15,7 @@
 						<li class="nav-item"><a class="nav-information" href="#">Информация</a></li>
 						<li class="nav-item"><a href="#">Фото и видео</a></li>
 						<li class="nav-item"><a class="nav-map" href="#">Карта штата</a></li>
-						<li class="nav-item"><a class="nav-hotels" href="file:///Users/annabelan/Documents/196107-sedona/inner.html?price=1500#">Гостиницы</a></li>
+						<li class="nav-item"><a class="nav-hotels" href="inner.html">Гостиницы</a></li>
 					</ul>
 					<a class="nav-logo" href="file:///Users/annabelan/Documents/196107-sedona/index.html#"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
 				</nav>
@@ -25,15 +25,17 @@
 			<div class="img-wrap">
 				<img src="img/welcome.jpg" width="1200" height="514" alt="Sedona">
 			</div>
-				
-				<h1 class="decignation">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1> 
+				<!--Текст заголовка не стыкуется с макетом в части. 
+				Свойство letter-spacing не помогло.-->
+				<h1 class="decignation"><span class="header-spacing">Седона - небольшой городок в Аризоне,</span> заслуживающий большего!</h1> 
 				<p class="decignation-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 				
 				<div class="description row">
-					<div class="column">
-						<div class="description-title">Настоящий городок</div>
+					<div class="column description-wrapper">
+						<div class="description-title">Настоящий<br> городок</div>
 						<span class="description-number">&mdash; №1 &mdash;</span>
-						<p class="description-content">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
+						<!--Верхняя часть текста не совпадает с макетом. Из-за неподключенных шрифтов?-->
+						<p class="description-content">Седона - не аттракцион для туристов.<br> Там течет своя жизнь</p>
 					</div>
 					<div class="column-double">
 						<div class="img-wrap-view">
@@ -44,19 +46,18 @@
 				
 				<ul class="services row">
 					<li class="services-item column">
-					<!--Здесь нужно вставлять текст по аналогии с иконками в футере и скрывать его?-->
-						<div class="sprite house"></div>
-						<div class="services-title">Жилье</div>
+						<div class="services-title sprite house">Жилье</div>
+						<!--Часть текста не совпадает с макетом. Из-за неподключенных шрифтов?-->
 						<p class="services-content">Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
 					</li>
 					<li class="services-item column">
-						<div class="sprite burger"></div>
-						<div class="services-title">Еда</div>
+						<div class="services-title sprite burger">Еда</div>
+						<!--Часть текста не совпадает с макетом. Из-за неподключенных шрифтов?-->
 						<p class="services-content">Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
 					</li>
 					<li class="services-item column">
-						<div class="sprite present"></div>
-						<div class="services-title">Сувениры</div>
+						<div class="services-title sprite present">Сувениры</div>
+						<!--Часть текста не совпадает с макетом. Из-за неподключенных шрифтов?-->
 						<p class="services-content">Не только китайского, но и местного производства!</p>
 					</li>
 				</ul>
@@ -67,10 +68,12 @@
 							<img src="img/canyon.jpg" width="800" height="256" alt="Grand Canyon">
 						</div>
 					</div>
-					<div class="column">
+					<div class="column entertainment-wrapper">
+					<!--Текст заголовка не совпадает с макетом в части.-->
 						<div class="entertainment-title">Там есть<br> мост дьявола</div>
 						<span class="entertainment-number">&mdash; №2 &mdash;</span>
-						<p class="entertainment-content">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+						<!--Верхняя часть текста не совпадает с макетом. Из-за неподключенных шрифтов?-->
+						<p class="entertainment-content">Да, по нему можно пройти! Если конечно<br> Вы осмелитесь</p>
 					</div>
 				</div>
 
@@ -78,18 +81,21 @@
 					<li class="causes-item column">
 						<div class="causes-title causes-square">Небольшая площадь</div>
 						<span class="causes-number">&mdash; №3 &mdash;</span>
+						<!--Текст не совпадает с макетом.-->
 						<p class="causes-content causes-content-square">Все достопримечательности находятся очень близко</p>
 					</li>
 
 					<li class="causes-item column">
 						<div class="causes-title causes-road">Красивая дорога</div>
 						<span class="causes-number">&mdash; №4 &mdash;</span>
+						<!--Текст не совпадает с макетом.-->
 						<p class="causes-content causes-content-road">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</li>
 
 					<li class="causes-item column">
 						<div class="causes-title causes-tourists">Мало туристов</div>
 						<span class="causes-number">&mdash; №5 &mdash;</span>
+						<!--Текст не совпадает с макетом.-->
 						<p class="causes-content causes-content-tourists">Большинство едет в Гранд Каньон и толпится там</p>
 					</li>
 				</ul>
@@ -106,40 +112,51 @@
 
 						<div class="popup">
 							<form class="search-block" action="#" method="get">
-								<div class="search-map">
+								<div class="search-card">
 									<!--Можно ли "Дата заезда:", "Дата выезда:" и возможно "Взрослые:" вынести в отдельный div вначале формы, чтобы задать им одинаковый отступ справа?-->
 									<div class="search-item date check-in">
 										<label class="search-data">
-											Дата заезда:<input class="search-data-date" type="text" name="checkin-date" value="24 апреля 2016">
+										Дата заезда:
 										</label>
-										<!--Как иконку календаря вставить в поле формы (расположить без отступа слева от поля формы)?-->
-										<span class="calendar"><img src="img/calendar.png" width="21" height="22" alt="Calendar"></span>
+										<input class="search-data-date" type="text" name="checkin-date" value="24 апреля 2016">
+										<span class="calendar">
+										</span>
 									</div>
 
 									<div class="search-item date check-out">
 										<label class="search-data">
-											Дата выезда:<input class="search-data-date" type="text" name="checkout-date" value="4 июля 2016">
+										Дата выезда:
 										</label>
-										<!--Как иконку календаря вставить в поле формы (расположить без отступа слева от поля формы)?-->
-										<span class="calendar"><img src="img/calendar.png" width="21" height="22" alt="Calendar"></span>
+										<input class="search-data-date" type="text" name="checkout-date" value="4 июля 2016">
+										<span class="calendar">
+										</span>
 									</div>
 
 									<div class="search-people">
 										<div class="search-number">
 											<label class="search-data adults">
-												Взрослые:<span class="symbols minus">&mdash;</span><input type="text" class="search-data-number" name="adults" value="2"><span class="symbols plus">+</span>
+											Взрослые:
 											</label>
+											<span class="symbols minus">&mdash;
+											</span>
+											<input class="search-data-number" type="text"  name="adults" value="2">
+											<span class="symbols plus">+
+											</span>
 										</div>
 
 										<div class="search-number">
 											<label class="search-data children">
-												Дети:<span class="symbols minus">&mdash;</span><input type="text" name="children" class="search-data-number" value="0"><span class="symbols plus">+</span>
-											</label>
+											Дети:</label>
+											<span class="symbols minus">&mdash;
+											</span>
+											<input class="search-data-number" type="text" name="children"  value="0">
+											<span class="symbols plus">+
+											</span>
 										</div>
 									</div>
 								</div>
-								<!--В таком виде ссылка не уводить на отдельную страницу.-->
-								<a href="nothing.html"><input class="search-btn" type="submit" value="Найти"></a>
+								<a href="result.html"><input class="search-btn" type="submit" value="Найти">
+								</a>
 							</form>
 						</div>
 					</div>
