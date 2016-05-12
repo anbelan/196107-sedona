@@ -341,17 +341,16 @@ li{
 	border: none;
 }
 .search-data-date{
-	position: relative; /*Или все таки position: absolute;?*/
-	z-index: 4;
 	width: 331px;
 	height: 35px;
 	/*Не совпадает текст с макетом.*/
 	padding-left: 13px;
 }
 	/*Не получается календарик расположить на инпуте.*/
-.search-data-date:after{
-	content: '';
-	position: absolute;
+.search-data-date::after{
+	content: "";
+	position: relative;
+	z-index: 4
 	padding-right: 20px;
 	background-color: #f2f2f2;
 }
@@ -402,13 +401,27 @@ input[name="checkout-date"]{
 }
 
 .search-data-number{
-	position: relative;
-	z-index: 7;
 	padding: 3px 14px;
 	width: 110px;
 	height: 38px;
 	text-align: center;
 	font-weight: bold;
+}
+
+.minus-icon, .plus-icon{
+	position: relative;
+	z-index: 7;
+}
+.minus-icon::before,
+.plus-icon::after{
+	content: "";
+	position: absolute;
+	padding-left: 30px;
+}
+.plus-icon::after{
+	content: "";
+	position: absolute;
+	padding-right: 30px;
 }
 .adults{
 	padding-left: 54px;
@@ -621,6 +634,32 @@ input[type="checkbox"]{
 	vertical-align: middle;
 	margin-right: 18px;
 	/*background: none;*/
+}
+.checkbox-icon{
+	position: relative;
+	z-index: 3;
+}
+.checkbox-icon::after{
+	content: "";
+	position: absolute;
+	padding-left: 30px;
+}
+.checkbox{
+	position: absolute;
+	z-index: 4;
+	background-position: -26px -63px;
+	width: 22px;
+	height: 22px;
+}
+.checkbox:hover{
+	background-position: -77px -64px;
+	width: 22px;
+	height: 22px;
+}
+.checkbox:active{
+	background-position: -126px -63px;
+	width: 22px;
+	height: 22px;
 }
 .pool{
 	padding: 17px 0 0 23px;
