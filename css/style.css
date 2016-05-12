@@ -1,4 +1,12 @@
 
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: normal;
@@ -278,7 +286,7 @@ li{
 }
 .popup{
 	position: absolute;
-	z-index: 1;
+	z-index: 5;
 	margin: 0 auto;
 	background-color: #ffffff;
 	margin: 0 auto;
@@ -294,12 +302,6 @@ li{
 	padding-left: 55px;
 	padding-bottom: 30px;
 }
-.search-data{
-	font-weight: bold;
-	line-height: 26px;
-	color: #000000;
-
-}
 .search-data-date, .search-data-number{
 	font-weight: bold;
 	font-size: 13px;
@@ -308,8 +310,8 @@ li{
 	border: none;
 }
 .search-data-date{
-	position: relative;
-	z-index: 2;
+	position: absolute;
+	z-index: 6;
 	width: 331px;
 	height: 35px;
 	/*Не совпадает текст с макетом.*/
@@ -332,31 +334,51 @@ input[name="checkout-date"]{
 }
 .calendar{
 	position: absolute;
-	z-index: 1;
+	z-index: 7;
 	background-image: url("../img/sprites2.png");
 	background-position: -27px -162px;
 	width: 21px;
 	height: 22px;
+	cursor: pointer;
 	background-repeat: no-repeat;
 	/*версия календаря, когда пользователь на него не кликал*/
 }
 .calendar:hover{
 	/*версия календаря по наведению мышки*/
-	position: relative;
-	z-index: 2;
+	position: absolute;
+	z-index: 7;
+	background-image: url("../img/sprites2.png");
+	background-position: -76px -162px;
+	width: 21px;
+	height: 22px;
+	cursor: pointer;
 	background-color: yellow; /*удалить*/
 }
 .calendar:active{
 	/*версия календаря в момент когда пользователь на него кликнул*/
-	z-index: 2;
-	background-image: url("../img/calendar-active.png");
+	position: absolute;
+	z-index: 7;
+	background-image: url("../img/sprites2.png");
+	background-position: -126px -162px;
+	width: 21px;
+	height: 22px;
+	cursor: pointer;
 	background-color: black; /*удалить*/
+}
+.search-data{
+	font-weight: bold;
+	line-height: 26px;
+	color: #000000;
 }
 .search-people{
 	margin-bottom: 51px;
+	text-align: left;
 }
 .search-number{
 	display: inline-block;
+}
+.adults{
+	padding-left: 54px;
 }
 .children{
 	margin-left: 54px;	
@@ -367,21 +389,52 @@ input[name="checkout-date"]{
 	text-align: center;
 	font-weight: bold;
 }
-.minus{
-	margin-left: 38px;
-	width: 30px;
-	height: 30px;
-}
-.plus{
-	margin-right: -6px;
-	width: 30px;
-	height: 30px;
-}
 .symbols{
-	color: #a9a9a9;
 	display: inline-block;
 	background-color: #f2f2f2;
+	padding: 19px 17px;
+}
+.minus{
+	background-image: url("../img/sprites2.png");
+	background-position: -26px -204px;
+	width: 12px;
+	height: 3px;
+	cursor: pointer;
+	margin-left: 38px;
 	vertical-align: middle;
+}
+.minus:hover{
+	background-image: url("../img/sprites2.png");
+	background-position: -76px -205px;
+	width: 12px;
+	height: 3px;
+}
+.minus:active{
+	background-image: url("../img/sprites2.png");
+	background-position: -125px -205px;
+	width: 12px;
+	height: 3px;
+}
+.plus{
+	background-image: url("../img/sprites2.png");
+	background-image: url("../img/sprites2.png");
+	background-position: -20px -256px;
+	width: 11px;
+	height: 11px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.plus:hover{
+	background-image: url("../img/sprites2.png");
+	background-position: -70px -255px;
+	width: 11px;
+	height: 11px;
+}
+.plus:active{
+	background-image: url("../img/sprites2.png");
+	background-position: -119px -254px;
+	width: 11px;
+	height: 11px;
 }
 .search-btn{
 	color: #ffffff;
