@@ -306,6 +306,8 @@ li{
 	margin: 0 316px;
 	padding: 33px 0;
 }
+
+/*Всплывающее окно.*/
 .popup{
 	position: absolute;
 	z-index: 3;
@@ -315,6 +317,35 @@ li{
 	left: 0;
 	right: 0;
 	width: 568px
+}
+.popup-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+	background-color: #ffffff;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+.popup-close::before,
+.popup-close::after{
+	content: "";
+	position: absolute;
+	width: 19px;
+	height: 3px;
+	background-color: #766357;
+	border-radius: 1px;
+	top: 10px;
+	left: 2px;
+}
+.popup-close::before{
+	transform: rotate(45deg);
+}
+.popup-close::after{
+	transform: rotate(-45deg);
 }
 .search-card{
 	margin-top: 55px;
@@ -346,29 +377,33 @@ li{
 	/*Не совпадает текст с макетом.*/
 	padding-left: 13px;
 }
+	.search-data-date:focus{
+		background-color: green; /*Поменять*/
+	}
 	/*Не получается календарик расположить на инпуте.*/
 .search-data-date::after{
 	content: "";
 	position: relative;
 	z-index: 4
-	padding-right: 20px;
 	background-color: #f2f2f2;
 }
 input[name="checkin-date"]{
 	margin-left: 18px;
 	margin-right: 0px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	padding-right: 30px;
 }
 input[name="checkout-date"]{
 	margin-left: 15px;
 	margin-right: 0;
+	font-family: "PT Sans", "Arial", sans-serif;
+	padding-right: 30px;
 }
 .calendar{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites2.png");
-	background-position: -27px -162px;
-	width: 21px;
-	height: 22px;
+	background-position: -278px -155px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 	/*версия календаря, когда пользователь на него не кликал*/
@@ -376,14 +411,14 @@ input[name="checkout-date"]{
 .calendar:hover{
 	/*версия календаря по наведению мышки*/
 	background-image: url("../img/sprites2.png");
-	background-position: -76px -162px;
+	background-position: -229px -155px;
 	width: 21px;
 	height: 22px;
 }
 .calendar:active{
 	/*версия календаря в момент когда пользователь на него кликнул*/
 	background-image: url("../img/sprites2.png");
-	background-position: -126px -162px;
+	background-position: -180px -155px;
 	width: 21px;
 	height: 22px;
 }
