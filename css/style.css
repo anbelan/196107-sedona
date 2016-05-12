@@ -223,6 +223,8 @@ li{
 	margin: 0 auto;
 }
 .services-title:before{
+	content: '';
+	position: absolute;
 	padding-top: 210px;
 }
 .sprite{
@@ -306,7 +308,7 @@ li{
 }
 .popup{
 	position: absolute;
-	z-index: 5;
+	z-index: 3;
 	margin: 0 auto;
 	background-color: #ffffff;
 	margin: 0 auto;
@@ -315,7 +317,7 @@ li{
 	width: 568px
 }
 .search-card{
-	margin-top: 57px;
+	margin-top: 55px;
 }
 .search-card input{
 	background-color: #f2f2f2;
@@ -326,12 +328,11 @@ li{
 }
 .search-card input:active{
 	background-color: #ffffff;
-
 }
 .search-item{
 	text-align: left;
-	padding-left: 55px;
-	padding-bottom: 30px;
+	padding-bottom: 32px;
+	padding-left: 54px;
 }
 .search-data-date, .search-data-number{
 	font-weight: bold;
@@ -340,23 +341,23 @@ li{
 	border: none;
 }
 .search-data-date{
-	position: absolute;
-	z-index: 6;
+	position: relative; /*Или все таки position: absolute;?*/
+	z-index: 4;
 	width: 331px;
 	height: 35px;
 	/*Не совпадает текст с макетом.*/
 	padding-left: 13px;
 }
-
+	/*Не получается календарик расположить на инпуте.*/
 .search-data-date:after{
+	content: '';
+	position: absolute;
 	padding-right: 20px;
 	background-color: #f2f2f2;
 }
-
 input[name="checkin-date"]{
 	margin-left: 18px;
 	margin-right: 0px;
-	padding-left: 
 }
 input[name="checkout-date"]{
 	margin-left: 15px;
@@ -364,7 +365,7 @@ input[name="checkout-date"]{
 }
 .calendar{
 	position: absolute;
-	z-index: 7;
+	z-index: 5;
 	background-image: url("../img/sprites2.png");
 	background-position: -27px -162px;
 	width: 21px;
@@ -375,25 +376,17 @@ input[name="checkout-date"]{
 }
 .calendar:hover{
 	/*версия календаря по наведению мышки*/
-	position: absolute;
-	z-index: 7;
 	background-image: url("../img/sprites2.png");
 	background-position: -76px -162px;
 	width: 21px;
 	height: 22px;
-	cursor: pointer;
-	background-color: yellow; /*удалить*/
 }
 .calendar:active{
 	/*версия календаря в момент когда пользователь на него кликнул*/
-	position: absolute;
-	z-index: 7;
 	background-image: url("../img/sprites2.png");
 	background-position: -126px -162px;
 	width: 21px;
 	height: 22px;
-	cursor: pointer;
-	background-color: black; /*удалить*/
 }
 .search-data{
 	font-weight: bold;
@@ -407,17 +400,23 @@ input[name="checkout-date"]{
 .search-number{
 	display: inline-block;
 }
-.adults{
-	padding-left: 54px;
-}
-.children{
-	margin-left: 54px;	
-}
+
 .search-data-number{
-	padding: 14px;
-	width: 15px;
+	position: relative;
+	z-index: 7;
+	padding: 3px 14px;
+	width: 110px;
+	height: 38px;
 	text-align: center;
 	font-weight: bold;
+}
+.adults{
+	padding-left: 54px;
+	padding-right: 40px;
+}
+.children{
+	padding-left: 50px;
+	padding-right: 24px;
 }
 .symbols{
 	display: inline-block;
@@ -425,30 +424,35 @@ input[name="checkout-date"]{
 	padding: 19px 17px;
 }
 .minus{
+	position: absolute;
+	z-index: 8;
 	background-image: url("../img/sprites2.png");
-	background-position: -26px -204px;
+	background-position: -26px -198px;
 	width: 12px;
 	height: 3px;
 	cursor: pointer;
-	margin-left: 38px;
 	vertical-align: middle;
 }
 .minus:hover{
 	background-image: url("../img/sprites2.png");
-	background-position: -76px -205px;
+	background-position: -76px -199px;
 	width: 12px;
 	height: 3px;
 }
 .minus:active{
 	background-image: url("../img/sprites2.png");
-	background-position: -125px -205px;
+	background-position: -125px -203px;
 	width: 12px;
 	height: 3px;
 }
+/*Что-о поменяла, что сместило плюс на следующую строку.
+Теперь не могу разобраться как его вернуть в инпут.*/
 .plus{
+	position: absolute;
+	z-index: 8;
 	background-image: url("../img/sprites2.png");
 	background-image: url("../img/sprites2.png");
-	background-position: -20px -256px;
+	background-position: -20px -260px;
 	width: 11px;
 	height: 11px;
 	cursor: pointer;
@@ -456,7 +460,7 @@ input[name="checkout-date"]{
 }
 .plus:hover{
 	background-image: url("../img/sprites2.png");
-	background-position: -70px -255px;
+	background-position: -70px -259px;
 	width: 11px;
 	height: 11px;
 }
