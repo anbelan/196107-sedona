@@ -381,29 +381,41 @@ li{
 		background-color: green; /*Поменять*/
 	}
 	/*Не получается календарик расположить на инпуте.*/
-.search-data-date::after{
+/*.search-data-date::after{
 	content: "";
 	position: relative;
 	z-index: 4
 	background-color: #f2f2f2;
-}
+}*/
 input[name="checkin-date"]{
+	position: relative;
+	z-index: 4
 	margin-left: 18px;
 	margin-right: 0px;
 	font-family: "PT Sans", "Arial", sans-serif;
+	width: 331px;
+	height: 42px;
+	padding-left: 10px;
 	padding-right: 30px;
 }
 input[name="checkout-date"]{
+	position: relative;
+	z-index: 4
 	margin-left: 15px;
 	margin-right: 0;
 	font-family: "PT Sans", "Arial", sans-serif;
+	width: 331px;
+	height: 42px;
+	padding-left: 10px;
 	padding-right: 30px;
 }
 .calendar{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites2.png");
-	background-position: -278px -155px;
+	background-position: 278px -155px;
+	width: 21px;
+	height: 22px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 	/*версия календаря, когда пользователь на него не кликал*/
@@ -411,14 +423,14 @@ input[name="checkout-date"]{
 .calendar:hover{
 	/*версия календаря по наведению мышки*/
 	background-image: url("../img/sprites2.png");
-	background-position: -229px -155px;
+	background-position: 229px -155px;
 	width: 21px;
 	height: 22px;
 }
 .calendar:active{
 	/*версия календаря в момент когда пользователь на него кликнул*/
 	background-image: url("../img/sprites2.png");
-	background-position: -180px -155px;
+	background-position: 180px -155px;
 	width: 21px;
 	height: 22px;
 }
