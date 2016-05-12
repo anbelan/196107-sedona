@@ -1,4 +1,14 @@
 
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "PT Sans";
+  src: url("../fonts/web/ptsans.woff") format("woff"),
+       url("../fonts/web/ptsans.woff2") format("woff2")
+       url("../fonts/web/ptsansbold.woff") format("woff"),
+       url("../fonts/web/ptsansbold.woff2") format("woff2");
+}
 html {
   box-sizing: border-box;
 }
@@ -123,16 +133,26 @@ li{
   display: inline-block;
   font-weight: bold;
 }
-.nav-information{
-
+.nav-item a:hover{
+	color: #81b3d2;
 }
+.nav-item a:active{
+	color: rgba(0, 0, 0, 0.3);
+}
+.nav-information{
+	margin-right: 3px;
+}
+/*.nav-photo{
+	margin-left: 4px;
+}*/
 .nav-map{
 	margin-left: 2px;
+	letter-spacing: 0.5px;
 }
 .nav-hotels{
-	margin-left: 14px;
+	margin-left: 17px;
 }
-.nav-item:nth-child(2) {
+.nav-item:nth-child(2){
   margin-right: 20%;  
 }
 .nav-item a{
@@ -203,7 +223,7 @@ li{
 	margin: 0 auto;
 }
 .services-title:before{
-	padding-top: 200px;
+	padding-top: 210px;
 }
 .sprite{
 	margin-left: auto;
@@ -297,6 +317,17 @@ li{
 .search-card{
 	margin-top: 57px;
 }
+.search-card input{
+	background-color: #f2f2f2;
+	outline: 2px solid #f2f2f2;
+}
+.search-card input:hover{
+	background-color: #ebebeb;
+}
+.search-card input:active{
+	background-color: #ffffff;
+
+}
 .search-item{
 	text-align: left;
 	padding-left: 55px;
@@ -306,7 +337,6 @@ li{
 	font-weight: bold;
 	font-size: 13px;
 	text-transform: uppercase;
-	background-color: #f2f2f2;
 	border: none;
 }
 .search-data-date{
@@ -448,6 +478,13 @@ input[name="checkout-date"]{
 	line-height: 26px;
 	cursor: pointer;
 }
+.search-btn:hover{
+	background-color: #669ec0;
+}
+.search-btn:active{
+	background-color: #5496bd;
+	color: rgba(255, 255, 255, 0.3);
+}
 .map{
 	z-index: 2;
 }
@@ -464,22 +501,34 @@ footer .content{
 	padding: 40px 0;
 	font-weight: bold;
 	font-size: 21px;
+	/*Не применился цвет.*/
 	color: #000000;
+}
+
+.social-link{
+	display: block;
+	margin: 0 auto;
+	width: 46px;
+	height: 48px;
+}
+.icon-btn{
+	margin-left: auto;
+	margin-right: auto;
 }
 footer .social-item{
 	display: inline-block;
 	float: left;
 	background-color: #81b3d2;
-	width: 46px;
-	height: 48px;
 	margin-right: 7px;
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
 }
-.social-link{
-	display: block;
-	margin: 0 auto;
+.social-item:hover{
+	background-color: #669ec0;
+}
+.social-item:active{
+	background-color: #5496bd;
 }
 .social-list{
 	padding: 35px 80px;
@@ -588,7 +637,7 @@ input[type="checkbox"]{
 	padding: 20px 0 0 118px;
 }
 .span{
-	border: 2px solid white;
+	border: 2px solid #ffffff;
 	margin: 0 0 10px 34px;
 	padding: 3px 0;
 }
@@ -605,11 +654,17 @@ input[type="range"]{
 	width: 265px;
 }
 .search-hotel-btn{
-	border: 2px solid white;
+	border: 2px solid #ffffff;
 	padding: 10px 25px;
 	text-transform: uppercase;
 	background: none;
 	color: #ffffff;
+	/*shadow #886458*/
+}
+.search-hotel-btn:hover{
+	background-color: #ffffff;
+	color: #000000;
+	/*shadow #aaaaaa*/
 }
 .search-line{
 	margin: 59px 0;
@@ -664,21 +719,21 @@ input[type="range"]{
 	text-align: left;
 	border-bottom: 1px solid #cccccc;
 	clear: both;
+	padding-bottom: 6px;
 }
  .hotels-image{
- 	padding: 22px 26px 23px 0;
+ 	padding: 26px 26px 23px 0;
  }
  .hotel-block{
  	display: inline-block;
  	float: left;
  }
  .title-hotel{
- 	padding-top: 3px;
+ 	padding-top: 7px;
  	margin-top: 17px;
  	margin-bottom: 0;
  }
  .type, .price{
- 	width: 116px;
  	padding-top: 9px;
  	padding-bottom: 20px;
  }
@@ -689,31 +744,48 @@ input[type="range"]{
 .hotel-link{
 	color: #ffffff;
  	font-weight: bold;
- 	padding: 4px 17px;
  	display: block;
  	margin-top: 13px;
+ 	margin-right: 3px;
+ 	padding: 3px 16px;
 }
  .hotels-link-more{
  	background-color: #81b3d2;
- 	width: 76px;
+ 	margin-right: 6px;
  }
  .hotels-link-book{
  	background-color: #766357;
- 	width: 108px;
  }
 .rating{
 	float: right;
 	text-align: right;
-	margin: 20px 0 20px 67px;
+	padding-top: 20px;
 }
-.rating-stars{
-	color: #81b3d2;
-	font-size: 19px;
-	letter-spacing: 4px;
-	margin: 1px 1px;
+.four-stars{
+	background-image: url("../img/sprites3.png");
+	background-position: 18px -32px;
+	width: 110px;
+	height: 17px;
+	background-repeat: no-repeat;
+}
+.two-stars{
+	background-image: url("../img/sprites3.png");
+	background-position: 41px -76px;
+	width: 110px;
+	height: 27px;
+	background-repeat: no-repeat;
+}
+.three-stars{
+	background-image: url("../img/sprites3.png");
+	background-position: 29px -122px;
+	width: 110px;
+	height: 27px;
+	background-repeat: no-repeat;
 }
 .rating-grade{
-	margin: 46px 18px 0 0;
+	padding: 3px 13px;
+	margin-top: 42px;
+	background-color: #f2f2f2;
 }
 
 
@@ -822,5 +894,20 @@ height: 11px;
 background-position: -136px -266px;
 width: 11px;
 height: 11px;
+}
+.stars4{
+background-position: -4px -32px;
+width: 89px;
+height: 17px;
+}
+.stars2{
+background-position: -28px -81px;
+width: 42px;
+height: 17px;
+}
+.stars3{
+background-position: -17px -132px;
+width: 65px;
+height: 17px;
 }
 */
