@@ -1,0 +1,58 @@
+.calendar, .calendar_hvr, .calendar_down, .checkbox, .checkbox_hvr, .checkbox_disabled, .checkbox_checked, .checkbox_checked_hover, .checkbox_checked_disabled{
+	background: url(sprites.png) no-repeat;
+}
+
+.calendar{
+	background-position: -27px -26px ;
+	width: 21px;
+	height: 22px;
+}
+
+.calendar_hvr{
+	background-position: -28px -76px ;
+	width: 21px;
+	height: 22px;
+}
+
+.calendar_down{
+	background-position: -28px -127px ;
+	width: 21px;
+	height: 22px;
+}
+
+.checkbox{
+	background-position: -27px -178px ;
+	width: 22px;
+	height: 22px;
+}
+
+.checkbox_hvr{
+	background-position: -27px -227px ;
+	width: 22px;
+	height: 22px;
+}
+
+.checkbox_disabled{
+	background-position: -25px -277px ;
+	width: 22px;
+	height: 22px;
+}
+
+.checkbox_checked{
+	background-position: -23px -328px ;
+	width: 26px;
+	height: 22px;
+}
+
+.checkbox_checked_hover{
+	background-position: -23px -377px ;
+	width: 26px;
+	height: 22px;
+}
+
+.checkbox_checked_disabled{
+	background-position: -23px -427px ;
+	width: 26px;
+	height: 22px;
+}
+
