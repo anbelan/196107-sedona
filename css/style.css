@@ -49,7 +49,7 @@ img{
 	margin: 0 auto;
 }
 .clearfix{
-	content: '';
+	content: "";
 	display: table;
 	clear: both;
 }
@@ -69,6 +69,7 @@ img{
 .container{
 	width: 1200px;
 	margin: 0 auto;
+	box-shadow: 0 0 30px 0px #ccc;
 }
 
 /* .row {
@@ -171,7 +172,8 @@ li{
 .header-spacing{
 	letter-spacing: 0.3px;
 }
-.description, .entertainment{
+.description, 
+.entertainment{
 	background-color: #81b3d2;
 	color: #ffffff;
 }
@@ -187,10 +189,11 @@ li{
     margin: 0 auto;*/
 }
 .description-title{
-	margin-top: 57px;
-	margin-bottom: 25px;
+	margin-top: 55px;
+	margin-bottom: 23px;
 }
-.description-title, .entertainment-title{
+.description-title, 
+.entertainment-title{
 	font-weight: bold;
     font-size: 21px;
 }
@@ -205,7 +208,7 @@ li{
 	margin-bottom: 26px;
 }
 .description-content{
-	margin-top: 25px;
+	margin-top: 21px;
 }
 .entertainment-content{
 	margin-top: 24px;	
@@ -223,7 +226,7 @@ li{
 	margin: 0 auto;
 }
 .services-title:before{
-	content: '';
+	content: "";
 	position: absolute;
 	padding-top: 210px;
 }
@@ -316,7 +319,8 @@ li{
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	width: 568px
+	width: 568px;
+	box-shadow: 0 5px 20px -5px #333;
 }
 .popup-close{
 	position: absolute;
@@ -365,7 +369,8 @@ li{
 	padding-bottom: 32px;
 	padding-left: 54px;
 }
-.search-data-date, .search-data-number{
+.search-data-date, 
+.search-data-number{
 	font-weight: bold;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -411,6 +416,8 @@ input[name="checkout-date"]{
 	padding-left: 10px;
 	padding-right: 30px;
 }
+/*версия календаря, 
+когда пользователь на него не кликал*/
 .calendar{
 	position: absolute;
 	z-index: 5;
@@ -420,17 +427,17 @@ input[name="checkout-date"]{
 	height: 22px;
 	cursor: pointer;
 	background-repeat: no-repeat;
-	/*версия календаря, когда пользователь на него не кликал*/
 }
+/*версия календаря по наведению мышки*/
 .calendar:hover{
-	/*версия календаря по наведению мышки*/
 	background-image: url("../img/sprites4.png");
 	background-position: 279px -63px;
 	width: 21px;
 	height: 22px;
 }
+/*версия календаря в момент, 
+когда пользователь на него кликнул*/
 .calendar:active{
-	/*версия календаря в момент когда пользователь на него кликнул*/
 	background-image: url("../img/sprites4.png");
 	background-position: -279px -114px;
 	width: 21px;
@@ -452,7 +459,7 @@ input[name="checkout-date"]{
 .search-data-number{
 	position: relative;
 	z-index: 7;
-	padding: 3px 25px;
+	padding: 3px 14px;
 	width: 110px;
 	height: 38px;
 	font: inherit;
@@ -501,9 +508,9 @@ input[name="checkout-date"]{
 	width: 23px;
 	height: 34px;
 }
-/*Что-nо поменяла, что сместило плюс на следующую строку.
-А теперь они совсем пропали.
-Совсем не могу разобраться как его вернуть в инпут.*/
+/*Что-то поменяла, что сместило плюс на следующую строку.
+А теперь он совсем пропал.
+Никак не могу разобраться как его вернуть в инпут.*/
 /*.plus-children{
 	position: absolute;
 	top: 196px;
@@ -573,10 +580,10 @@ footer .content{
 	padding: 40px 0;
 	font-weight: bold;
 	font-size: 21px;
-	/*Не применился цвет.*/
+}
+.hashtag a{
 	color: #000000;
 }
-
 .social-link{
 	display: block;
 	margin: 0 auto;
@@ -770,10 +777,6 @@ input[type="checkbox"]
 		width: 22px;
 		height: 22px;
 	}
-/*Закомментированные стили для чекбокса ниже 
-добавили чекбоксы в соответствии с мактом, 
-но неподвижные. Стили выше не сработали.*/
-
 /*.checkbox-icon::after{
 	content: "";
 	position: absolute;
