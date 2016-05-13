@@ -1,0 +1,40 @@
+.minus, .minus_hvr, .minus_down, .plus, .plus_hvr, .plus_down{
+	background: url(sprites.png) no-repeat;
+}
+
+.minus{
+	background-position: -19.015625px -23px ;
+	width: 12px;
+	height: 3px;
+}
+
+.minus_hvr{
+	background-position: -19px -71px ;
+	width: 12px;
+	height: 3px;
+}
+
+.minus_down{
+	background-position: -19.015625px -120.99998474121094px ;
+	width: 12px;
+	height: 3px;
+}
+
+.plus{
+	background-position: -18px -164.00001525878906px ;
+	width: 11px;
+	height: 11px;
+}
+
+.plus_hvr{
+	background-position: -20.015625px -219.00001525878906px ;
+	width: 11px;
+	height: 11px;
+}
+
+.plus_down{
+	background-position: -19.015625px -267.99998474121094px ;
+	width: 11px;
+	height: 11px;
+}
+
