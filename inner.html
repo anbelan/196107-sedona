@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Жильё Седона</title>
 	<link href="css/style.css" rel="stylesheet">
+	<link href="https//fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 				<form class="search row" action="#" method="get">  
 					<div class="column-double">
 						<fieldset class="first-form">
-							<legend class="search-first">Инфраструктура:
+							<legend class="checkbox-title-first">Инфраструктура:
 							</legend>
 							<label class="search-label pool">
 								<input type="checkbox" name="option1" checked>
@@ -49,7 +50,7 @@
 						</fieldset>
 
 						<fieldset class="second-form">
-							<legend class="search-second">
+							<legend class="checkbox-title-second">
 							Тип жилья:
 							</legend>
 							<label class="search-label hotel">
@@ -73,20 +74,28 @@
 						</fieldset>
 					</div>
 
-					<div class="column">
-						<fieldset class="third-form">
-							<legend class="search-third">Стоимость в сутки (р)</legend>
-							<label class="search-span">
+					<div class="column filter-range">
+						<div class="range-title">Стоимость в сутки (р)
+						</div>
+						<div class="span-price">
+							<label class="min-price">от 
+								<input type="text" name="min-price" value="0">
 							</label>
-							<!--Java script-->
-							<div class="span">
-								<span class="span-price min">от 0</span>
-								<span class="separator">|</span>
-								<span class="span-price max">до 3000</span>
+							<label class="max-price">до 
+								<input type="text" name="max-price" value="3000">
+							</label>
+						</div>
+						<div class="range">
+							<div class="scale">
+								<div class="bar">
+								</div>
 							</div>
-							<input type="range" name="price" min="0" max="3000">
-						</fieldset>
-						<input class="search-hotel-btn" type="submit" value="Показать">
+							<div class="range-toggle range-toggle-min">
+							</div>
+							<div class="range-toggle range-toggle-max">
+							</div>
+						</div>
+						<button class="search-hotel-btn" type="submit">Показать</button>
 					</div>
 				</form>
 				
