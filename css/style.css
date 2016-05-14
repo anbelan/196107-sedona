@@ -334,8 +334,11 @@ li{
 .search-card input{
 	position: relative;
 	z-index: 4;
-	font: inherit;
-	color: inherit;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 14px;
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: bold;
 	background-color: #f2f2f2;
 	outline: 2px solid #f2f2f2;
 }
@@ -403,7 +406,6 @@ li{
 .search-number{
 	display: inline-block;
 }
-
 .search-data-number{
 	padding: 0 25px;
 	width: 70px;
@@ -419,10 +421,9 @@ li{
 	padding-left: 50px;
 	padding-right: 24px;
 }
-/.symbols{
+.symbols{
 	display: inline-block;
 	background-color: #f2f2f2;
-	/*padding: 19px 17px;*/
 }
 .minus-adults{
 	position: absolute;
@@ -590,7 +591,7 @@ footer .content{
 	background-color: #5496bd;
 }
 .social-link{
-	display: block;
+	display: inline-block;
 	margin: 0 auto;
 	width: 46px;
 	height: 48px;
@@ -781,17 +782,6 @@ input[type="checkbox"]
 		width: 22px;
 		height: 22px;
 	}
-/*.checkbox-icon::after{
-	content: "";
-	position: absolute;
-	padding-left: 30px;
-}
-.checkbox{
-	position: absolute;
-	z-index: 4;
-	background-position: -26px -63px;
-	width: 22px;
-	height: 22px;*/
 }
 .checkbox:hover{
 	background-position: -77px -64px;
@@ -808,25 +798,6 @@ input[type="checkbox"]
 	display: block;
 	padding-right: 148px;
 }
-/*
-.pool{
-	padding: 17px 0 0 23px;
-}
-.parking{
-	padding: 20px 0 0 32px;
-}
-.internet{
-	padding: 20px 0 0 0;
-}
-.hotel{
-	padding: 22px 0 0 99px;
-}
-.motel{
-	padding: 20px 0 0 74px;
-}
-.apartaments{
-	padding: 20px 0 0 118px;
-}*/
 .filter-range{
 	width: 328px;
 	/*margin: 50px auto;*/
