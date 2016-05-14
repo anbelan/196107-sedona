@@ -9,14 +9,7 @@
        url("../fonts/web/ptsansbold.woff") format("woff"),
        url("../fonts/web/ptsansbold.woff2") format("woff2");
 }
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+
 body {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: normal;
@@ -30,6 +23,12 @@ body {
 h1 {
 	font-weight: bold;
 	font-size: 21px; 
+	line-height: 26px;
+}
+h2{
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 21px;
 	line-height: 26px;
 }
 header{
@@ -97,7 +96,13 @@ img{
 .column {
   float: left;
   width: 33.33%;
+  box-sizing: border-box;
   /*outline: 2px solid yellow;*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 .column-double {
   width: 66.66%;
@@ -143,9 +148,9 @@ li{
 .nav-information{
 	margin-right: 3px;
 }
-/*.nav-photo{
+.nav-photo{
 	margin-left: 4px;
-}*/
+}
 .nav-map{
 	margin-left: 2px;
 	letter-spacing: 0.5px;
@@ -160,9 +165,10 @@ li{
 	color: #000000;
 }
 .decignation{
-	margin-top: 54px;
-	margin-bottom: 31px;
-	padding: 0 300px;
+	width: 500px;
+	text-align: center;
+	padding: 45px 0;
+	margin: 0 auto;
 }
 .decignation-content{
 	margin-bottom: 53px;
@@ -176,17 +182,12 @@ li{
 .entertainment{
 	background-color: #81b3d2;
 	color: #ffffff;
+	overflow: hidden;
 }
-/*Добавила паддинги к обертке колонки -
-- всё увеличилось до размеров страницы. 
-Не могу понять в чем причина. 
-Из-за установленной ширины?
-Тогда не знаю как это исправить.
-Пока поставила теги <br> по тексту.*/
-.description-wrapper{
-    /*padding-left: 50px;
-    padding-right: 50px;
-    margin: 0 auto;*/
+.description-wrapper,
+.entertainment-wrapper{
+	padding: 0 50px;
+    box-sizing: border-box;
 }
 .description-title{
 	margin-top: 55px;
@@ -196,12 +197,6 @@ li{
 .entertainment-title{
 	font-weight: bold;
     font-size: 21px;
-}
-/*См комментарий выше*/
-.entertainment-wrapper{
-	/*padding-top: 56px;
-	padding-left: 38px;
-	padding-right: 38px;*/
 }
 .entertainment-title{
 	margin-top: 57px;
@@ -214,102 +209,84 @@ li{
 	margin-top: 24px;	
 }
 .services{
-	margin-bottom: 56px;
+	padding-bottom: 58px;
+}
+.services-item{
+	padding: 163px 50px 24px;
+	margin: 0 auto;
 }
 .services-title{
-	padding-top: 103px;
+	position: relative;
 	font-weight: bold;
 	font-size: 21px;
 }
 .services-content{
-	padding: 26px 50px;
+	padding-top: 24px;
 	margin: 0 auto;
 }
-.services-title:before{
+.services-title::before{
 	content: "";
 	position: absolute;
-	padding-top: 210px;
-}
-.sprite{
-	margin-left: auto;
-	margin-right: auto;
-	background-repeat: no-repeat;
+	/*Для top размер -135 нормальный или все таки 
+	padding-top: 163px; добавить .services-title 
+	вместо .services-item*/
+	top: -135px;
+	left: 112px;
+	background-image: url("../img/sprites.png");
+	width: 112px;
+	height: 76px;
 }
 .house{
-	background-image: url("../img/sprites.png");
 	background-position: 0 -4px;
-	width: 75px;
-	/*height: 72px;*/
-	margin-top: 60px;
 }
+/*Не применяутся position для burger и present, 
+если все данные, кроме position прописываются в ::before.*/
 .burger{
-	background-image: url("../img/sprites.png");
 	background-position: -114px -6px;
-	width: 74px;
-	/*height: 70px;*/
-	margin-top: 60px;
 }
 .present{
-	background-image: url("../img/sprites.png");
-	/*Верхняя часть картинки скрылась при -5px 
-	в свойстве background-position.*/
 	background-position: -197px -5px; 
-	width: 112px;
-	/*height: 76px;*/
-	margin-top: 61px;
+}
+.causes-item{
+	padding: 0 60px;
 }
 .causes{
 	background-color: #eeeeee;
-	padding-bottom: 46px;
+	padding-top: 51px;
+	padding-bottom: 54px;
 }
 .causes-title{
 	font-weight: bold;
 	font-size: 21px;
-	padding-top: 51px;
-	padding-bottom: 25px;
+	padding: 0 80px 25px;
 }
-.causes-square{
-	padding-left: 100px;
-	padding-right: 100px;
+.causes-content{
+	margin: 0 auto;
+	padding-top: 8px;
 }
-.causes-road{
-	padding-left: 150px;
-	padding-right: 150px;
-}
-.causes-tourists{
-	padding-left: 150px;
-	padding-right: 150px;
-}
-.causes-content-square{
-	padding: 10px 71px 0px;
-}
-.causes-content-road{
-	padding: 10px 61px 0px;
-}
-.causes-content-tourists{
-	padding: 10px 61px 0px;
+.search-order{
+	padding: 50px 0;
 }
 .order-header {
-	font-weight: bold;
 	font-size: 30px; 
 	line-height: 24px;
-	padding: 35px 0 5px;
+	padding-bottom: 30px;
 }
 .order-content{
-	padding: 0;
 	margin: 0;
 }
 .order-content-2{
-	padding-bottom: 34px;
 	margin-top: 5px;
+	margin-bottom: 0;
 }
 .search-title{
 	background-color: #766357;
 	color: #ffffff;
+	font-size: 21px;
+	line-height: 26px;
 	margin: 0 316px;
 	padding: 33px 0;
 }
-
 /*Всплывающее окно.*/
 .popup{
 	position: absolute;
@@ -355,6 +332,10 @@ li{
 	margin-top: 55px;
 }
 .search-card input{
+	position: relative;
+	z-index: 4;
+	font: inherit;
+	color: inherit;
 	background-color: #f2f2f2;
 	outline: 2px solid #f2f2f2;
 }
@@ -364,7 +345,7 @@ li{
 .search-card input:active{
 	background-color: #ffffff;
 }
-.search-item{
+.search-date{
 	text-align: left;
 	padding-bottom: 32px;
 	padding-left: 54px;
@@ -377,43 +358,9 @@ li{
 	border: none;
 }
 .search-data-date{
-	width: 331px;
+	width: 300px;
 	height: 35px;
-	/*Не совпадает текст с макетом.*/
 	padding-left: 13px;
-}
-	.search-data-date:focus{
-		background-color: green; /*Поменять*/
-	}
-	/*Не получается календарик расположить на инпуте.*/
-/*.search-data-date::after{
-	content: "";
-	position: relative;
-	z-index: 4
-	background-color: #f2f2f2;
-}*/
-input[name="checkin-date"]{
-	position: relative;
-	z-index: 4
-	margin-left: 18px;
-	margin-right: 0px;
-	font: inherit;
-	color: inherit;
-	width: 331px;
-	height: 42px;
-	padding-left: 10px;
-	padding-right: 30px;
-}
-input[name="checkout-date"]{
-	position: relative;
-	z-index: 4
-	margin-left: 15px;
-	margin-right: 0;
-	font: inherit;
-	color: inherit;
-	width: 331px;
-	height: 42px;
-	padding-left: 10px;
 	padding-right: 30px;
 }
 /*версия календаря, 
@@ -422,26 +369,27 @@ input[name="checkout-date"]{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites4.png");
+	width: 26px;
+	height: 36px;
+	right: 74px;
+	background-color: #f2f2f2;
 	background-position: 279px -14px;
-	width: 21px;
-	height: 22px;
 	cursor: pointer;
-	background-repeat: no-repeat;
 }
 /*версия календаря по наведению мышки*/
 .calendar:hover{
 	background-image: url("../img/sprites4.png");
 	background-position: 279px -63px;
-	width: 21px;
-	height: 22px;
+	width: 26px;
+	height: 36px;
 }
 /*версия календаря в момент, 
 когда пользователь на него кликнул*/
 .calendar:active{
 	background-image: url("../img/sprites4.png");
 	background-position: -279px -114px;
-	width: 21px;
-	height: 22px;
+	width: 26px;
+	height: 36px;
 }
 .search-data{
 	font-weight: bold;
@@ -457,25 +405,15 @@ input[name="checkout-date"]{
 }
 
 .search-data-number{
-	position: relative;
-	z-index: 7;
-	padding: 3px 14px;
-	width: 110px;
+	padding: 0 25px;
+	width: 70px;
 	height: 38px;
-	font: inherit;
-	color: inherit;
 	text-align: center;
 	font-weight: bold;
 }
-.minus-icon::before,
-.plus-icon::after{
-	content: "";
-	position: absolute;
-
-}
 .adults{
 	padding-left: 54px;
-	padding-right: 40px;
+	padding-right: 26px;
 }
 .children{
 	padding-left: 50px;
@@ -486,62 +424,100 @@ input[name="checkout-date"]{
 	background-color: #f2f2f2;
 	/*padding: 19px 17px;*/
 }
-.minus{
+.minus-adults{
 	position: absolute;
-	z-index: 8;
+	z-index: 5;
 	background-image: url("../img/sprites5.png");
 	background-position: -14px -3px;
 	width: 23px;
 	height: 34px;
+	left: 175px;
 	cursor: pointer;
-	background-repeat: no-repeat;
 }
-.minus:hover{
+.minus-adults:hover{
 	background-image: url("../img/sprites5.png");
 	background-position: -14px -51px;
 	width: 23px;
 	height: 34px;
+	left: 175px;
 }
-.minus:active{
+.minus-adults:active{
 	background-image: url("../img/sprites5.png");
 	background-position: -14px -99px;
 	width: 23px;
 	height: 34px;
+	left: 175px;
 }
-/*Что-то поменяла, что сместило плюс на следующую строку.
-А теперь он совсем пропал.
-Никак не могу разобраться как его вернуть в инпут.*/
-/*.plus-children{
+.minus-children{
 	position: absolute;
-	top: 196px;
-	left: 470px;
-}
-.plus-adults{
-	position: absolute;
-	top: 196px;
-	left: 200px;
-}*/
-}
-.plus{
-	position: absolute;
-	z-index: 8;
+	z-index: 5;
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -144px;
-	width: 28px;
-	height: 40px;
-	background-color: green;
+	background-position: -14px -3px;
+	width: 23px;
+	height: 34px;
+	right: 142px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 }
-.plus:hover{
+.minus-children:hover{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -199px;
+	background-position: -14px -51px;
+	width: 23px;
+	height: 34px;
+	right: 142px;
+}
+.minus-children:active{
+	background-image: url("../img/sprites5.png");
+	background-position: -14px -99px;
+	width: 23px;
+	height: 34px;
+	right: 142px;
+}
+.plus-adults{
+	position: absolute;
+	z-index: 5;
+	background-image: url("../img/sprites5.png");
+	background-position: -4px -147px;
+	width: 28px;
+	height: 40px;
+	top: 189px;
+	left: 240px;
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+.plus-adults:hover{
+	background-image: url("../img/sprites5.png");
+	background-position: -4px -201px;
 	width: 28px;
 	height: 40px;
 }
-.plus:active{
+.plus-adults:active{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -247px;
+	background-position: -4px -250px;
+	width: 28px;
+	height: 40px;
+}
+.plus-children{
+	position: absolute;
+	z-index: 5;
+	background-image: url("../img/sprites5.png");
+	background-position: -4px -147px;
+	width: 28px;
+	height: 40px;
+	top: 189px;
+	right: 63px;
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+.plus-children:hover{
+	background-image: url("../img/sprites5.png");
+	background-position: -4px -201px;
+	width: 28px;
+	height: 40px;
+}
+.plus-children:active{
+	background-image: url("../img/sprites5.png");
+	background-position: -4px -250px;
 	width: 28px;
 	height: 40px;
 }

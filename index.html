@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<title>Главная страница Седона</title>
 	<link href="css/style.css" rel="stylesheet">
+	<link href="#" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
 						<li class="nav-item"><a class="nav-map" href="#">Карта штата</a></li>
 						<li class="nav-item"><a class="nav-hotels" href="inner.html">Гостиницы</a></li>
 					</ul>
-					<a class="nav-logo" href="file:///Users/annabelan/Documents/196107-sedona/index.html#"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
+					<a class="nav-logo" href="index.html"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
 				</nav>
 		</header>
 
@@ -28,15 +30,16 @@
 			</div>
 				<!--Текст заголовка не стыкуется с макетом в части. 
 				Свойство letter-spacing не помогло.-->
-				<h1 class="decignation"><span class="header-spacing">Седона - небольшой городок в Аризоне,</span> заслуживающий большего!</h1> 
+				<h1 class="decignation">Седона &#8212; небольшой городок в Аризоне, заслуживающий большего!</h1> 
 				<p class="decignation-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 				
 				<div class="description row">
 					<div class="column description-wrapper">
+						<!--Нормально вставлять в description-title тег <br> или ему свои паддинги лучше задать?-->
 						<div class="description-title">Настоящий<br> городок</div>
 						<span class="description-number">&mdash; №1 &mdash;</span>
 						<!--Верхняя часть текста не совпадает с макетом.-->
-						<p class="description-content">Седона - не аттракцион для туристов.<br> Там течет своя жизнь</p>
+						<p class="description-content">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
 					</div>
 					<div class="column-double">
 						<div class="img-wrap-view">
@@ -47,15 +50,15 @@
 				
 				<ul class="services row">
 					<li class="services-item column">
-						<div class="services-title sprite house">Жилье</div>
+						<div class="services-title house">Жилье</div>
 						<p class="services-content">Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
 					</li>
 					<li class="services-item column">
-						<div class="services-title sprite burger">Еда</div>
+						<div class="services-title burger">Еда</div>
 						<p class="services-content">Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
 					</li>
 					<li class="services-item column">
-						<div class="services-title sprite present">Сувениры</div>
+						<div class="services-title present">Сувениры</div>
 						<p class="services-content">Не только китайского, но и местного производства!</p>
 					</li>
 				</ul>
@@ -67,9 +70,10 @@
 						</div>
 					</div>
 					<div class="column entertainment-wrapper">
+					<!--Нормально вставлять в description-title тег <br> или ему свои паддинги лучше задать?-->
 						<div class="entertainment-title">Там есть<br> мост дьявола</div>
 						<span class="entertainment-number">&mdash; №2 &mdash;</span>
-						<p class="entertainment-content">Да, по нему можно пройти! Если конечно<br> Вы осмелитесь</p>
+						<p class="entertainment-content">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
 					</div>
 				</div>
 
@@ -96,35 +100,35 @@
 					<div class="search">
 						<div class="search-order">
 							<h2 class="order-header">Заинтересовались?</h2>
+							<!--Текст ниже лучше разделить тегом <br> или разделить на два абзаца, как сделано?-->
 							<p class="order-content">Укажите предполагаемые даты поездки,</p>
 							<p class="order-content-2">и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
 						</div>
 						
-						<a class="search-form-btn" href="#"><h2 class="search-title">Поиск гостиницы в Седоне
-						</h2></a>
+						<a class="search-form-btn" href="#"><div class="search-title">Поиск гостиницы в Седоне
+						</div></a>
 
 						<div class="popup">
 							<button class="popup-close" type="button" title="Закрыть">Закрыть
 							</button>
 							<form class="search-block" action="#" method="post">
 								<div class="search-card">
-									<div class="search-item date check-in">
+									<div class="search-date date check-in">
 										<label class="search-data">
 										Дата заезда:
 										</label>
-										<input class="calendar search-data-date" type="text" name="checkin-date" value="24 апреля 2016">
-										<!--<span class="calendar">
-										</span>-->
+										<input class="search-data-date" type="text" name="checkin-date" value="24 апреля 2016">
+										<span class="calendar">
+										</span>
 									</div>
 
-									<div class="search-item date check-out">
+									<div class="search-date date check-out">
 										<label class="search-data">
 										Дата выезда:
 										</label>
-										<input class="calendar search-data-date" type="text" name="checkout-date" value="4 июля 2016">
-										<!--Можно ли иконку календарика поместить в инпут добавлением в него класса? Или нужно обязательно выносить ее в отдельные спаны?-->
-										<!--<span class="calendar">
-										</span>-->
+										<input class="search-data-date" type="text" name="checkout-date" value="4 июля 2016">
+										<span class="calendar">
+										</span>
 									</div>
 
 									<div class="search-people">
@@ -132,21 +136,22 @@
 											<label class="search-data adults">
 											Взрослые:
 											</label>
-											<span class="symbols minus"></span>
-											<input class="symbols minus-icon plus-icon search-data-number" type="text"  name="adults" value="2">
-											<span class="symbols plus plus-adults"></span>
+											<span class="symbols minus-adults"></span>
+											<input class="symbols search-data-number" type="text"  name="adults" value="2">
+											<span class="symbols plus-adults"></span>
 										</div>
 
 										<div class="search-number">
 											<label class="search-data children">
 											Дети:</label>
-											<span class="symbols minus"></span>
-											<input class="symbols minus-icon plus-icon search-data-number" type="text" name="children"  value="0">
-											<span class="symbols plus plus-children"></span>
+											<span class="symbols minus-children"></span>
+											<input class="symbols search-data-number" type="text" name="children"  value="0">
+											<span class="symbols plus-children"></span>
 										</div>
 									</div>
 								</div>
-								<a href="result.html"><input class="search-btn" type="submit" value="Найти">
+								<!--Видимо я не поняла куда нужно добавить название result.-->
+								<a href="nothing.html"><input class="search-btn" type="submit" value="Найти">
 								</a>
 							</form>
 						</div>
