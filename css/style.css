@@ -832,7 +832,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 	top: -9px;
 	width: 4px;
 	height: 4px;
-	/*Свойство background-color не подключилось.*/
 	background-color: #ababab;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
@@ -869,6 +868,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .search-line{
 	margin: 39px 0;
+	border-bottom: 1px solid #cccccc;
 }
 .result{
 	display: inline-block;
@@ -881,7 +881,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 	margin: 0 46px 0 0;
 	padding-bottom: 29px;
 	/* Ошибка! См ниже */
-	border-bottom: 1px solid #cccccc;
 }
 .sorting{
 	font-size: 12px;
