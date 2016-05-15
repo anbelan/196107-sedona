@@ -30,51 +30,34 @@
 			<div class="main-container">
 				<form class="search row" action="search.html" method="get">  
 					<div class="column-double">
+
 						<fieldset class="first-form">
 							<legend class="checkbox-title-first">Инфраструктура:
 							</legend>
-							<label class="search-label">
-								<input type="checkbox" name="option1" checked>
-								<span class="checkbox icon-checked">
-								</span>
-								<span class="options pool">Бассейн</span>
+							<input type="checkbox" name="option-pool" id="search-option-pool" checked>
+							<label for="search-option-pool" class="search-label">Бассейн
 							</label>
-							<label class="search-label">
-								<input type="checkbox" name="option2">
-								<span class="checkbox checkbox-icon">
-								</span>
-								<span class="options parking">Парковка</span>
-							</label>
-							<label class="search-label">
-								<input type="checkbox" name="option3">
-								<span class="checkbox checkbox-icon">
-								</span>
-								<span class="options internet">Wi-Fi</span>
-							</label>
+							<input type="checkbox" name="option-parking" id="search-option-parking">
+                           	<label for="search-option-parking" class="search-label">Парковка
+                           	</label>
+							<input type="checkbox" name="option-internet"id="search-option-internet">
+                           	<label for="search-option-internet" class="search-label">Wi-Fi
+                           	</label>
 						</fieldset>
 
 						<fieldset class="second-form">
 							<legend class="checkbox-title-second">
 							Тип жилья:
 							</legend>
-							<label class="search-label">
-								<input type="checkbox" name="option4" checked>
-								<span class="checkbox icon-checked">
-								</span>
-								<span class="options hotel">Гостиница</span>
-							</label>
-							<label class="search-label">
-								<input type="checkbox" name="option5" checked>
-								<span class="checkbox icon-checked">
-								</span>
-								<span class="options motel">Мотель</span>
-							</label>
-							<label class="search-label">
-								<input type="checkbox" name="option6" checked>
-								<span class="checkbox icon-checked">
-								</span>
-								<span class="options apartaments">Апартаменты</span>
-							</label>
+							<input type="checkbox" name="option-hotel" id="search-option-hotel" checked>
+                            <label for="search-option-hotel" class="search-label">Гостиница
+                            </label>
+							<input type="checkbox" name="option-motel" id="search-option-motel" checked>
+                            <label for="search-option-motel" class="search-label">Мотель
+                            </label>
+							<input type="checkbox" name="option-apartaments" id="search-option-apartaments" checked>
+                            <label for="search-option-apartaments" class="search-label">Апартаменты
+                            </label>
 						</fieldset>
 					</div>
 
@@ -202,7 +185,7 @@
 		</main>
 
 		<footer>
-			<div class="row">
+			<div class="content row">
 				<section class="column hashtag">					
 				<a href="#">#visitsedona</a>
 				</section>

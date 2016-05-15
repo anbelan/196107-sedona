@@ -70,22 +70,7 @@ img{
 	margin: 0 auto;
 	box-shadow: 0 0 30px 0px #ccc;
 }
-
-/* .row {
-  font-size: 0;
-}
-.column {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.33%;
-  font-size: 30px;
-  outline: 2px solid lightgreen;
-} */
 .row {
-/*   list-style: none;
-  margin: 0;
-  padding: 0; */
-  /*outline: 2px solid red;*/
   margin: 0;
 }
 .row::after {
@@ -97,18 +82,16 @@ img{
   float: left;
   width: 33.33%;
   box-sizing: border-box;
-  /*outline: 2px solid yellow;*/
+}
+.column-double {
+  width: 66.66%;
+  float: left;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-.column-double {
-  width: 66.66%;
-  float: left;
-}
-
 fieldset{
 	border: none;
 	padding: 0;
@@ -129,7 +112,7 @@ li{
 .nav-list {
 	list-style: none;
  	margin: 0;
- 	padding: 12px 0 14px;
+ 	padding: 13px 0 12px;
  	font-size: 0;
 }
 .nav-item {
@@ -149,11 +132,10 @@ li{
 	margin-right: 3px;
 }
 .nav-photo{
-	margin-left: 4px;
+	margin-left: 2px;
 }
 .nav-map{
-	margin-left: 2px;
-	letter-spacing: 0.5px;
+	margin-left: 4px;
 }
 .nav-hotels{
 	margin-left: 17px;
@@ -167,16 +149,11 @@ li{
 .decignation{
 	width: 500px;
 	text-align: center;
-	padding: 45px 0;
+	padding: 55px 0 18px;
 	margin: 0 auto;
 }
 .decignation-content{
-	margin-bottom: 53px;
-}
-/*Текст заголовка не стыкуется с макетом в части. 
-Свойство letter-spacing не помогло.*/
-.header-spacing{
-	letter-spacing: 0.3px;
+	margin-bottom: 52px;
 }
 .description, 
 .entertainment{
@@ -186,27 +163,27 @@ li{
 }
 .description-wrapper,
 .entertainment-wrapper{
-	padding: 0 50px;
+	padding: 0 47px;
     box-sizing: border-box;
-}
-.description-title{
-	margin-top: 55px;
-	margin-bottom: 23px;
 }
 .description-title, 
 .entertainment-title{
 	font-weight: bold;
     font-size: 21px;
 }
-.entertainment-title{
+.description-title{
 	margin-top: 57px;
-	margin-bottom: 26px;
+	margin-bottom: 24px;
+}
+.entertainment-title{
+	margin-top: 58px;
+	margin-bottom: 25px;
 }
 .description-content{
-	margin-top: 21px;
+	margin-top: 23px;
 }
 .entertainment-content{
-	margin-top: 24px;	
+	margin-top: 23px;	
 }
 .services{
 	padding-bottom: 58px;
@@ -221,39 +198,43 @@ li{
 	font-size: 21px;
 }
 .services-content{
-	padding-top: 24px;
+	padding-top: 25px;
 	margin: 0 auto;
 }
 .services-title::before{
 	content: "";
 	position: absolute;
-	/*Для top размер -135 нормальный или все таки 
+	/* Для top размер -107 нормальный или лучше 
 	padding-top: 163px; добавить .services-title 
-	вместо .services-item*/
-	top: -135px;
+	вместо .services-item? */
+	top: -107px;
 	left: 112px;
 	background-image: url("../img/sprites.png");
-	width: 112px;
+	width: 88px;
 	height: 76px;
 }
-.house{
-	background-position: 0 -4px;
+.house:before{
+	width: 75px;
+	height: 76px;
+	background-position: 0 0;
 }
-/*Не применяутся position для burger и present, 
-если все данные, кроме position прописываются в ::before.*/
-.burger{
-	background-position: -114px -6px;
+.burger:before{
+	background-position: -113px 0;
+	width: 74px;
+	height: 76px;
 }
-.present{
-	background-position: -197px -5px; 
+.present:before{
+	background-position: -214px 0; 
+	width: 72px;
+	height: 78px;
 }
 .causes-item{
 	padding: 0 60px;
 }
 .causes{
 	background-color: #eeeeee;
-	padding-top: 51px;
-	padding-bottom: 54px;
+	padding-top: 50px;
+	padding-bottom: 58px;
 }
 .causes-title{
 	font-weight: bold;
@@ -262,22 +243,26 @@ li{
 }
 .causes-content{
 	margin: 0 auto;
-	padding-top: 8px;
+	padding-top: 23px;
 }
 .search-order{
-	padding: 50px 0;
+	padding: 58px 0 47px;
 }
 .order-header {
 	font-size: 30px; 
 	line-height: 24px;
-	padding-bottom: 30px;
+	padding-bottom: 29px;
 }
 .order-content{
 	margin: 0;
+	line-height: 24px;
 }
+/* Или в данном случае лучше использовать 
+тег <br> и объединить два абзаца? */
 .order-content-2{
-	margin-top: 5px;
+	margin-top: 0;
 	margin-bottom: 0;
+	line-height: 24px;
 }
 .search-title{
 	background-color: #766357;
@@ -285,9 +270,9 @@ li{
 	font-size: 21px;
 	line-height: 26px;
 	margin: 0 316px;
-	padding: 33px 0;
+	padding: 30px 0;
 }
-/*Всплывающее окно.*/
+/* Всплывающее окно */
 .popup{
 	position: absolute;
 	z-index: 3;
@@ -303,8 +288,8 @@ li{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 22px;
-	height: 22px;
+	width: 18px;
+	height: 19px;
 	font-size: 0;
 	background-color: #ffffff;
 	border: 0;
@@ -320,7 +305,7 @@ li{
 	background-color: #766357;
 	border-radius: 1px;
 	top: 10px;
-	left: 2px;
+	left: 6px;
 }
 .popup-close::before{
 	transform: rotate(45deg);
@@ -329,7 +314,40 @@ li{
 	transform: rotate(-45deg);
 }
 .search-card{
-	margin-top: 55px;
+	margin-top: 56px;
+	height: 172px;
+	margin-bottom: 53px;
+}
+.check-in{
+	padding-bottom: 31px;
+	padding-left: 56px;
+}
+.check-out{
+	padding-bottom: 33px;
+	padding-left: 55px;
+}
+.check-in label{
+	margin-right: 19px;
+}
+.check-out label{
+	margin-right: 15px;
+}
+.search-date{
+	text-align: left;
+}
+.search-data-date, 
+.search-data-number{
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
+	border: none;
+}
+.search-data-date{
+	width: 296px;
+	height: 31px;
+	padding-left: 12px;
+	padding-top: 4px;
+	padding-right: 35px;
 }
 .search-card input{
 	position: relative;
@@ -348,51 +366,39 @@ li{
 .search-card input:active{
 	background-color: #ffffff;
 }
-.search-date{
-	text-align: left;
-	padding-bottom: 32px;
-	padding-left: 54px;
+/* Стиль для сообщения об ошибке формы */
+.search form label.error{
+	display: block;
+	position: absolute;
+	padding-left: 89px;
 }
-.search-data-date, 
-.search-data-number{
-	font-weight: bold;
-	font-size: 13px;
-	text-transform: uppercase;
-	border: none;
-}
-.search-data-date{
-	width: 300px;
-	height: 35px;
-	padding-left: 13px;
-	padding-right: 30px;
-}
-/*версия календаря, 
-когда пользователь на него не кликал*/
+/* Версия календаря, когда 
+пользователь на него не кликал */
 .calendar{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites4.png");
-	width: 26px;
-	height: 36px;
-	right: 74px;
+	width: 35px;
+	height: 35px;
+	right: 55px;
 	background-color: #f2f2f2;
-	background-position: 279px -14px;
+	background-position: 282px -19px;
 	cursor: pointer;
 }
-/*версия календаря по наведению мышки*/
+/* Версия календаря по наведению мышки */
 .calendar:hover{
 	background-image: url("../img/sprites4.png");
-	background-position: 279px -63px;
-	width: 26px;
-	height: 36px;
+	background-position: 282px -68px;
+	width: 35px;
+	height: 35px;
 }
-/*версия календаря в момент, 
-когда пользователь на него кликнул*/
+/* Версия календаря в момент, когда п
+ользователь на него кликнул */
 .calendar:active{
 	background-image: url("../img/sprites4.png");
-	background-position: -279px -114px;
-	width: 26px;
-	height: 36px;
+	background-position: -282px -120px;
+	width: 35px;
+	height: 35px;
 }
 .search-data{
 	font-weight: bold;
@@ -408,119 +414,107 @@ li{
 }
 .search-data-number{
 	padding: 0 25px;
-	width: 70px;
-	height: 38px;
+	width: 61px;
+	height: 32px;
 	text-align: center;
 	font-weight: bold;
+	padding-top: 2px;
 }
 .adults{
-	padding-left: 54px;
-	padding-right: 26px;
+	padding-left: 55px;
+	margin-right: 39px;
 }
 .children{
-	padding-left: 50px;
-	padding-right: 24px;
+	padding-left: 51px;
+	margin-right: 24px;
 }
 .symbols{
 	display: inline-block;
 	background-color: #f2f2f2;
 }
+.minus-adults,
+.minus-adults:hover,
+.minus-adults:active,
+.minus-children,
+.minus-children:hover,
+.minus-children:active,
+.plus-adults,
+.plus-adults:hover,
+.plus-adults:active,
+.plus-children,
+.plus-children:hover,
+.plus-children:active{
+	width: 34px;
+	height: 34px;
+}
 .minus-adults{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -3px;
-	width: 23px;
-	height: 34px;
-	left: 175px;
+	background-position: -8px -7px;
+	left: 169px;
 	cursor: pointer;
 }
 .minus-adults:hover{
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -51px;
-	width: 23px;
-	height: 34px;
-	left: 175px;
+	background-position: -8px -55px;
 }
 .minus-adults:active{
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -99px;
-	width: 23px;
-	height: 34px;
-	left: 175px;
+	background-position: -8px -104px;
 }
 .minus-children{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -3px;
-	width: 23px;
-	height: 34px;
-	right: 142px;
+	background-position: -6px -7px;
+	right: 134px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 }
 .minus-children:hover{
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -51px;
-	width: 23px;
-	height: 34px;
-	right: 142px;
+	background-position: -6px -55px;
 }
 .minus-children:active{
 	background-image: url("../img/sprites5.png");
-	background-position: -14px -99px;
-	width: 23px;
-	height: 34px;
-	right: 142px;
+	background-position: -6px -104px;
 }
 .plus-adults{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -147px;
-	width: 28px;
-	height: 40px;
-	top: 189px;
-	left: 240px;
+	background-position: -8px -152px;
+	top: 192px;
+	left: 246px;
 	background-color: #f2f2f2;
 	cursor: pointer;
 }
 .plus-adults:hover{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -201px;
-	width: 28px;
-	height: 40px;
+	background-position: -11px -207px;
 }
 .plus-adults:active{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -250px;
-	width: 28px;
-	height: 40px;
+	background-position: -9px -255px;
 }
 .plus-children{
 	position: absolute;
 	z-index: 5;
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -147px;
-	width: 28px;
-	height: 40px;
-	top: 189px;
-	right: 63px;
+	background-position: -7px -152px;
+	top: 192px;
+	right: 56px;
 	background-color: #f2f2f2;
 	cursor: pointer;
 }
 .plus-children:hover{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -201px;
-	width: 28px;
-	height: 40px;
+	background-position: -10px -207px;
 }
 .plus-children:active{
 	background-image: url("../img/sprites5.png");
-	background-position: -4px -250px;
-	width: 28px;
-	height: 40px;
+	background-position: -8px -255px;
 }
 .search-btn{
 	color: #ffffff;
@@ -528,6 +522,7 @@ li{
 	padding: 17px 196px;
 	margin-bottom: 54px;
 	border: none;
+	font: inherit;
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 21px;
@@ -546,11 +541,13 @@ li{
 }
 footer{
 	position: relative;
+	margin: 0 auto;
 }
 footer .content{	
 	background-color: rgba(255, 255, 255, 0.9);
 	position: absolute;
 	width: 1200px;
+	height: 59px
 	bottom: 0;
 	padding: 30px 0;
 	margin: 0 auto;
@@ -568,13 +565,13 @@ footer .content{
 }
 .social-list{
 	position: absolute;
-	/*Отрицательное значение для top с
-	читается нормальным или лучше другим способом 
-	выровнять список? При установлении position: relative; 
-	для ul и position: absolut; для li теряются 
-	два первых li*/
-	top: -9px;
-	left: 125px;
+	/* Отрицательное значение для top считается нормальным 
+	или лучше другим способом выровнять список? 
+	При установлении position: relative; для ul 
+	и position: absolut; для li теряются 
+	два первых li */
+	top: -7px;
+	left: 124px;
 }
 .social-item{
 	display: inline-block;
@@ -603,23 +600,23 @@ footer .content{
 
 .twitter-btn{
 	background-image: url("../img/sprites.png");
-	background-position: -31px -100px;
+	background-position: -30px -98px;
 	width: 17px;
 	height: 15px;
 	margin-top: 15px;
 }
 .facebook-btn{
 	background-image: url("../img/sprites.png");
-	background-position: -88px -100px;
-	width: 10px;
-	height: 19px;
+	background-position: -86px -99px;
+	width: 14px;
+	height: 22px;
 	margin-top: 12px;
 }
 .youtube-btn{
 	background-image: url("../img/sprites.png");
-	background-position: -128px -100px;
-	width: 20px;
-	height: 16px;
+	background-position: -126px -98px;
+	width: 24px;
+	height: 20px;
 	margin-top: 15px;
 }
 .copyright{
@@ -630,27 +627,30 @@ footer .content{
 	display: inline-block;
 }
 .copyright-content{
-
+	padding-right: 9px;
+    padding-top: 21px;
+    margin: 0;
 }
 .copyright-btn{
 	position: absolute;
 	z-index: 3;
 	background-image: url("../img/sprites-html.png");
-	background-position: -19px -10px;
+	background-position: -18px 2px;
 	width: 113px;
-	height: 39px;
+	height: 52px;
+	right: 50px;
 }
 .copyright-btn:hover{
 	background-image: url("../img/sprites-html.png");
-	background-position: -19px -61px;
+	background-position: -18px -50px;
 	width: 113px;
-	height: 39px;
+	height: 52px;
 }
 .copyright-btn:active{
 	background-image: url("../img/sprites-html.png");
-	background-position: -20px -109px;
+	background-position: -19px -98px;
 	width: 113px;
-	height: 39px;
+	height: 52px;
 }
 
 
@@ -683,7 +683,7 @@ legend{
 	text-align: left;
 }
 .checkbox-title-second{
-	padding: 28px 115px 25px 0;
+	padding: 28px 115px 23px 0;
 	margin: 0;
 	text-align: left;
 }
@@ -697,107 +697,55 @@ legend{
 	padding-bottom: 26px;
 }
 input[type="checkbox"]{
-	display: none; /*Opacity - если не сработает display.*/
-	vertical-align: middle;
-	margin-right: 18px;
-	/*background: none;*/
+	display: none;
 }
-/*Нестандартные чекбоксы пустые.*/
-input[type="checkbox"] + .checkbox-icon{
+input[type="checkbox"] + label{
+	position: relative;
+	display: block;
+	padding-left: 40px;
+	padding-bottom: 24px;
+	line-height: 22px;
+	/*font-size: 40px;*/
+}
+input[type="checkbox"] + label:before{
+	content: "";
 	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
 	background-image: url("../img/sprites4.png");
 	background-position: -27px -178px;
 	width: 22px;
-	height: 22px;
-	
+	height: 22px;*/
 }
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::before,
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::after{
-		content: "";
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -27px -178px;
-		width: 22px;
-		height: 22px;
-	}
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::before{
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -27px -178px;
-		width: 22px;
-		height: 22px;
-	}
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::after{
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -23px -328px;
-		width: 26px;
-		height: 22px;
-	}
-/*Нестандартные чекбоксы отмеченные.*/
-input[type="checkbox"] + .icon-checked{
-	position: absolute;
+input[type="checkbox"]:checked + label::before{
 	background-image: url("../img/sprites4.png");
-	background-position: -23px -328px;		
-	width: 26px;
-	height: 22px;
-	
+	background-position: -23px -328px;
 }
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::before,
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::after{
-		content: "";
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -23px -328px;
-		width: 26px;
-		height: 22px;
-	}
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::before{
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -2px -328px;
-		width: 26px;
-		height: 22px;
-	}
-input[type="checkbox"]
-	:checked + .checkbox-icon
-	::after{
-		position: absolute;
-		background-image: url("../img/sprites4.png");
-		background-position: -27px -178px;
-		width: 22px;
-		height: 22px;
-	}
+input[type="checkbox"] + label:hover:before{
+	background-image: url("../img/sprites4.png");
+	background-position: -27px -227px;
 }
-.checkbox:hover{
-	background-position: -77px -64px;
-	width: 22px;
-	height: 22px;
+input[type="checkbox"]:checked + label:hover:before {
+	background-image: url("../img/sprites4.png");
+	background-position: -23px -377px;
 }
-.checkbox:active{
-	background-position: -126px -63px;
-	width: 22px;
-	height: 22px;
+input[type="checkbox"]:checked:disabled + label:before {
+	background-image: url("../img/sprites4.png");
+	background-position: -23px -427px;
 }
-.options{
+input[type="checkbox"]:disabled + label:before {
+	background-image: url("../img/sprites4.png");
+	background-position: -25px -277px;
+}
+.second-form{
+	padding-left: 121px;
+}
+/*.options{
 	padding-left: 40px;
 	display: block;
 	padding-right: 148px;
-}
+}*/
 .filter-range{
 	width: 328px;
 	/*margin: 50px auto;*/
@@ -880,6 +828,7 @@ input[type="checkbox"]
 	border-radius: 50%;
 	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
 	cursor: pointer;
+	box-sizing: content-box;
 }
 .range-toggle:hover{
 	background-color: #1c4f80;
@@ -908,37 +857,6 @@ input[type="checkbox"]
 	color: #000000;
 	background-color: #ffffff;
 }
-/*
-.span{
-	border: 2px solid #ffffff;
-	margin: 0 0 10px 34px;
-	padding: 3px 0;
-}
-.span-price{
-	cursor: pointer;
-}
-.min{
-	padding: 0 60px;
-}
-.max{
-	padding: 0 49px;
-}
-input[type="range"]{
-	width: 265px;
-}
-.search-hotel-btn{
-	border: 2px solid #ffffff;
-	padding: 10px 25px;
-	text-transform: uppercase;
-	background: transparent;
-	color: #ffffff;
-	/*shadow #886458*/
-/*}
-.search-hotel-btn:hover{
-	background-color: #ffffff;
-	color: #000000;
-	/*shadow #aaaaaa*/
-/*}*/
 .search-line{
 	margin: 59px 0;
 }
@@ -1006,7 +924,8 @@ input[type="range"]{
  	margin-top: 17px;
  	margin-bottom: 0;
  }
- .type, .price{
+ .type, 
+ .price{
  	padding-top: 9px;
  	padding-bottom: 20px;
  }

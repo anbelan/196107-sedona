@@ -19,7 +19,6 @@
 					<ul class="nav-list">
 						<li class="nav-item"><a class="nav-information" href="#">Информация</a></li>
 						<li class="nav-item"><a class="nav-photo" href="#">Фото и видео</a></li>
-						<!--Не совпадает текст с макетом.-->
 						<li class="nav-item"><a class="nav-map" href="#">Карта штата</a></li>
 						<li class="nav-item"><a class="nav-hotels" href="inner.html">Гостиницы</a></li>
 					</ul>
@@ -31,8 +30,6 @@
 			<div class="img-wrap">
 				<img src="img/welcome.jpg" width="1200" height="514" alt="Sedona">
 			</div>
-				<!--Текст заголовка не стыкуется с макетом в части. 
-				Свойство letter-spacing не помогло.-->
 				<h1 class="decignation">Седона &#8212; небольшой городок в Аризоне, заслуживающий большего!</h1> 
 				<p class="decignation-content">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 				
@@ -42,7 +39,7 @@
 						<div class="description-title">Настоящий<br> городок</div>
 						<span class="description-number">&mdash; №1 &mdash;</span>
 						<!--Верхняя часть текста не совпадает с макетом.-->
-						<p class="description-content">Седона - не аттракцион для туристов. Там течет своя жизнь</p>
+						<p class="description-content">Седона &#8211; не аттракцион для туристов. Там течет своя жизнь</p>
 					</div>
 					<div class="column-double">
 						<div class="img-wrap-view">
@@ -163,7 +160,15 @@
 
 		<footer>
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1046191.5589982112!2d-112.3157074821408!3d34.81568844742628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNg!5e0!3m2!1sru!2s!4v1463234047805" width="1200" height="592" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                	<div style='overflow:hidden;height:592px;width:1200px;'>
+                		<div id='gmap_canvas' style='height:592px;width:1200px;'>
+                		</div>
+                			<style>#gmap_canvas img{max-width:none!important;background:none!important}
+                			</style>
+                		</div>
+                <script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(34.8697395,-111.76098960000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(34.8697395,-111.76098960000002)});infowindow = new google.maps.InfoWindow({content:'Седона'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                </script>
 			</div>
 			<div class="content row">
 				<section class="column hashtag">
