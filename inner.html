@@ -7,9 +7,6 @@
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -28,7 +25,7 @@
 
 		<main>
 			<div class="main-container">
-				<form class="search row" action="search.html" method="get">  
+				<form class="search row" action="search.html" method="post">  
 					<div class="column-double">
 
 						<fieldset class="first-form">
@@ -40,7 +37,7 @@
 							<input type="checkbox" name="option-parking" id="search-option-parking">
                            	<label for="search-option-parking" class="search-label">Парковка
                            	</label>
-							<input type="checkbox" name="option-internet"id="search-option-internet">
+							<input type="checkbox" name="option-internet" id="search-option-internet">
                            	<label for="search-option-internet" class="search-label">Wi-Fi
                            	</label>
 						</fieldset>
@@ -157,7 +154,7 @@
 					</div>
 				</section>
 
-				<section class="hotels row">
+				<section class="hotels row indent">
 					<div class="column-double">
 						<div class="column-item hotels-image">
 							<img src="img/apartments.jpg" width="135" height="90" alt="Apartments">
@@ -186,8 +183,8 @@
 
 		<footer>
 			<div class="content row">
-				<section class="column hashtag">					
-				<a href="#">#visitsedona</a>
+				<section class="column hashtag">
+					<a href="#">#visitsedona</a>
 				</section>
 
 				<section class="column social">
@@ -213,12 +210,15 @@
 					</ul>
 				</section>
 
-				<section class="column copyright">					
-				<p class="copyright-content">Website by:</p>
-					<a class="copyright-btn" href="https://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="html academy"></a>
+				<section class="column copyright">
+					<p class="copyright-item copyright-content">Website by:</p>
+					<a class="copyright-item copyright-btn" href="https://htmlacademy.ru"></a>					
 				</section>
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

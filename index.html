@@ -7,9 +7,6 @@
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -111,41 +108,43 @@
 						<div class="popup">
 							<button class="popup-close" type="button" title="Закрыть">Закрыть
 							</button>
+							
+
 							<form class="search-block" action="result.html" method="post">
 								<div class="search-card">
 									<div class="search-date date check-in">
-										<label class="search-data">
+										<label class="search-data" for="checkin-argument">
 										Дата заезда:
 										</label>
-										<input class="search-data-date" type="text" name="checkin-date" value="24 апреля 2016">
+										<input class="search-data-date" type="text" name="checkin-date" id="checkin-argument" value="24 апреля 2016">
 										<span class="calendar">
 										</span>
 									</div>
 
 									<div class="search-date date check-out">
-										<label class="search-data">
+										<label class="search-data" for="checkout-argument">
 										Дата выезда:
 										</label>
-										<input class="search-data-date" type="text" name="checkout-date" value="4 июля 2016">
+										<input class="search-data-date" type="text" name="checkout-date" id="checkout-argument" value="4 июля 2016">
 										<span class="calendar">
 										</span>
 									</div>
 
 									<div class="search-people">
 										<div class="search-number">
-											<label class="search-data adults">
+											<label class="search-data adults" for="adults-argument">
 											Взрослые:
 											</label>
 											<span class="symbols minus-adults"></span>
-											<input class="symbols search-data-number" type="text"  name="adults" value="2">
+											<input class="symbols search-data-number" type="text"  name="adults" id="adults-argument" value="2">
 											<span class="symbols plus-adults"></span>
 										</div>
 
 										<div class="search-number">
-											<label class="search-data children">
+											<label class="search-data children" for="children-argument">
 											Дети:</label>
 											<span class="symbols minus-children"></span>
-											<input class="symbols search-data-number" type="text" name="children"  value="0">
+											<input class="symbols search-data-number" type="text" name="children" id="children-argument" value="0">
 											<span class="symbols plus-children"></span>
 										</div>
 									</div>
@@ -161,13 +160,11 @@
 		<footer>
 			<div class="map">
 				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                	<div style='overflow:hidden;height:592px;width:1200px;'>
-                		<div id='gmap_canvas' style='height:592px;width:1200px;'>
+                	<div class="map-wrapper">
+                		<div class="map-interactive" id="gmap_canvas">
                 		</div>
-                			<style>#gmap_canvas img{max-width:none!important;background:none!important}
-                			</style>
-                		</div>
-                <script type='text/javascript'>function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(34.8697395,-111.76098960000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(34.8697395,-111.76098960000002)});infowindow = new google.maps.InfoWindow({content:'Седона'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                	</div>
+                <script type="text/javascript">function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(34.8697395,-111.76098960000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(34.8697395,-111.76098960000002)});infowindow = new google.maps.InfoWindow({content:"Седона"});google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, "load", init_map);
                 </script>
 			</div>
 			<div class="content row">
@@ -205,5 +202,8 @@
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
