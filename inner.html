@@ -49,41 +49,42 @@
 							<input type="checkbox" name="option-hotel" id="search-option-hotel" checked>
                             <label for="search-option-hotel" class="search-label">Гостиница
                             </label>
-							<input type="checkbox" name="option-motel" id="search-option-motel" checked>
+							<input type="checkbox" disabled name="option-motel" id="search-option-motel">
                             <label for="search-option-motel" class="search-label">Мотель
                             </label>
-							<input type="checkbox" name="option-apartaments" id="search-option-apartaments" checked>
+							<input type="checkbox" disabled name="option-apartaments" id="search-option-apartaments" checked>
                             <label for="search-option-apartaments" class="search-label">Апартаменты
                             </label>
 						</fieldset>
 					</div>
 
-					<div class="column filter-range">
-						<div class="range-title">Стоимость в сутки (р)
-						</div>
-						<div class="span-price">
-							<label class="min-price">от 
-								<input type="text" name="min-price" value="0">
-							</label>
-							<label class="max-price">до 
-								<input type="text" name="max-price" value="3000">
-							</label>
-						</div>
-						<div class="range">
-							<div class="scale">
-								<div class="bar">
+					<div class="column">
+						<div class="range-title">Стоимость в сутки (р)</div>
+						<div class="filter-range">
+							<div class="span-price">
+								<label class="min-price">от 
+									<input type="text" name="min-price" value="0">
+								</label>
+								<label class="max-price">до 
+									<input type="text" name="max-price" value="3000">
+								</label>
+							</div>
+							<div class="range">
+								<div class="scale">
+									<div class="bar">
+									</div>
+								</div>
+								<div class="range-toggle range-toggle-min">
+								</div>
+								<div class="range-toggle range-toggle-max">
 								</div>
 							</div>
-							<div class="range-toggle range-toggle-min">
-							</div>
-							<div class="range-toggle range-toggle-max">
-							</div>
+							<button class="search-hotel-btn" type="submit">Показать</button>
 						</div>
-						<button class="search-hotel-btn" type="submit">Показать</button>
 					</div>
 				</form>
 				
-				<div class="search-line">
+				<div class="search-line clearfix">
 					<div class="result found">Найдено: 3
 					</div>
 					<span class="result sorting result-sorting">Сортировка:
@@ -121,7 +122,7 @@
 					</div>
 					<div class="column">
 						<div class="rating">
-							<div class="rating-stars four-stars">&#9733; &#9733; &#9733; &#9733;</div>
+							<div class="rating-stars"><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div></div>
 							<div class="rating-grade">Рейтинг: 8,5</div>
 						</div>
 					</div>
@@ -148,7 +149,7 @@
 					</div>
 					<div class="column">
 						<div class="rating">
-							<div class="rating-stars two-stars">&#9733; &#9733;</div>
+							<div class="rating-stars"><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div></div>
 							<div class="rating-grade">Рейтинг: 8,9</div>
 						</div>
 					</div>
@@ -173,7 +174,7 @@
 					</div>
 					<div class="column">
 						<div class="rating">
-							<div class="rating-stars three-stars">&#9733; &#9733; &#9733;</div>
+							<div class="rating-stars"><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div><div class="rating-single-star">&#9733;</div></div>
 							<div class="rating-grade">Рейтинг: 9,2</div>
 						</div>
 					</div>

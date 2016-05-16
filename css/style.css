@@ -572,8 +572,8 @@ footer .content{
 .copyright-btn{
 	background-image: url("../img/sprites-html.png");
 	background-position: -18px -10px;
-	width: 113px;
-	height: 39px;
+	width: 116px;
+	height: 38px;
     position: relative;
     top: 16px;
 }
@@ -599,7 +599,7 @@ footer .content{
 form.search{
 	color: #ffffff;
 	padding: 0 6%;
-	padding-bottom: 7px;
+	padding-bottom: 8px;
 }
 fieldset{
 	float: left;
@@ -660,7 +660,7 @@ input[type="checkbox"]:checked + label::before{
 }
 
 input[type="checkbox"]:disabled + label:before {
-	background-position: -25px -277px;
+	background-position: -24px -277px;
 }
 input[type="checkbox"]:checked:disabled + label:before {
 	background-position: -23px -426px;
@@ -669,9 +669,10 @@ input[type="checkbox"]:checked:disabled + label:before {
 	padding-left: 114px;
 }
 .filter-range{
-	width: 352px;
+	width: 351px;
 	color: #ffffff;
 	transform: uppercase;
+	float: right;
 }
 .range-title{
 	font-weight: bold;
@@ -681,6 +682,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	margin-bottom: 10px;
 	padding-left: 26px;
 	text-align: left;
+	letter-spacing: 0.01em;
 }
 .span-price{
 	position: relative;
@@ -785,8 +787,10 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background-color: #ffffff;
 }
 .search-line{
-	margin: 32px 0;
+	margin-top: 32px;
+	margin-bottom: 28px;
 	padding: 0 6%;
+	box-sizing: border-box;
 }
 .result{
 	float: left;
@@ -796,7 +800,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 	font-size: 21px;
 	line-height: 26px;
 	margin: 0 48px 0 0;
-	padding-bottom: 29px;
 }
 .sorting{
 	font-size: 12px;
@@ -853,7 +856,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	clear: both;
 	padding-left: 6%;
 	padding-right: 6%;
-	padding-bottom: 9px;
+	padding-bottom: 10px;
 	padding-top: 26px;
 }
 .hotels-top-row{
@@ -899,6 +902,7 @@ input[type="checkbox"]:checked:disabled + label:before {
  	margin-right: 3px;
  	padding: 4px 17px;
  	letter-spacing: 0;
+ 	max-width: 210px;
 }
 .price{
 	letter-spacing: -0.05em;
@@ -914,7 +918,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .hotels-link-more:focus{
 	background-color: #5496bd;
-	color: #94b9d2;
+	color: rgba(255, 255, 255, 0.3);
 }
 /* Кнопка Забронировать */
  .hotels-link-book{
@@ -933,12 +937,24 @@ input[type="checkbox"]:checked:disabled + label:before {
 	padding-top: 4px;
 }
 .rating-stars{
+	float: right;
+}
+.rating-single-star{
+	display: inline-block;
 	color: #81b3d2;
 	font-size: large;
+	margin-left: 6px;
+    width: 17px;
+    height: 17px;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background: url('../img/star.png') no-repeat;
+	/*background-position: -5px -33px;*/
+	float: right;
 }
 .rating-grade{
 	padding: 3px 13px;
-	margin-top: 43px;
+	margin-top: 64px;
 	background-color: #f2f2f2;
 }
-
