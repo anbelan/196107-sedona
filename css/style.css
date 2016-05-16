@@ -46,6 +46,7 @@ img{
 	height: auto;
 	vertical-align: top;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .clearfix{
 	content: "";
@@ -159,7 +160,6 @@ li{
 .entertainment{
 	background-color: #81b3d2;
 	color: #ffffff;
-	overflow: hidden;
 }
 .description-wrapper,
 .entertainment-wrapper{
@@ -239,7 +239,7 @@ li{
 .causes-title{
 	font-weight: bold;
 	font-size: 21px;
-	padding: 0 80px 25px;
+	padding-bottom: 25px;
 }
 .causes-content{
 	margin: 0 auto;
@@ -255,13 +255,6 @@ li{
 }
 .order-content{
 	margin: 0;
-	line-height: 24px;
-}
-/* Или в данном случае лучше использовать 
-тег <br> и объединить два абзаца? */
-.order-content-2{
-	margin-top: 0;
-	margin-bottom: 0;
 	line-height: 24px;
 }
 .search-title{
@@ -363,14 +356,14 @@ li{
 .search-card input:hover{
 	background-color: #ebebeb;
 }
-.search-card input:active{
+.search-card input:focus{
 	background-color: #ffffff;
 }
 /* Стиль для сообщения об ошибке формы */
 .search form label.error{
 	display: block;
 	position: absolute;
-	padding-left: 89px;
+	padding-left: 89px;/* Поправить паддинг */
 }
 /* Версия календаря, когда 
 пользователь на него не кликал */
@@ -381,14 +374,13 @@ li{
 	width: 35px;
 	height: 35px;
 	right: 55px;
-	background-color: #f2f2f2;
 	background-position: 282px -19px;
 	cursor: pointer;
 }
 /* Версия календаря по наведению мышки */
 .calendar:hover{
 	background-image: url("../img/sprites4.png");
-	background-position: 282px -68px;
+	background-position: 281px -69px;
 	width: 35px;
 	height: 35px;
 }
@@ -396,7 +388,7 @@ li{
 ользователь на него кликнул */
 .calendar:active{
 	background-image: url("../img/sprites4.png");
-	background-position: -282px -120px;
+	background-position: -281px -120px;
 	width: 35px;
 	height: 35px;
 }
@@ -459,7 +451,7 @@ li{
 	background-image: url("../img/sprites5.png");
 	background-position: -8px -55px;
 }
-.minus-adults:active{
+.minus-adults:focus{
 	background-image: url("../img/sprites5.png");
 	background-position: -8px -104px;
 }
@@ -476,7 +468,7 @@ li{
 	background-image: url("../img/sprites5.png");
 	background-position: -6px -55px;
 }
-.minus-children:active{
+.minus-children:focus{
 	background-image: url("../img/sprites5.png");
 	background-position: -6px -104px;
 }
@@ -494,7 +486,7 @@ li{
 	background-image: url("../img/sprites5.png");
 	background-position: -11px -207px;
 }
-.plus-adults:active{
+.plus-adults:focus{
 	background-image: url("../img/sprites5.png");
 	background-position: -9px -255px;
 }
@@ -512,7 +504,7 @@ li{
 	background-image: url("../img/sprites5.png");
 	background-position: -10px -207px;
 }
-.plus-children:active{
+.plus-children:focus{
 	background-image: url("../img/sprites5.png");
 	background-position: -8px -255px;
 }
@@ -532,7 +524,7 @@ li{
 .search-btn:hover{
 	background-color: #669ec0;
 }
-.search-btn:active{
+.search-btn:focus{
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
 }
@@ -558,13 +550,12 @@ footer .content{
 	position: absolute;
 	z-index: 2;
 	width: 1200px;
-	height: 59px;
+	height: 119px;
 	bottom: 0;
-	padding: 30px 0;
 	margin: 0 auto;
 }
 .hashtag{
-	padding: 20px 0;
+	padding: 50px 0;
 	font-weight: bold;
 	font-size: 21px;
 }
@@ -573,15 +564,11 @@ footer .content{
 }
 .social{
 	position: relative;
+	padding: 30px 0;
 }
 .social-list{
 	position: absolute;
-	/* Отрицательное значение для top считается нормальным 
-	или лучше другим способом выровнять список? 
-	При установлении position: relative; для ul 
-	и position: absolut; для li теряются 
-	два первых li */
-	top: -7px;
+	top: 23px;
 	left: 124px;
 }
 .social-item{
@@ -595,7 +582,7 @@ footer .content{
 .social-item:hover{
 	background-color: #669ec0;
 }
-.social-item:active{
+.social-item:focus{
 	background-color: #5496bd;
 }
 .social-link{
@@ -633,6 +620,7 @@ footer .content{
 .copyright{
 	position: absolute;
 	right: 55px;
+	padding: 30px;
 }
 .copyright-item{
 	display: inline-block;
@@ -656,7 +644,7 @@ footer .content{
 	width: 113px;
 	height: 52px;
 }
-.copyright-btn:active{
+.copyright-btn:focus{
 	background-image: url("../img/sprites-html.png");
 	background-position: -19px -98px;
 	width: 113px;
@@ -666,19 +654,20 @@ footer .content{
 
 /*inner*/
 
-.main-container{
-	padding: 0 6%;
+.background{
 	margin: 0 auto;
 	background-image: url("../img/sedonabackground.jpg");
 	background-repeat: no-repeat;
-	background-size: 1200px 217px;
 }
 .column-item{
 	display: inline-block;
 	vertical-align: top;
 }
+
 form.search{
 	color: #ffffff;
+	padding: 0 6%;
+	padding-bottom: 9px;
 }
 fieldset{
 	display: inline-block;
@@ -689,12 +678,12 @@ legend{
 	font-size: 16px;
 }
 .checkbox-title-first{
-	padding: 28px 0 22px 0;
+	padding: 29px 0 23px 0;
 	margin: 0;
 	text-align: left;
 }
 .checkbox-title-second{
-	padding: 28px 115px 22px 0;
+	padding: 29px 115px 23px 0;
 	margin: 0;
 	text-align: left;
 }
@@ -721,7 +710,6 @@ input[type="checkbox"] + label{
 	position: relative;
 	display: block;
 	line-height: 22px;
-	/*font-size: 40px;*/
 }
 input[type="checkbox"] + label:before{
 	content: "";
@@ -755,7 +743,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background-position: -23px -426px;
 }
 .second-form{
-	padding-left: 114px;
+	padding-left: 115px;
 }
 .filter-range{
 	width: 352px;
@@ -767,19 +755,20 @@ input[type="checkbox"]:checked:disabled + label:before {
 	font-size: 16px;
 	line-height: 21px;
 	margin-top: 28px;
-	margin-bottom: 9px;
-	padding-left: 24px;
+	margin-bottom: 10px;
+	padding-left: 26px;
 	text-align: left;
 }
 .span-price{
 	position: relative;
 	height: 36px;
-	margin-bottom: 20px;
+	margin-bottom: 35px;
 	margin-left: 34px;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
 	font-size: 0;
 	margin-bottom: 20px;
+	text-align: left;
 }
 .span-price::after{
 	content: "";
@@ -794,14 +783,18 @@ input[type="checkbox"]:checked:disabled + label:before {
 .span-price label{
 	display: inline-block;
 	font-size: 14px;
-	line-height: 38px;
+	line-height: 32px;
 	vertical-align: top;
 	cursor: pointer;
+	box-sizing: content-box;
 }
-.min-price,
+.min-price{
+	width: 92px;
+	padding-left: 65px;
+}
 .max-price{
 	width: 90px;
-	padding-left: 5px;
+	padding-left: 54px;
 }
 .span-price input{
 	width: 50px;
@@ -843,17 +836,17 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background-color: #1c4f80;
 }
 .range-toggle-min{
-	left: 0;
+	left: 2px;
 }
 .range-toggle-max{
 	left: 80%;
 }
 .search-hotel-btn{
 	display: block;
-	margin-left: 119;
-	padding: 6px 29px;
+	margin-left: 120px;
+	padding: 6px 33px;
 	font-size: 14px;
-	line-height: 20px;
+	line-height: 23px;
 	color: #ffffff;
 	text-transform: uppercase;
 	background: transparent;
@@ -861,14 +854,15 @@ input[type="checkbox"]:checked:disabled + label:before {
 	border-radius: 2px;
 	outline: none;
 	cursor: pointer;
+	letter-spacing: -0.09em;
 }
 .search-hotel-btn:hover{
 	color: #000000;
 	background-color: #ffffff;
 }
 .search-line{
-	margin: 39px 0;
-	border-bottom: 1px solid #cccccc;
+	margin: 32px 0;
+	padding: 0 6%;
 }
 .result{
 	display: inline-block;
@@ -878,16 +872,15 @@ input[type="checkbox"]:checked:disabled + label:before {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
-	margin: 0 46px 0 0;
+	margin: 0 48px 0 0;
 	padding-bottom: 29px;
-	/* Ошибка! См ниже */
 }
 .sorting{
 	font-size: 12px;
 	line-height: 18px;
 }
 .result-sorting{
-	padding: 5px 33px 0 0;
+	padding: 5px 39px 0 0;
 }
 .sorting-item{
 	list-style: none;
@@ -917,12 +910,15 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .hotels{
 	text-align: left;
-	/* Ошибка! border тянется только на ширину 
-	main-container, а нужно на всю ширину страницы */
 	border-bottom: 1px solid #cccccc;
 	clear: both;
-	padding-bottom: 11px;
+	padding-left: 6%;
+	padding-right: 6%;
+	padding-bottom: 10px;
 	padding-top: 26px;
+}
+.hotels-top-row{
+	border-top: 1px solid #cccccc;
 }
  .hotels-image{
  	padding: 4px 26px 0 0;
@@ -936,21 +932,25 @@ input[type="checkbox"]:checked:disabled + label:before {
  }
  .type, 
  .price{
- 	padding-top: 9px;
+ 	padding-top: 7px;
  	padding-bottom: 20px;
  }
- .type-hotel, .price-hotel{
+ .type-hotel, 
+ .price-hotel{
  	color: #333333;
- 	padding-right: 26px;
  }
 .hotel-link{
 	color: #ffffff;
  	font-weight: bold;
  	display: block;
- 	margin-top: 13px;
+ 	margin-top: 14px;
  	margin-right: 3px;
- 	padding: 4px 16px;
+ 	padding: 4px 17px;
 }
+/* Формат цены не совпадает с макетом */
+.price{
+	letter-spacing: -0.05em;
+ }
  .hotels-link-more{
  	background-color: #81b3d2;
  	margin-right: 6px;
@@ -961,37 +961,39 @@ input[type="checkbox"]:checked:disabled + label:before {
 .rating{
 	float: right;
 	text-align: right;
-	padding-top: 20px;
+	padding-top: 4px;
 }
-.four-stars{
+.rating-stars{
+	color: #81b3d2;
+	font-size: large;
+}
+/*.four-stars{
 	background-image: url("../img/sprites3.png");
-	background-position: 18px -32px;
+	background-position: 18px -33px;
 	width: 110px;
 	height: 17px;
 	background-repeat: no-repeat;
 }
 .two-stars{
 	background-image: url("../img/sprites3.png");
-	background-position: 41px -76px;
+	background-position: 41px -83px;
 	width: 110px;
-	height: 27px;
+	height: 17px;
 	background-repeat: no-repeat;
 }
 .three-stars{
 	background-image: url("../img/sprites3.png");
-	background-position: 29px -122px;
+	background-position: 29px -134px;
 	width: 110px;
 	height: 27px;
 	background-repeat: no-repeat;
-}
+}*/
 .rating-grade{
 	padding: 3px 13px;
-	margin-top: 42px;
+	margin-top: 46px;
 	background-color: #f2f2f2;
 }
-.indent{
-	margin-bottom: 106px;
-}
+
 
 
 /*
