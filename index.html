@@ -106,64 +106,59 @@
 						<div class="popup">
 							<button class="popup-close" type="button" title="Закрыть">Закрыть
 							</button>
-							
 
 							<form class="search-block" action="result.html" method="post">
-								<div class="search-card">
-									<div class="search-date date check-in">
-										<label class="search-data" for="checkin-argument">
-										Дата заезда:
-										</label>
-										<input class="search-data-date" type="text" name="checkin-date" id="checkin-argument" value="24 апреля 2016">
-										<span class="calendar">
-										</span>
-									</div>
-
-									<div class="search-date date check-out">
-										<label class="search-data" for="checkout-argument">
-										Дата выезда:
-										</label>
-										<input class="search-data-date" type="text" name="checkout-date" id="checkout-argument" value="4 июля 2016">
-										<span class="calendar">
-										</span>
-									</div>
-
-									<div class="search-people">
-										<div class="search-number">
-											<label class="search-data adults" for="adults-argument">
-											Взрослые:
-											</label>
-											<span class="symbols minus-adults"></span>
-											<input class="symbols search-data-number" type="text"  name="adults" id="adults-argument" value="2">
-											<span class="symbols plus-adults"></span>
-										</div>
-
-										<div class="search-number">
-											<label class="search-data children" for="children-argument">
-											Дети:</label>
-											<span class="symbols minus-children"></span>
-											<input class="symbols search-data-number" type="text" name="children" id="children-argument" value="0">
-											<span class="symbols plus-children"></span>
-										</div>
-									</div>
-								</div>
-								<!-- В этом месте должна быть ссылка или достаточно инпута с кнопкой? -->
-								<!-- <a href="#"> --><input class="search-btn" type="submit" value="Найти">
-								<!-- </a> -->
-							</form>
+                                <div class="search-card">
+                                    <div class="search-date date check-in">
+                                        <label class="search-data" for="checkin-argument">
+                                        Дата заезда:
+                                        </label>
+                                        <input class="search-data-date search-data-input search-input" type="text" name="checkin-date" id="checkin-argument" value="24 апреля 2016">
+                                        <span class="calendar" required></span>
+                                    </div>
+ 
+                                    <div class="search-date date check-out">
+                                        <label class="search-data" for="checkout-argument">
+                                        Дата выезда:
+                                        </label>
+                                        <input class="search-data-date search-data-input search-input" type="text" name="checkout-date" id="checkout-argument" value="4 июля 2016">
+                                        <span class="calendar" required></span>
+                                    </div>
+ 
+                                    <div class="search-people">
+                                        <div class="search-number">
+                                            <label class="search-data adults" for="adults-argument">
+                                            Взрослые:
+                                            </label>
+                                            <div class="counter-wrap counter-adults">
+                                                <button class="symbols symbols-button">&#8722;</button>
+                                                <input class="symbols search-data-number search-input" type="text"  name="adults" id="adults-argument" value="2">
+                                                <button class="symbols symbols-button" required>&#43;</button>
+                                            </div>
+                                        </div>
+ 
+                                        <div class="search-number">
+                                            <label class="search-data children" for="children-argument">
+                                            Дети:</label>
+                                            <div class="counter-wrap counter-adults">
+                                                <button class="symbols symbols-button">&#8722;</button>
+                                                <input class="symbols search-data-number search-input" type="text"  name="children" id="children-argument" value="0" required>
+                                                <button class="symbols symbols-button">&#43;</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- В этом месте должна быть ссылка или достаточно инпута с кнопкой? -->
+                                <!-- <a href="#"> --><input class="search-btn" type="submit" value="Найти">
+                                <!-- </a> -->
+                            </form>
 						</div>
 					</div>
 		</main>
 
 		<footer>
 			<div class="map">
-				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                	<div class="map-wrapper">
-                		<div class="map-interactive" id="gmap_canvas">
-                		</div>
-                	</div>
-                <script type="text/javascript">function init_map(){var myOptions = {zoom:8,center:new google.maps.LatLng(34.8697395,-111.76098960000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(34.8697395,-111.76098960000002)});infowindow = new google.maps.InfoWindow({content:"Седона"});google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, "load", init_map);
-                </script>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6547.342303931996!2d-111.7712801!3d34.8644894!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1463404519664" width="1200" height="592" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 			<div class="content row">
 				<section class="column hashtag">
@@ -200,8 +195,58 @@
 			</div>
 		</footer>
 	</div>
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		var link = document.querySelector(".search-form-btn");
+		var popup = document.querySelector(".popup");
+		var close = popup.querySelector("popup-close");
+		var form = popup.querySelector("form");
+		var checkin = popup.querySelector("[checkin-date]");
+		var checkout = popup.querySelector("[checkout-date]");
+		var storage = localStorage.getItem("checkin");
+
+		
+		link.addEventListener("click", function(event) {
+			event.preventDefault();
+		popup.classList.add("popup-show");
+		
+
+		if (storage) {
+			checkin.value = storage;
+			checkout.focus();
+		} else {
+			checkin.focus();
+		}
+		});
+
+		close.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.classList.remove("popup-show");
+			popup.classList.remove("popup-error");
+		});
+
+		form.addEventListener("submit", function(event) {
+			if (!checkin.value || checkout.value){
+			event.preventDefault();
+			console.log("Поле обязательно для заполнения");
+			popup.classList.remove("popup-error");
+          	popup.offsetWidth = popup.offsetWidth;
+			popup.classList.add("popup-error");
+		}else {
+			localStorage.setItem("checkin", checkin.value);
+		}
+		});
+
+		window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("popup-show")) {
+            popup.classList.remove("popup-show");
+            popup.classList.remove("popup-error");
+          }
+        }
+      });
+	</script>
+	<!--<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>-->
 </body>
 </html>
