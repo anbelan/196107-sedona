@@ -556,28 +556,27 @@ footer .content{
 	background-position: -15px -418px;
 }
 .copyright{
-	position: absolute;
 	right: 55px;
 	padding: 30px;
 }
 .copyright-item{
 	display: inline-block;
+	float: left;
 }
 .copyright-content{
 	padding-right: 9px;
     padding-top: 21px;
     margin: 0;
+    padding-left: 73px;
 }
 .copyright-btn{
-	position: absolute;
 	background-image: url("../img/sprites-html.png");
 	background-position: -18px 2px;
-	width: 113px;
-	height: 52px;
-	right: 49px;
+	width: 117px;
+	height: 53px;
 }
 .copyright-btn:hover{
-	background-position: -18px -49px;
+	background-position: -18px -51px;
 }
 .copyright-btn:focus{
 	background-position: -19px -97px;
@@ -811,21 +810,21 @@ input[type="checkbox"]:checked:disabled + label:before {
 	margin: 5px 32px 0 1px;
 }
 /* Cортировки в inner.html */
-.option a{
+.option{
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: 1px dotted;
 	border-color: #81b3d2;
 }
-.option a:hover{
+.option:hover{
 	color: #81b3d2;
 	border-bottom: 1px dotted;
 	border-color: #81b3d2;
 }
-.option a:focus{
+.option:active{
 	color: black;
 	border: none;
 }
-.current a{
+.current{
 	color: #81b3d2;
 	border: none;
 }
