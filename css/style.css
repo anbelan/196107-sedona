@@ -1,5 +1,5 @@
 
-@font-face {
+@font-face{
   font-weight: normal;
   font-style: normal;
 
@@ -10,7 +10,7 @@
        url("../fonts/web/ptsansbold.woff2") format("woff2");
 }
 
-body {
+body{
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 14px;
@@ -20,7 +20,7 @@ body {
 	color: #333333;
 	margin: 0;
 }
-h1 {
+h1{
 	font-weight: bold;
 	font-size: 21px; 
 	line-height: 26px;
@@ -46,7 +46,22 @@ img{
 	height: auto;
 	vertical-align: top;
 	margin: 0 auto;
+}
+/* Обертки для картинок */
+.img-truetown{
+	width: 800px;
+	height: 256px;
 	overflow: hidden;
+}
+.img-canyon{
+	width: 800px;
+	height: 256px;
+	overflow: hidden;	
+}
+.hotels-image{
+	width: 135px;
+	height: 90px;
+	overflow: hidden;	
 }
 .clearfix{
 	content: "";
@@ -56,12 +71,12 @@ img{
 .img-wrap{
 	overflow: hidden;
 }
-.main-content {
+.main-content{
 	font-size: 14px; 
 	line-height: 26px;
 	margin-bottom: 60px;
 }
-.title {
+.title{
 	font-weight: bold;
 	font-size: 21px; 
 	line-height: 21px;
@@ -71,26 +86,26 @@ img{
 	margin: 0 auto;
 	box-shadow: 0 0 30px 0px #ccc;
 }
-.row {
+.row{
   margin: 0;
 }
-.row::after {
+.row::after{
   content: "";
   display: table;
   clear: both;
 }
-.column {
+.column{
   float: left;
   width: 33.33%;
   box-sizing: border-box;
 }
-.column-double {
+.column-double{
   width: 66.66%;
   float: left;
 }
 *,
 *:before,
-*:after {
+*:after{
   box-sizing: inherit;
 }
 fieldset{
@@ -109,14 +124,16 @@ li{
 	top: 0;
   	left: 50%;
   	transform: translateX(-50%);
+  	width: 138px;
+  	height: 70px;
 }
-.nav-list {
+.nav-list{
 	list-style: none;
  	margin: 0;
  	padding: 12px 0 13px;
  	font-size: 0;
 }
-.nav-item {
+.nav-item{
   width: 20%;
   font-size: 14px;
   line-height: 31px;
@@ -150,11 +167,13 @@ li{
 .decignation{
 	width: 500px;
 	text-align: center;
-	padding: 55px 0 18px;
+	padding: 55px 0 15px;
 	margin: 0 auto;
 }
 .decignation-content{
-	margin-bottom: 52px;
+	margin-bottom: 53px;
+    letter-spacing: 0.01em;
+    padding-left: 4px;
 }
 .description, 
 .entertainment{
@@ -172,18 +191,18 @@ li{
     font-size: 21px;
 }
 .description-title{
-	margin-top: 57px;
+	margin-top: 55px;
 	margin-bottom: 24px;
 }
 .entertainment-title{
-	margin-top: 58px;
-	margin-bottom: 25px;
+	margin-top: 56px;
+	margin-bottom: 23px;
 }
 .description-content{
 	margin-top: 23px;
 }
 .entertainment-content{
-	margin-top: 23px;	
+	margin-top: 21px;	
 }
 .services{
 	padding-bottom: 58px;
@@ -198,15 +217,12 @@ li{
 	font-size: 21px;
 }
 .services-content{
-	padding-top: 25px;
+	padding-top: 22px;
 	margin: 0 auto;
 }
 .services-title::before{
 	content: "";
 	position: absolute;
-	/* Для top размер -107 нормальный или лучше 
-	padding-top: 163px; добавить .services-title 
-	вместо .services-item? */
 	top: -107px;
 	left: 112px;
 	background-image: url("../img/sprites.png");
@@ -219,7 +235,7 @@ li{
 	background-position: 0 0;
 }
 .burger:before{
-	background-position: -113px 0;
+	background-position: -114px 0;
 	width: 74px;
 	height: 76px;
 }
@@ -233,20 +249,20 @@ li{
 }
 .causes{
 	background-color: #eeeeee;
-	padding-top: 50px;
+	padding-top: 48px;
 	padding-bottom: 58px;
 }
 .causes-title{
 	font-weight: bold;
 	font-size: 21px;
-	padding-bottom: 25px;
+	padding-bottom: 23px;
 }
 .causes-content{
 	margin: 0 auto;
-	padding-top: 23px;
+	padding-top: 21px;
 }
 .search-order{
-	padding: 58px 0 47px;
+	padding: 59px 0 47px;
 }
 .order-header {
 	font-size: 30px; 
@@ -266,9 +282,6 @@ li{
 	padding: 30px 0;
 }
 /* Всплывающее окно */
-
-
-
 .popup{
 	position: absolute;
 	z-index: 2;
@@ -279,6 +292,8 @@ li{
 	right: 0;
 	width: 568px;
 	box-shadow: 0 5px 20px -5px #333;
+}
+.popup-hidden{
 	display: none;
 }
 .popup-close{
@@ -310,76 +325,36 @@ li{
 .popup-close::after{
 	transform: rotate(-45deg);
 }
-.popup-show{
-	display: block;
-	animation: bounce 0.6s;
-}
-.popup-error {
-  animation: shake 0.6s;
-}
-
-@keyframes bounce {
-  0%   {
-    transform: translateY(-2000px);
-  }
-  70%  {
-    transform: translateY(30px);
-  }
-  90%  {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-  }
-}
 .search-card{
-	margin-top: 56px;
+	margin-top: 55px;
 	height: 172px;
-	margin-bottom: 53px;
+	margin-bottom: 55px;
 }
 .check-in{
-	padding-bottom: 31px;
+	padding-bottom: 27px;
 	padding-left: 56px;
 }
 .check-out{
-	padding-bottom: 33px;
+	padding-bottom: 20px;
 	padding-left: 55px;
 }
 .check-in label{
-	margin-right: 19px;
+	 margin-right: 16px;
 }
 .check-out label{
-	margin-right: 15px;
+	margin-right: 12px;
 }
 .search-date{
 	text-align: left;
 }
-.search-data-date, 
-.search-data-number{
-	font-weight: bold;
-	font-size: 13px;
-	text-transform: uppercase;
-	border: none;
-}
 .search-data-date{
 	width: 296px;
-	height: 31px;
+	height: 30px;
 	padding-left: 12px;
 	padding-top: 4px;
-	padding-right: 35px;
+	padding-right: 34px;
 }
-.search-card input{
+.search-input{
 	position: relative;
 	z-index: 3;
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -388,19 +363,20 @@ li{
 	text-transform: uppercase;
 	font-weight: bold;
 	background-color: #f2f2f2;
-	outline: 2px solid #f2f2f2;
+	border: 2px solid #f2f2f2;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	outline: none;
 }
-.search-card input:hover{
+.search-input:hover{
 	background-color: #ebebeb;
 }
-.search-card input:focus{
+.search-input:focus{
 	background-color: #ffffff;
 }
-/* Стиль для сообщения об ошибке формы */
-.search form label.error{
-	display: block;
-	position: absolute;
-	padding-left: 89px;/* Поправить паддинг */
+.search-input-error{
+	border: 2px solid red;
 }
 /* Версия календаря, когда 
 пользователь на него не кликал */
@@ -415,17 +391,17 @@ li{
 	cursor: pointer;
 }
 /* Версия календаря по наведению мышки */
-.calendar:hover{
+.calendar:hover, .search-input:hover + .calendar{
 	background-image: url("../img/sprites4.png");
 	background-position: 281px -69px;
 	width: 35px;
 	height: 35px;
 }
-/* Версия календаря в момент, когда п
-ользователь на него кликнул */
-.calendar:active{
+/* Версия календаря в момент, когда 
+пользователь на него кликнул */
+.calendar:active, .search-input:focus + .calendar{
 	background-image: url("../img/sprites4.png");
-	background-position: -281px -120px;
+	background-position: -99px -120px;
 	width: 35px;
 	height: 35px;
 }
@@ -433,129 +409,67 @@ li{
 	font-weight: bold;
 	line-height: 26px;
 	color: #000000;
+	letter-spacing: 0.02em;
 }
 .search-people{
 	margin-bottom: 51px;
 	text-align: left;
+	padding-left: 55px;
 }
 .search-number{
 	display: inline-block;
 }
-.search-data-number{
-	padding: 0 25px;
-	width: 61px;
-	height: 32px;
-	text-align: center;
-	font-weight: bold;
-	padding-top: 2px;
-}
 .adults{
-	padding-left: 55px;
-	margin-right: 39px;
+	margin-right: 36px;
 }
 .children{
-	padding-left: 51px;
-	margin-right: 24px;
+	padding-left: 50px;
+	margin-right: 22px;
+	letter-spacing: 0.01em;
 }
 .symbols{
-	display: inline-block;
-	background-color: #f2f2f2;
+    box-sizing: border-box;
+	width: 33%;
+	height: 36px;
+    float: left;
+    text-align: center;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1px;
 }
-.minus-adults,
-.minus-adults:hover,
-.minus-adults:active,
-.minus-children,
-.minus-children:hover,
-.minus-children:active,
-.plus-adults,
-.plus-adults:hover,
-.plus-adults:active,
-.plus-children,
-.plus-children:hover,
-.plus-children:active{
-	width: 34px;
-	height: 34px;
+.symbols-button{
+	font-size: 22px;
+	color: #a9a9a9;
+	border: none;
+	outline: none;
 }
-.minus-adults{
-	position: absolute;
-	z-index: 4;
-	background-image: url("../img/sprites5.png");
-	background-position: -8px -7px;
-	left: 169px;
-	cursor: pointer;
+.symbols-button:hover{
+	color: #000000;
 }
-.minus-adults:hover{
-	background-image: url("../img/sprites5.png");
-	background-position: -8px -55px;
+.symbols-button:focus{
+	color: #81b3d2;
 }
-.minus-adults:focus{
-	background-image: url("../img/sprites5.png");
-	background-position: -8px -104px;
+/* Плюс-минус в форме */
+.counter-adults{
+	width: 115px;
 }
-.minus-children{
-	position: absolute;
-	z-index: 4;
-	background-image: url("../img/sprites5.png");
-	background-position: -6px -7px;
-	right: 134px;
-	cursor: pointer;
-	background-repeat: no-repeat;
-}
-.minus-children:hover{
-	background-image: url("../img/sprites5.png");
-	background-position: -6px -55px;
-}
-.minus-children:focus{
-	background-image: url("../img/sprites5.png");
-	background-position: -6px -104px;
-}
-.plus-adults{
-	position: absolute;
-	z-index: 4;
-	background-image: url("../img/sprites5.png");
-	background-position: -8px -152px;
-	top: 192px;
-	left: 246px;
-	background-color: #f2f2f2;
-	cursor: pointer;
-}
-.plus-adults:hover{
-	background-image: url("../img/sprites5.png");
-	background-position: -11px -207px;
-}
-.plus-adults:focus{
-	background-image: url("../img/sprites5.png");
-	background-position: -9px -255px;
-}
-.plus-children{
-	position: absolute;
-	z-index: 4;
-	background-image: url("../img/sprites5.png");
-	background-position: -7px -152px;
-	top: 192px;
-	right: 56px;
-	background-color: #f2f2f2;
-	cursor: pointer;
-}
-.plus-children:hover{
-	background-image: url("../img/sprites5.png");
-	background-position: -10px -207px;
-}
-.plus-children:focus{
-	background-image: url("../img/sprites5.png");
-	background-position: -8px -255px;
+.counter-wrap {
+  position: relative;
+  display: inline-block;
+  top: 11px;
 }
 .search-btn{
 	color: #ffffff;
 	background-color: #81b3d2;
-	padding: 17px 196px;
+	padding: 16px 195px;
 	margin-bottom: 54px;
 	border: none;
 	font: inherit;
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 21px;
-	line-height: 26px;
+	line-height: 27px;
 	cursor: pointer;
 }
 .search-btn:hover{
@@ -576,25 +490,19 @@ li{
 	background:none;
 	height:592px;
 	width:1200px;
+	background-image: url('../img/map.jpg');
 }
 footer{
 	position: relative;
 	z-index: 1
 	margin: 0 auto;
 }
-.map{
-	background-image: url("../img/map.jpg");
-	width: 1200px;
-	height: 592px;
-	position: relative;
-	z-index: 1;
-}
 footer .content{	
 	background-color: rgba(255, 255, 255, 0.9);
 	position: absolute;
 	z-index: 2;
 	width: 1200px;
-	height: 119px;
+	height: 120px;
 	bottom: 0;
 	margin: 0 auto;
 }
@@ -608,58 +516,56 @@ footer .content{
 }
 .social{
 	position: relative;
-	padding: 30px 0;
+	padding: 22px 0;
+	text-align: left;
 }
 .social-list{
-	position: absolute;
-	top: 23px;
-	left: 124px;
+	margin-left: 125px;
 }
 .social-item{
 	display: inline-block;
-	background-color: #81b3d2;
 	margin-right: 2px;
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
+	width: 46px;
 }
-.social-item:hover{
+.social-link:hover::before{
 	background-color: #669ec0;
 }
-.social-item:focus{
+.social-link:focus::before{
 	background-color: #5496bd;
 }
-.social-link{
-	display: inline-block;
-	margin: 0 auto;
+.social-link::before{
+	content: "";
+	position: absolute;
+	background-image: url("../img/sprites-social.png");
+	background-color: #81b3d2;
 	width: 46px;
 	height: 48px;
+	display: inline-block;
 }
 .icon-btn{
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.twitter-btn{
-	background-image: url("../img/sprites.png");
-	background-position: -30px -98px;
-	width: 17px;
-	height: 15px;
-	margin-top: 15px;
+.twitter-btn::before{
+	background-position: -16px -17px;
 }
-.facebook-btn{
-	background-image: url("../img/sprites.png");
-	background-position: -86px -99px;
-	width: 14px;
-	height: 22px;
-	margin-top: 12px;
+.twitter-btn:focus::before{
+	background-position: -16px -118px;
 }
-.youtube-btn{
-	background-image: url("../img/sprites.png");
-	background-position: -126px -98px;
-	width: 24px;
-	height: 20px;
-	margin-top: 15px;
+.facebook-btn::before{
+	background-position: -20px -167px;
+}
+.facebook-btn:focus::before{
+	background-position: -20px -267px;
+}
+.youtube-btn::before{
+	background-position: -15px -318px;
+}
+.youtube-btn:focus::before{
+	background-position: -15px -418px;
 }
 .copyright{
 	position: absolute;
@@ -680,23 +586,17 @@ footer .content{
 	background-position: -18px 2px;
 	width: 113px;
 	height: 52px;
-	right: 50px;
+	right: 49px;
 }
 .copyright-btn:hover{
-	background-image: url("../img/sprites-html.png");
-	background-position: -18px -50px;
-	width: 113px;
-	height: 52px;
+	background-position: -18px -49px;
 }
 .copyright-btn:focus{
-	background-image: url("../img/sprites-html.png");
-	background-position: -19px -98px;
-	width: 113px;
-	height: 52px;
+	background-position: -19px -97px;
 }
 
 
-/*inner*/
+/* inner */
 
 .background{
 	margin: 0 auto;
@@ -707,14 +607,12 @@ footer .content{
 	display: inline-block;
 	vertical-align: top;
 }
-
 form.search{
 	color: #ffffff;
 	padding: 0 6%;
-	padding-bottom: 9px;
+	padding-bottom: 7px;
 }
 fieldset{
-	display: inline-block;
 	float: left;
 }
 legend{
@@ -725,11 +623,13 @@ legend{
 	padding: 29px 0 23px 0;
 	margin: 0;
 	text-align: left;
+	letter-spacing: 0.02em;
 }
 .checkbox-title-second{
 	padding: 29px 115px 23px 0;
 	margin: 0;
 	text-align: left;
+	letter-spacing: 0.02em;
 }
 .search-label{
 	position: relative;
@@ -738,14 +638,14 @@ legend{
 	cursor: pointer;
 	margin: 0;
 	text-align: left;
-	padding-bottom: 22px;
+	padding-bottom: 23px;
 	padding-top: 2px;
 }
 .first-form label{
 	padding-left: 39px;
 }
 .second-form label{
-	padding-left: 41px;
+	padding-left: 43px;
 }
 input[type="checkbox"]{
 	display: none;
@@ -762,32 +662,22 @@ input[type="checkbox"] + label:before{
 	left: 0;
 	cursor: pointer;
 	background-image: url("../img/sprites4.png");
-	background-position: -28px -178px;
+	background-position: -26px -178px;
 	width: 26px;
 	height: 23px;
 }
 input[type="checkbox"]:checked + label::before{
-	background-image: url("../img/sprites4.png");
-	background-position: -23px -327px;
+	background-position: -22px -328px;
 }
-input[type="checkbox"] + label:hover:before{
-	background-image: url("../img/sprites4.png");
-	background-position: -28px -227px;
-}
-input[type="checkbox"]:checked + label:hover:before {
-	background-image: url("../img/sprites4.png");
-	background-position: -23px -376px;
-}
+
 input[type="checkbox"]:disabled + label:before {
-	background-image: url("../img/sprites4.png");
 	background-position: -25px -277px;
 }
 input[type="checkbox"]:checked:disabled + label:before {
-	background-image: url("../img/sprites4.png");
 	background-position: -23px -426px;
 }
 .second-form{
-	padding-left: 115px;
+	padding-left: 114px;
 }
 .filter-range{
 	width: 352px;
@@ -827,14 +717,14 @@ input[type="checkbox"]:checked:disabled + label:before {
 .span-price label{
 	display: inline-block;
 	font-size: 14px;
-	line-height: 32px;
+	line-height: 37px;
 	vertical-align: top;
 	cursor: pointer;
 	box-sizing: content-box;
 }
 .min-price{
 	width: 92px;
-	padding-left: 65px;
+	padding-left: 66px;
 }
 .max-price{
 	width: 90px;
@@ -842,6 +732,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .span-price input{
 	width: 50px;
+	padding: 0;
 	margin: 0;
 	color: inherit;
 	font: inherit;
@@ -880,7 +771,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background-color: #1c4f80;
 }
 .range-toggle-min{
-	left: 2px;
+	left: 0px;
 }
 .range-toggle-max{
 	left: 80%;
@@ -909,7 +800,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 	padding: 0 6%;
 }
 .result{
-	display: inline-block;
 	float: left;
 }
 .found{
@@ -932,10 +822,20 @@ input[type="checkbox"]:checked:disabled + label:before {
 	padding: 0;
 	margin: 5px 32px 0 1px;
 }
-.sorting-item a{
+/* Cортировки в inner.html */
+.option a{
 	color: rgba(0, 0, 0, 0.3);
 	border-bottom: 1px dotted;
 	border-color: #81b3d2;
+}
+.option a:hover{
+	color: #81b3d2;
+	border-bottom: 1px dotted;
+	border-color: #81b3d2;
+}
+.option a:focus{
+	color: black;
+	border: none;
 }
 .current a{
 	color: #81b3d2;
@@ -949,6 +849,12 @@ input[type="checkbox"]:checked:disabled + label:before {
 	padding-right: 5px;
 	color: rgba(0, 0, 0, 0.3);
 }
+.switch-clickable:hover{
+	color: #81b3d2;
+}
+.switch-clickable:focus{
+	color: black;
+}
 .switch-down{
 	color: #81b3d2;
 }
@@ -958,31 +864,44 @@ input[type="checkbox"]:checked:disabled + label:before {
 	clear: both;
 	padding-left: 6%;
 	padding-right: 6%;
-	padding-bottom: 10px;
+	padding-bottom: 9px;
 	padding-top: 26px;
 }
 .hotels-top-row{
 	border-top: 1px solid #cccccc;
 }
- .hotels-image{
+.hotels-image{
  	padding: 4px 26px 0 0;
- }
- .hotel-block{
+}
+.hotel-block{
  	display: inline-block;
- 	float: left;
- }
- .title-hotel{
+}
+.hotels-content{
+	max-width: 500px;
+}
+.title-hotel{
  	margin-bottom: 0;
- }
- .type, 
- .price{
+ 	max-width: 500px;
+ 	letter-spacing: 0.02em;
+}
+.title-hotel a{
+	color: black;
+}
+.title-hotel a:hover{
+	color: #81b3d2;
+}
+.title-hotel a:focus{
+	color: rgba(0, 0, 0, 0.3);
+}
+.type, 
+.price{
  	padding-top: 7px;
  	padding-bottom: 20px;
- }
- .type-hotel, 
- .price-hotel{
+}
+.type-hotel, 
+.price-hotel{
  	color: #333333;
- }
+}
 .hotel-link{
 	color: #ffffff;
  	font-weight: bold;
@@ -990,18 +909,35 @@ input[type="checkbox"]:checked:disabled + label:before {
  	margin-top: 14px;
  	margin-right: 3px;
  	padding: 4px 17px;
+ 	letter-spacing: 0;
 }
-/* Формат цены не совпадает с макетом */
 .price{
 	letter-spacing: -0.05em;
- }
- .hotels-link-more{
+}
+ /* Кнопка Подробнее */
+.hotels-link-more{
  	background-color: #81b3d2;
- 	margin-right: 6px;
- }
+ 	color: #ffffff;
+ 	margin-right: 3px;
+}
+.hotels-link-more:hover{
+	background-color: #669ec0;
+}
+.hotels-link-more:focus{
+	background-color: #5496bd;
+	color: #94b9d2;
+}
+/* Кнопка Забронировать */
  .hotels-link-book{
  	background-color: #766357;
- }
+}
+.hotels-link-book:hover{
+ 	background-color: #604e43;
+}
+.hotels-link-book:focus{
+ 	background-color: #503e33;
+ 	color: #928a85;
+}
 .rating{
 	float: right;
 	text-align: right;
@@ -1011,195 +947,9 @@ input[type="checkbox"]:checked:disabled + label:before {
 	color: #81b3d2;
 	font-size: large;
 }
-/*.four-stars{
-	background-image: url("../img/sprites3.png");
-	background-position: 18px -33px;
-	width: 110px;
-	height: 17px;
-	background-repeat: no-repeat;
-}
-.two-stars{
-	background-image: url("../img/sprites3.png");
-	background-position: 41px -83px;
-	width: 110px;
-	height: 17px;
-	background-repeat: no-repeat;
-}
-.three-stars{
-	background-image: url("../img/sprites3.png");
-	background-position: 29px -134px;
-	width: 110px;
-	height: 27px;
-	background-repeat: no-repeat;
-}*/
 .rating-grade{
 	padding: 3px 13px;
-	margin-top: 46px;
+	margin-top: 43px;
 	background-color: #f2f2f2;
 }
 
-
-
-/*
-.house{
-background-position: 0 -4px;
-width: 75px;
-height: 72px;
-}
-.burger{
-background-position: -114px -6px;
-width: 74px;
-height: 70px;
-}
-.present{
-background-position: -221px 0;
-width: 64px;
-height: 76px;
-}
-.twitter{
-background-position: -31px -100px;
-width: 17px;
-height: 15px;
-}
-.facebook{
-background-position: -88px -100px;
-width: 10px;
-height: 19px;
-}
-.youtube{
-background-position: -128px -100px;
-width: 20px;
-height: 16px;
-}
-
-sprites-html
-.html{
-background-position: -19px -10px;
-width: 113px;
-height: 39px;
-}
-.html-hover{
-background-position: -19px -61.98439025878906px;
-width: 113px;
-height: 39px;
-}
-.html-down{
-background-position: -20.984375px -109.98439025878906px;
-width: 113px;
-height: 39px;
-}
-
-sprites4
-
-.checkbox{
-background-position: -27px -178px;
-width: 22px;
-height: 22px;
-}
-.checkbox_hvr{
-background-position: -27px -227px;
-width: 22px;
-height: 22px;
-}
-.checkbox_disabled{
-background-position: -25px -277px;
-width: 22px;
-height: 22px;
-}
-.checkbox_checked{
-background-position: -23px -328px;
-width: 26px;
-height: 22px;
-}
-.checkbox_checked_hover{
-background-position: -23px -377px;
-width: 26px;
-height: 22px;
-}
-.checkbox_checked_disabled{
-background-position: -23px -427px;
-width: 26px;
-height: 22px;
-}
-
-
-.slide{
-background-position: -51px -111px;
-width: 20px;
-height: 23px;
-}
-.slide_hvr{
-background-position: -101px -112px;
-width: 20px;
-height: 23px;
-}
-
-
-sprites4
-
-.calendar{
-background-position: -27px -26px;
-width: 21px;
-height: 22px;
-}
-.calendar_hvr{
-background-position: -28px -76px;
-width: 21px;
-height: 22px;
-}
-.calendar_down{
-background-position: -28px -127px;
-width: 21px;
-height: 22px;
-}
-
-sprites5
-
-.minus{
-background-position: -19.015625px -23px;
-width: 12px;
-height: 3px;
-}
-.minus_hvr{
-background-position: -19px -71px;
-width: 12px;
-height: 3px;
-}
-.minus_down{
-background-position: -19.015625px -120.99998474121094px;
-width: 12px;
-height: 3px;
-}
-.plus{
-background-position: -18px -164.00001525878906px;
-width: 11px;
-height: 11px;
-}
-.plus_hvr{
-background-position: -20.015625px -219.00001525878906px;
-width: 11px;
-height: 11px;
-}
-.plus_down{
-background-position: -19.015625px -267.99998474121094px;
-width: 11px;
-height: 11px;
-}
-
-
-.stars4{
-background-position: -4px -32px;
-width: 89px;
-height: 17px;
-}
-.stars2{
-background-position: -28px -81px;
-width: 42px;
-height: 17px;
-}
-.stars3{
-background-position: -17px -132px;
-width: 65px;
-height: 17px;
-}
-*/
