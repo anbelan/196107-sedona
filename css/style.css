@@ -504,8 +504,7 @@ footer .content{
 }
 .social{
 	padding-top: 21px;
-	padding-left: 125px;
-	text-align: left;
+	text-align: center;
 }
 .social-link{
 	margin-right: 2px;
@@ -560,14 +559,13 @@ footer .content{
 }
 .copyright{
 	padding-top: 25px;
-	text-align: left;
 }
 .copyright-item{
 	display: inline-block;
 }
 .copyright-content{
-    padding-left: 103px;
     margin: 0;
+    margin-top: 2px;
 }
 .copyright-btn{
 	background-image: url("../img/sprites-html.png");
@@ -612,13 +610,13 @@ legend{
 	padding: 29px 0 23px 0;
 	margin: 0;
 	text-align: left;
-	letter-spacing: 0.02em;
+	/*letter-spacing: 0.02em;*/
 }
 .checkbox-title-second{
 	padding: 29px 115px 23px 0;
 	margin: 0;
 	text-align: left;
-	letter-spacing: 0.02em;
+	/*letter-spacing: 0.02em;*/
 }
 .search-label{
 	position: relative;
@@ -627,7 +625,7 @@ legend{
 	cursor: pointer;
 	margin: 0;
 	text-align: left;
-	padding-bottom: 23px;
+	padding-bottom: 22px;
 	padding-top: 2px;
 }
 .first-form label{
@@ -651,25 +649,25 @@ input[type="checkbox"] + label:before{
 	left: 0;
 	cursor: pointer;
 	background-image: url("../img/sprites4.png");
-	background-position: -26px -178px;
+	background-position: -27px -179px;
 	width: 26px;
 	height: 23px;
 }
 input[type="checkbox"]:checked + label::before{
-	background-position: -22px -328px;
+	background-position: -23px -328px;
 }
 
 input[type="checkbox"]:disabled + label:before {
-	background-position: -24px -277px;
+	background-position: -27px -278px;
 }
 input[type="checkbox"]:checked:disabled + label:before {
-	background-position: -23px -426px;
+	background-position: -23px -427px;
 }
 .second-form{
 	padding-left: 114px;
 }
 .filter-range{
-	width: 351px;
+	width: 320px;
 	color: #ffffff;
 	transform: uppercase;
 	float: right;
@@ -680,15 +678,14 @@ input[type="checkbox"]:checked:disabled + label:before {
 	line-height: 21px;
 	margin-top: 28px;
 	margin-bottom: 10px;
-	padding-left: 26px;
+	padding-left: 24px;
 	text-align: left;
-	letter-spacing: 0.01em;
+	/*letter-spacing: 0.01em;*/
 }
 .span-price{
 	position: relative;
 	height: 36px;
 	margin-bottom: 35px;
-	margin-left: 34px;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
 	font-size: 0;
@@ -724,7 +721,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 .span-price input{
 	width: 50px;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	color: inherit;
 	font: inherit;
 	background: none;
@@ -734,7 +731,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 .range{
 	position: relative;
 	margin-bottom: 32px;
-	margin-left: 34px;
 	text-align: left;
 }
 .scale{
@@ -769,7 +765,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .search-hotel-btn{
 	display: block;
-	margin-left: 120px;
 	padding: 6px 33px;
 	font-size: 14px;
 	line-height: 23px;
@@ -781,6 +776,8 @@ input[type="checkbox"]:checked:disabled + label:before {
 	outline: none;
 	cursor: pointer;
 	letter-spacing: -0.09em;
+	margin-left: auto;
+	margin-right: auto;
 }
 .search-hotel-btn:hover{
 	color: #000000;
@@ -791,6 +788,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	margin-bottom: 28px;
 	padding: 0 6%;
 	box-sizing: border-box;
+	width: 100%;
 }
 .result{
 	float: left;
@@ -799,20 +797,20 @@ input[type="checkbox"]:checked:disabled + label:before {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
-	margin: 0 48px 0 0;
+	margin: 0 47px 0 0;
 }
 .sorting{
 	font-size: 12px;
 	line-height: 18px;
 }
 .result-sorting{
-	padding: 5px 39px 0 0;
+	padding: 6px 39px 0 0;
 }
 .sorting-item{
 	list-style: none;
 	float: left;	
 	padding: 0;
-	margin: 5px 32px 0 1px;
+	margin: 7px 32px 0 1px;
 }
 /* Cортировки в inner.html */
 .option{
@@ -835,7 +833,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .switch{
 	float: right;
-	margin: 3px 0;
+	margin: 4px 0;
 }
 .switch-up{
 	padding-right: 5px;
@@ -874,7 +872,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 .title-hotel{
  	margin-bottom: 0;
  	max-width: 500px;
- 	letter-spacing: 0.02em;
+ 	/*letter-spacing: 0.02em;*/
 }
 .title-hotel a{
 	color: black;
@@ -900,7 +898,7 @@ input[type="checkbox"]:checked:disabled + label:before {
  	display: block;
  	margin-top: 14px;
  	margin-right: 3px;
- 	padding: 4px 17px;
+ 	padding: 4px 16px;
  	letter-spacing: 0;
  	max-width: 210px;
 }
