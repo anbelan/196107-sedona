@@ -476,8 +476,8 @@ li{
 .map-interactive{
 	max-width: none;
 	background:none;
-	height:592px;
 	width:1200px;
+	height:592px;
 	background-image: url('../img/map.jpg');
 }
 footer{
@@ -503,30 +503,27 @@ footer .content{
 	color: #000000;
 }
 .social{
-	position: relative;
-	padding: 22px 0;
+	padding-top: 21px;
+	padding-left: 125px;
 	text-align: left;
 }
-.social-list{
-	margin-left: 125px;
-}
-.social-item{
-	display: inline-block;
+.social-link{
 	margin-right: 2px;
+	width: 46px;
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
-	width: 46px;
+	display: inline-block;
 }
-.social-link:hover::before{
+
+.social-link:hover{
 	background-color: #669ec0;
 }
-.social-link:focus::before{
+.social-link:focus{
 	background-color: #5496bd;
 }
-.social-link::before{
-	content: "";
-	position: absolute;
+
+.social-link{
 	background-image: url("../img/sprites-social.png");
 	background-color: #81b3d2;
 	width: 46px;
@@ -537,49 +534,54 @@ footer .content{
 	margin-left: auto;
 	margin-right: auto;
 }
-.twitter-btn::before{
-	background-position: -16px -17px;
+
+.twitter-btn{
+	background-position: -16px -16px;
 }
-.twitter-btn:focus::before{
-	background-position: -16px -118px;
+
+.twitter-btn:focus{
+	background-position: -16px -117px;
 }
-.facebook-btn::before{
-	background-position: -20px -167px;
+
+.facebook-btn{
+	background-position: -20px -166px;
 }
-.facebook-btn:focus::before{
-	background-position: -20px -267px;
+
+.facebook-btn:focus{
+	background-position: -20px -266px;
 }
-.youtube-btn::before{
-	background-position: -15px -318px;
+
+.youtube-btn{
+	background-position: -15px -317px;
 }
-.youtube-btn:focus::before{
-	background-position: -15px -418px;
+
+.youtube-btn:focus{
+	background-position: -15px -417px;
 }
 .copyright{
-	right: 55px;
-	padding: 30px;
+	padding-top: 25px;
+	text-align: left;
 }
 .copyright-item{
 	display: inline-block;
-	float: left;
 }
 .copyright-content{
-	padding-right: 9px;
-    padding-top: 21px;
+    padding-left: 103px;
     margin: 0;
-    padding-left: 73px;
 }
 .copyright-btn{
 	background-image: url("../img/sprites-html.png");
-	background-position: -18px 2px;
-	width: 117px;
-	height: 53px;
+	background-position: -18px -10px;
+	width: 113px;
+	height: 39px;
+    position: relative;
+    top: 16px;
 }
 .copyright-btn:hover{
-	background-position: -18px -51px;
+	background-position: -18px -61px;
 }
 .copyright-btn:focus{
-	background-position: -19px -97px;
+	background-position: -19px -109px;
 }
 
 
