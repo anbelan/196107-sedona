@@ -126,7 +126,7 @@ li{
   font-size: 14px;
   line-height: 31px;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: top;
   font-weight: bold;
 }
 .nav-item a:hover{
@@ -250,7 +250,7 @@ li{
 	padding-top: 21px;
 }
 .search-order{
-	padding: 59px 0 47px;
+	padding: 58px 0 47px;
 }
 .order-header {
 	font-size: 30px; 
@@ -324,7 +324,7 @@ li{
 	padding-left: 56px;
 }
 .check-out{
-	padding-bottom: 19px;
+	padding-bottom: 20px;
 	padding-left: 55px;
 }
 .check-in label{
@@ -411,7 +411,7 @@ li{
 }
 .search-number{
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 .adults{
 	margin-right: 35px;
@@ -431,7 +431,7 @@ li{
     cursor: pointer;
     font-weight: bold;
     line-height: 1px;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 .symbols-button{
 	font-size: 22px;
@@ -512,7 +512,7 @@ footer .content{
 	color: #000000;
 }
 .social{
-	padding-top: 21px;
+	padding-top: 36px;
 	text-align: center;
 }
 .social-link{
@@ -521,7 +521,7 @@ footer .content{
 	color: transparent;
 	text-shadow: none;
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: middle;
 	background-image: url("../img/sprites-social.png");
 	background-color: #81b3d2;
 	width: 46px;
@@ -566,7 +566,7 @@ footer .content{
 }
 .copyright-item{
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 .copyright-content{
     margin: 0;
@@ -715,7 +715,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	line-height: 21px;
 	text-transform: uppercase;
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: middle;
 	cursor: pointer;
 	box-sizing: content-box;
 }
@@ -880,7 +880,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .hotel-block{
  	display: inline-block;
- 	vertical-align: baseline;
+ 	vertical-align: top;
 }
 .hotels-content{
 	max-width: 500px;
@@ -956,7 +956,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .rating-single-star{
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: top;
 	color: #81b3d2;
 	font-size: large;
 	margin-left: 6px;
