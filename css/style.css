@@ -281,8 +281,8 @@ li{
 }
 .popup-close{
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 10px;
+	right: 15px;
 	width: 18px;
 	height: 19px;
 	font-size: 0;
@@ -328,6 +328,8 @@ li{
 	margin-right: 12px;
 }
 .search-date{
+	position: relative;
+	z-index: 3;
 	text-align: left;
 }
 .search-data-date{
@@ -338,8 +340,6 @@ li{
 	padding-right: 34px;
 }
 .search-input{
-	position: relative;
-	z-index: 3;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 14px;
 	color: #000000;
@@ -363,20 +363,20 @@ li{
 }
 /* Версия календаря, когда 
 пользователь на него не кликал */
-.calendar-checkin{
+.calendar{
 	position: absolute;
 	z-index: 4;
 	background-image: url("../img/sprites4.png");
 	width: 35px;
 	height: 35px;
 	right: 57px;
-	top: 56px;
+	top: 0;
 	background-position: 282px -19px;
 	cursor: pointer;
 }
 /* Версия календаря по наведению мышки */
-.calendar-checkin:hover, 
-.search-input:hover + .calendar-checkin{
+.calendar:hover, 
+.search-input:hover + .calendar{
 	background-image: url("../img/sprites4.png");
 	background-position: 281px -69px;
 	width: 35px;
@@ -384,38 +384,8 @@ li{
 }
 /* Версия календаря в момент, когда 
 пользователь на него кликнул */
-.calendar-checkin:active, 
-.search-input:focus + .calendar-checkin{
-	background-image: url("../img/sprites4.png");
-	background-position: -99px -120px;
-	width: 35px;
-	height: 35px;
-}
-/* Версия календаря, когда 
-пользователь на него не кликал */
-.calendar-checkout{
-	position: absolute;
-	z-index: 4;
-	background-image: url("../img/sprites4.png");
-	width: 35px;
-	height: 35px;
-	right: 57px;
-	top: 122px;
-	background-position: 282px -19px;
-	cursor: pointer;
-}
-/* Версия календаря по наведению мышки */
-.calendar-checkout:hover, 
-.search-input:hover + .calendar-checkout{
-	background-image: url("../img/sprites4.png");
-	background-position: 281px -69px;
-	width: 35px;
-	height: 35px;
-}
-/* Версия календаря в момент, когда 
-пользователь на него кликнул */
-.calendar-checkout:active, 
-.search-input:focus + .calendar-checkout{
+.calendar:active, 
+.search-input:focus + .calendar{
 	background-image: url("../img/sprites4.png");
 	background-position: -99px -120px;
 	width: 35px;
