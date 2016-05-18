@@ -333,11 +333,12 @@ li{
 	text-align: left;
 }
 .search-data-date{
-	width: 296px;
-	height: 30px;
+	width: 342px;
+	height: 40px;
 	padding-left: 10px;
 	padding-top: 6px;
 	padding-right: 34px;
+	box-sizing: border-box;
 }
 .search-input{
 	font-family: "PT Sans", "Arial", sans-serif;
