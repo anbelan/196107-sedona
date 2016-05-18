@@ -156,7 +156,7 @@ li{
 .decignation{
 	width: 500px;
 	text-align: center;
-	padding: 55px 0 18px;
+	padding: 55px 0 15px;
 	margin: 0 auto;
 }
 .decignation-content{
@@ -178,14 +178,19 @@ li{
 	font-weight: bold;
     font-size: 21px;
 }
-.description-title,
-.entertainment-title{
-	margin-top: 58px;
-	margin-bottom: 25px;
+.description-title{
+	margin-top: 55px;
+	margin-bottom: 23px;
 }
-.description-content,
+.entertainment-title{
+	margin-top: 56px;
+	margin-bottom: 23px;
+}
+.description-content{
+	margin-top: 21px;
+}
 .entertainment-content{
-	margin-top: 24px;
+	margin-top: 21px;
 }
 .services{
 	padding-bottom: 58px;
@@ -200,7 +205,7 @@ li{
 	font-size: 21px;
 }
 .services-content{
-	padding-top: 27px;
+	padding-top: 22px;
 	margin: 0 auto;
 }
 .services-title::before{
@@ -238,19 +243,19 @@ li{
 .causes-title{
 	font-weight: bold;
 	font-size: 21px;
-	padding-bottom: 26px;
+	padding-bottom: 22px;
 }
 .causes-content{
 	margin: 0 auto;
-	padding-top: 24px;
+	padding-top: 21px;
 }
 .search-order{
-	padding: 61px 0 47px;
+	padding: 59px 0 47px;
 }
 .order-header {
 	font-size: 30px; 
 	line-height: 24px;
-	padding-bottom: 31px;
+	padding-bottom: 29px;
 }
 .order-content{
 	margin: 0;
@@ -315,18 +320,18 @@ li{
 	margin-bottom: 55px;
 }
 .check-in{
-	padding-bottom: 27px;
+	padding-bottom: 30px;
 	padding-left: 56px;
 }
 .check-out{
-	padding-bottom: 20px;
+	padding-bottom: 19px;
 	padding-left: 55px;
 }
 .check-in label{
-	 margin-right: 16px;
+	 margin-right: 13px;
 }
 .check-out label{
-	margin-right: 12px;
+	margin-right: 11px;
 }
 .search-date{
 	position: relative;
@@ -334,10 +339,10 @@ li{
 	text-align: left;
 }
 .search-data-date{
-	width: 342px;
-	height: 40px;
-	padding-left: 10px;
-	padding-top: 4px;
+	width: 346px;
+	height: 37px;
+	padding-left: 11px;
+	padding-top: 2px;
 	padding-right: 34px;
 	box-sizing: border-box;
 }
@@ -371,7 +376,7 @@ li{
 	background-image: url("../img/sprites4.png");
 	width: 35px;
 	height: 35px;
-	right: 57px;
+	right: 55px;
 	top: 0;
 	background-position: 282px -19px;
 	cursor: pointer;
@@ -402,31 +407,31 @@ li{
 .search-people{
 	margin-bottom: 51px;
 	text-align: left;
-	padding-left: 55px;
+	padding-left: 54px;
 }
 .search-number{
 	display: inline-block;
 	vertical-align: baseline;
 }
 .adults{
-	margin-right: 36px;
+	margin-right: 35px;
 }
 .children{
-	padding-left: 50px;
-	margin-right: 22px;
+	padding-left: 48px;
+	margin-right: 23px;
 	letter-spacing: 0.01em;
 }
 .symbols{
     box-sizing: border-box;
 	width: 33%;
-	height: 36px;
+	height: 37px;
     float: left;
     text-align: center;
     background-color: #f2f2f2;
     cursor: pointer;
     font-weight: bold;
     line-height: 1px;
-    padding-top: 5px;
+    padding-top: 4px;
 }
 .symbols-button{
 	font-size: 22px;
@@ -499,7 +504,7 @@ footer .content{
 	margin: 0 auto;
 }
 .hashtag{
-	padding: 51px 0;
+	padding: 49px 0;
 	font-weight: bold;
 	font-size: 21px;
 }
@@ -507,7 +512,7 @@ footer .content{
 	color: #000000;
 }
 .social{
-	padding-top: 24px;
+	padding-top: 21px;
 	text-align: center;
 }
 .social-link{
@@ -598,7 +603,7 @@ footer .content{
 form.search{
 	color: #ffffff;
 	padding: 0 6%;
-	padding-bottom: 8px;
+	padding-bottom: 6px;
 }
 fieldset{
 	float: left;
@@ -704,10 +709,13 @@ input[type="checkbox"]:checked:disabled + label:before {
 	transform: translate(-50%, -50%);
 }
 .span-price label{
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
 	display: inline-block;
 	vertical-align: baseline;
-	font-size: 14px;
-	line-height: 37px;
 	cursor: pointer;
 	box-sizing: content-box;
 }
@@ -722,6 +730,11 @@ input[type="checkbox"]:checked:disabled + label:before {
 .span-price input{
 	width: 50px;
 	height: 30px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
 	padding: 0;
 	margin: 0 auto;
 	color: inherit;
@@ -767,7 +780,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .search-hotel-btn{
 	display: block;
-	padding: 6px 33px;
+	padding: 4px 28px;
 	font-size: 14px;
 	line-height: 23px;
 	color: #ffffff;
@@ -786,7 +799,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background-color: #ffffff;
 }
 .search-line{
-	margin-top: 32px;
+	margin-top: 31px;
 	margin-bottom: 28px;
 	padding: 0 6%;
 	box-sizing: border-box;
@@ -806,13 +819,13 @@ input[type="checkbox"]:checked:disabled + label:before {
 	line-height: 18px;
 }
 .result-sorting{
-	padding: 6px 39px 0 0;
+	padding: 6px 38px 0 0;
 }
 .sorting-item{
 	list-style: none;
 	float: left;	
 	padding: 0;
-	margin: 7px 32px 0 1px;
+	margin: 5px 32px 0 1px;
 }
 /* Cортировки в inner.html */
 .option{
@@ -835,7 +848,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .switch{
 	float: right;
-	margin: 4px 0;
+	margin: 3px 0;
 }
 .switch-up{
 	padding-right: 5px;
@@ -899,9 +912,9 @@ input[type="checkbox"]:checked:disabled + label:before {
 	color: #ffffff;
  	font-weight: bold;
  	display: block;
- 	margin-top: 14px;
+ 	margin-top: 13px;
  	margin-right: 3px;
- 	padding: 4px 16px;
+ 	padding: 3px 16px;
  	letter-spacing: 0;
 }
 .price{
@@ -936,7 +949,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 .rating{
 	float: right;
 	text-align: right;
-	padding-top: 4px;
+	padding-top: 3px;
 }
 .rating-stars{
 	float: right;
