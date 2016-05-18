@@ -912,7 +912,7 @@ input[type="checkbox"]:checked:disabled + label:before {
  	background-color: #81b3d2;
  	color: #ffffff;
  	margin-right: 3px;
- 	max-width: 190px;
+ 	max-width: 108px;
 }
 .hotels-link-more:hover{
 	background-color: #669ec0;
@@ -924,7 +924,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 /* Кнопка Забронировать */
  .hotels-link-book{
  	background-color: #766357;
- 	max-width: 210px;
+ 	max-width: 142px;
 }
 .hotels-link-book:hover{
  	background-color: #604e43;
