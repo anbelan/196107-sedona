@@ -126,6 +126,7 @@ li{
   font-size: 14px;
   line-height: 31px;
   display: inline-block;
+  vertical-align: baseline;
   font-weight: bold;
 }
 .nav-item a:hover{
@@ -283,8 +284,8 @@ li{
 	position: absolute;
 	top: 10px;
 	right: 15px;
-	width: 18px;
-	height: 19px;
+	width: 30px;
+	height: 30px;
 	font-size: 0;
 	background-color: #ffffff;
 	border: 0;
@@ -405,6 +406,7 @@ li{
 }
 .search-number{
 	display: inline-block;
+	vertical-align: baseline;
 }
 .adults{
 	margin-right: 36px;
@@ -445,6 +447,7 @@ li{
 .counter-wrap {
   position: relative;
   display: inline-block;
+  vertical-align: baseline;
   top: 11px;
 }
 .search-btn{
@@ -459,6 +462,7 @@ li{
 	font-size: 21px;
 	line-height: 27px;
 	cursor: pointer;
+	outline: none;
 }
 .search-btn:hover{
 	background-color: #669ec0;
@@ -508,26 +512,21 @@ footer .content{
 }
 .social-link{
 	margin-right: 2px;
-	width: 46px;
 	font: 0/0 a;
 	color: transparent;
 	text-shadow: none;
 	display: inline-block;
+	vertical-align: baseline;
+	background-image: url("../img/sprites-social.png");
+	background-color: #81b3d2;
+	width: 46px;
+	height: 48px;
 }
-
 .social-link:hover{
 	background-color: #669ec0;
 }
 .social-link:focus{
 	background-color: #5496bd;
-}
-
-.social-link{
-	background-image: url("../img/sprites-social.png");
-	background-color: #81b3d2;
-	width: 46px;
-	height: 48px;
-	display: inline-block;
 }
 .icon-btn{
 	margin-left: auto;
@@ -562,6 +561,7 @@ footer .content{
 }
 .copyright-item{
 	display: inline-block;
+	vertical-align: baseline;
 }
 .copyright-content{
     margin: 0;
@@ -589,6 +589,7 @@ footer .content{
 	margin: 0 auto;
 	background-image: url("../img/sedonabackground.jpg");
 	background-repeat: no-repeat;
+	background-color: #345367;
 }
 .column-item{
 	display: inline-block;
@@ -649,7 +650,7 @@ input[type="checkbox"] + label:before{
 	left: 0;
 	cursor: pointer;
 	background-image: url("../img/sprites4.png");
-	background-position: -27px -179px;
+	background-position: -27px -178px;
 	width: 26px;
 	height: 23px;
 }
@@ -704,9 +705,9 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .span-price label{
 	display: inline-block;
+	vertical-align: baseline;
 	font-size: 14px;
 	line-height: 37px;
-	vertical-align: top;
 	cursor: pointer;
 	box-sizing: content-box;
 }
@@ -727,7 +728,6 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background: none;
 	border: none;
 	outline: none;
-	padding-top: 1px;
 }
 .range{
 	position: relative;
@@ -866,6 +866,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .hotel-block{
  	display: inline-block;
+ 	vertical-align: baseline;
 }
 .hotels-content{
 	max-width: 500px;
@@ -901,7 +902,6 @@ input[type="checkbox"]:checked:disabled + label:before {
  	margin-right: 3px;
  	padding: 4px 16px;
  	letter-spacing: 0;
- 	max-width: 210px;
 }
 .price{
 	letter-spacing: -0.05em;
@@ -911,6 +911,7 @@ input[type="checkbox"]:checked:disabled + label:before {
  	background-color: #81b3d2;
  	color: #ffffff;
  	margin-right: 3px;
+ 	max-width: 80px;
 }
 .hotels-link-more:hover{
 	background-color: #669ec0;
@@ -922,6 +923,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 /* Кнопка Забронировать */
  .hotels-link-book{
  	background-color: #766357;
+ 	max-width: 112px;
 }
 .hotels-link-book:hover{
  	background-color: #604e43;
@@ -940,6 +942,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 }
 .rating-single-star{
 	display: inline-block;
+	vertical-align: baseline;
 	color: #81b3d2;
 	font-size: large;
 	margin-left: 6px;
