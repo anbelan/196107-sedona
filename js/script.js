@@ -1,14 +1,14 @@
 
     function hidePopup(popup){
-        popup.classList.add('popup-hidden')
+        popup.classList.add("popup-hidden")
     }
 
     function markFieldInvalid(field){
-        field.classList.add('search-input-error')
+        field.classList.add("search-input-error")
     }
 
     function markFieldValid(field){
-        field.classList.remove('search-input-error')
+        field.classList.remove("search-input-error")
     }
 
     function initSite(){
@@ -67,7 +67,7 @@
         }
       });
     }   
-    window.addEventListener('load', initSite)   
+    window.addEventListener("load", initSite)   
 
 /* Гугл карта */
 if(window.google){
