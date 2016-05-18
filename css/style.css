@@ -336,7 +336,7 @@ li{
 	width: 342px;
 	height: 40px;
 	padding-left: 10px;
-	padding-top: 6px;
+	padding-top: 4px;
 	padding-right: 34px;
 	box-sizing: border-box;
 }
@@ -727,6 +727,7 @@ input[type="checkbox"]:checked:disabled + label:before {
 	background: none;
 	border: none;
 	outline: none;
+	padding-top: 1px;
 }
 .range{
 	position: relative;
